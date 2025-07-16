@@ -33,19 +33,7 @@ editor_options:
 #| warning: false
 
 library(tidyverse)    
-library(oibiostat)
-library(janitor)
-library(rstatix)
-library(knitr)
-library(gtsummary)
-library(moderndive)
 library(gt)
-library(broom) 
-library(here) 
-library(pwr) 
-
-# terminal: for icons
-# quarto install extension quarto-ext/fontawesome
 
 # set ggplot theme for slides 
 theme_set(theme_bw(base_size = 22))

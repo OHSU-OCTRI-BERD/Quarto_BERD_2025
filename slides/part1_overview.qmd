@@ -32,25 +32,6 @@ editor_options:
 #| message: false
 #| warning: false
 
-library(tidyverse)    # do we need all these?
-# library(oibiostat)
-library(janitor)
-library(rstatix)
-library(knitr)
-library(gtsummary)
-library(moderndive)
-library(gt)
-library(broom) 
-library(here) 
-library(pwr) 
-
-# terminal: for icons
-# quarto install extension quarto-ext/fontawesome
-
-# set ggplot theme for slides 
-theme_set(theme_bw(base_size = 22))
-# theme_update(text = element_text(size=16))  # set global text size for ggplots
-
 ```
 
 
@@ -130,8 +111,13 @@ This workshop will teach you how to create professional presentations and websit
 
 <br>
 
-* Workshop is from 1:00 pm - 5:00 pm
-    * Break at 3:00-3:15 pm
+* Thurs, July 17: 1:00 pm - 2:30 pm
+    * Part 1
+    * Begin Part 2 (Presentations)
+* Tues, July 22: 1:00 pm - 2:30 pm
+    * Finish Part 2 (Presentations)
+    * Part 3 (Websites)
+
 
 <br>
 
@@ -154,7 +140,7 @@ remotes::install_github("gadenbuie/countdown")
 - **palmerpenguins**: For example datasets.
 - **tidyverse**: A collection of R packages for data science.
 - **gt**: For creating beautiful tables.
-- **countdown**: To add timers to your slides.
+- **countdown**: To add timers to your slides (optional).
 
 If you do not already have **rmarkdown** installed, please install that as well.
 

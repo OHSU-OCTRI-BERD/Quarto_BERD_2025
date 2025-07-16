@@ -9,7 +9,7 @@ date: "7/17/25"
 <br>
 
 ::: {style="font-size: 125%;"}
-Quick link to website: <https://bit.ly/wnar2025_quarto>
+Quick link to website: <https://bit.ly/berd2025_quarto>
 
 __[Welcome!]{style="color:purple"}__
 
@@ -18,7 +18,7 @@ __[Welcome!]{style="color:purple"}__
 :::
 
 
-[Below are links to the WNAR workshop on *Creating Professional Presentations and Websites using R/Quarto*.]{style="color:purple"}
+[Below are links to the OCTRI-BERD workshop on *Creating Professional Presentations and Websites using R/Quarto*.]{style="color:purple"}
 
 
 |        |                                                                    |
@@ -28,5 +28,5 @@ __[Welcome!]{style="color:purple"}__
 | Part 2 | [Creating Presentations](slides/part2_presentations.qmd){target="_blank"} |
 | Part 3 | [Creating Websites](slides/part3_webpages.qmd){target="_blank"}           |
 
-{{< fa brands github >}} _You can access the source code for the website and slides on [GitHub](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025){target="_blank"}_
+{{< fa brands github >}} _You can access the source code for the website and slides on [GitHub](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025){target="_blank"}_
  
