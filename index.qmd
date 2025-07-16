@@ -9,7 +9,7 @@ date: "7/17/25"
 <br>
 
 ::: {style="font-size: 125%;"}
-Quick link to website: <https://bit.ly/berd2025_quarto>
+Quick link to this website: <https://bit.ly/berd2025_quarto>
 
 __[Welcome!]{style="color:purple"}__
 
@@ -27,6 +27,14 @@ __[Welcome!]{style="color:purple"}__
 | Part 1 | [Workshop Overview](slides/part1_overview.qmd){target="_blank"}           |
 | Part 2 | [Creating Presentations](slides/part2_presentations.qmd){target="_blank"} |
 | Part 3 | [Creating Websites](slides/part3_webpages.qmd){target="_blank"}           |
+
+
+__Links to Recordings__
+
+_Workshop recording links will be added below when they are available._
+
+* Thurs, July 17
+* Tues, July 22
 
 {{< fa brands github >}} _You can access the source code for the website and slides on [GitHub](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025){target="_blank"}_
  
