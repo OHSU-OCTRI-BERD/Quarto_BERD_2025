@@ -1,0 +1,719 @@
+---
+title: "Part 3: Creating Websites with Quarto"
+pagetitle: "Part 3: Creating Websites with Quarto"
+subtitle: "OCTRI-BERD Workshop July 2025"
+author: "Jessica Minnier, Meike Niederhausen"
+institute: "OHSU-PSU School of Public Health"
+date: "7/22/25"
+format: 
+  revealjs:
+      incremental: false
+      scrollable: true
+      chalkboard: true
+      theme: [../sky_modified.scss]
+      width:  1050 #default 1050
+      height: 700 #default 700
+      slide-number: true
+      html-math-method: mathjax
+  # html:
+  #   link-external-newwindow: true
+  #   toc: true
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) 
+library(here) 
+library(pwr) 
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+```
+
+
+## Outline 
+
+* Sample websites
+* Create Quarto website project
+* File structure of a website
+* Navigation options 
+* Blog-style webpage
+* Themes
+* Hosting
+
+## Sample websites 
+
+::: {.panel-tabset}
+
+### Workshop website
+
+<https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/>
+
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/" title="workshop website">
+</iframe>
+
+
+
+### BSTA 511 Fall 2024
+
+<https://niederhausen.github.io/BSTA_511_F24/>
+
+<iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_511_F24/" title="BSTA 511 Fall 2024">
+</iframe>
+
+### BSTA 526 Winter 2025
+
+<https://niederhausen.github.io/BSTA_526_W25/>
+
+<iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_526_W25/" title="BSTA 526 Winter 2025">
+</iframe>
+
+:::
+
+
+
+## Create Quarto website project
+
+::: {.panel-tabset}
+
+### __Quarto Website__ project
+
+1. From the R menu, select `File` -> `New Project...`
+
+
+
+::: columns
+::: {.column width="50%"}
+2. Select New Directory option  
+(_NOT_ Existing Directory)
+
+![](/images/web/project1.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+3. Select __Quarto Website__ from the Project Types
+
+![](/images/web/project2.png){fig-align="center"}
+:::
+:::
+
+### __New Project Wizard__ window
+
+  
+::: columns
+::: {.column width="50%"}
+
+::: {style="font-size: 90%;"}
+
+4. __[Directory name:]{style="color:purple"}__ Enter the name for your website project folder
+5. __[Browse]{style="color:green"}__ to the folder that the website project folder will be saved in
+6. Make sure the __[Engine]{style="color:blue"}__ is set to `Knitr`
+7. Optional:
+    * Select _Create a git repository_ if you plan on syncing your website to GitHub
+    * Select _Open in a new session_ if you want to keep your current R project open
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+![](/images/web/project4_annotated.png){fig-align="center"}
+
+::: {style="font-size: 90%;"}
+8. Click on __[Create Project]{style="color:darkorange"}__
+:::
+
+:::
+:::
+
+
+
+### Voila!
+
+Your new Quarto website project should now open up in RStudio
+
+![](/images/web/project5.png){fig-align="center"}
+
+:::
+
+# Website file structure
+
+What files are needed to create a Quarto website?
+
+## Template (default) website
+
+::: {.panel-tabset}
+
+### Before rendering
+
+::: {.panel-tabset}
+
+#### Files
+
+![](/images/web/files1.png){fig-align="center"}
+
+_Note: If you do not have GitHub set up, then you will not have the `.gitignore` file._
+
+#### `_quarto.yml`
+
+This is the config file that specifies the general structure of the website
+
+![](/images/web/files_quarto_yml.png){width="60%" fig-align="center"}
+
+
+#### `index.qmd`
+
+This is the home page of the website
+
+![](/images/web/files_index_qmd.png){fig-align="center"}
+
+#### `about.qmd`
+
+This is an extra (optional) webpage where information about the website can be provided
+
+![](/images/web/files_about_qmd.png){fig-align="center"}
+
+#### `styles.css`
+
+![](/images/web/files_style_css.png){fig-align="center"}
+
+:::
+
+### After rendering
+
+* You can render the website by clicking on the Render button, similar to rendering a quarto file.
+
+::: {.panel-tabset}
+
+#### Files
+
+![](/images/web/files2.png){fig-align="center"}
+
+#### `_site` folder 🕸️
+
+::: {style="font-size: 90%;"}
+* The `_site` folder is created when rendering the website
+* It contains the html files that make up the website
+:::
+
+![](/images/web/files_site1.png){fig-align="center"}
+:::
+
+:::
+
+
+
+# Navigation
+
+How to navigate the website?
+
+## Top vs. Side Navigation
+
+::: {.panel-tabset}
+
+### Example
+
+
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/" title="workshop website">
+</iframe>
+
+### Top
+
+* The navigation bar at the top of the page is customized with the `navbar` options in `_quarto.yml`
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+::: {style="font-size: 90%;"}
+* Use  `left:` and `right:` to specify which side of the top navigation bar you want the links to appear
+* Other options: 
+    * `background` and `foreground` colors, 
+    * adding a website `search` option and `logo`
+    * specifying when the navigation bar is collapsed to a "hamburger" menu
+:::
+:::
+                                          
+::: {.column width="50%"}
+
+* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
+
+``` yaml
+website:
+  title: "Quarto WNAR 2025"
+  navbar:
+    background: primary
+    foreground: "#fff"
+    logo: "/images/web/cat_laptop.gif"
+    search: true
+    collapse-below: sm
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - href: about.qmd
+        text: About
+
+```
+:::
+                                          
+:::
+
+::: {.footnote}
+Learn more: [Top Navigation](https://quarto.org/docs/websites/website-navigation.html#top-navigation){target="_blank"}
+:::
+
+
+
+
+### Side
+
+::: {.panel-tabset}
+
+#### Options
+
+* The navigation bar at the left side of the page is customized with the `sidebar` options in `_quarto.yml`
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+::: {style="font-size: 90%;"}
+* Use  `contents:` to specify which pages to link to
+* Other options: 
+    * `style:` options are `"docked"` and `"floating"`
+    * adding a website `search` option on the sidebar (won't appear if navigation bar already has one)
+    * how many navigation levels to display (`collapse-level:`)
+:::
+:::
+                                          
+::: {.column width="50%"}
+
+* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
+
+``` yaml
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: slides.qmd
+        text: Workshop slides as "blog"
+      - section: "Section for slides"
+        contents: 
+          - href: slides/part1_overview.qmd
+            text: 1 Overview
+          - href: slides/part2_presentations.qmd
+            text: 2 Presentations
+          - href: slides/part3_webpages.qmd
+            text: 3 Websites
+
+```
+:::
+                                          
+:::
+
+::: {.footnote}
+Learn more: [Side Navigation](https://quarto.org/docs/websites/website-navigation.html#side-navigation){target="_blank"}
+:::
+
+#### Sections
+
+* Within the `contents:` list, sections of related pages can be grouped together with `section:`
+* For each `section:`, list the `contents:`
+* Exampl 1: See the [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt in the Options 
+* Example 2: Sections for weekly pages and homework-related pages from class [website](https://niederhausen.github.io/BSTA_511_F24/){target="_blank"}; [YAML](https://github.com/niederhausen/BSTA_511_F24/blob/main/_quarto.yml){target="_blank"}
+
+<iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_511_F24/" title="workshop website">
+</iframe>
+
+:::
+
+
+### Hybrid
+
+* This option was not implemented in the workshop webpage
+* Hybrid navigation allows for each top navigation bar item to have its own contents in the sidebar.
+
+Learn more: [Hybrid Navigation](https://quarto.org/docs/websites/website-navigation.html#hybrid-navigation){target="_blank"}
+
+<iframe width="1100" height="500" src="https://quarto.org/docs/websites/website-navigation.html#hybrid-navigation" title="Hybrid navigation">
+</iframe>
+
+
+:::
+
+## Exercise 1: navigation practice
+
+1.  Add a link to a quarto page to the top navigation bar. 
+    * You can create a new qmd file to link to, or link to a slide file you created in part 2.
+
+<br>
+
+2.  Add a link to a quarto page to the side bar. 
+    * You can link to the same page as the top bar if you like.
+
+
+## Blog-style webpage
+
+::: {.panel-tabset}
+### Example
+
+The __[Workshop Slides](/slides.html){target="_blank"}__ link on the left navigation bar of the workshop website is an example of a blog-style webpage
+
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/slides.html" title="workshop slides">
+</iframe>
+
+
+
+
+### YAML
+
+``` yaml
+---
+title: "Workshop Slides"
+format: 
+  html:
+    listing: 
+      contents: slides
+      type: table
+      table-hover: true
+      fields: [date, title]
+      sort: "title asc"
+      date-format: "short"
+    link-external-newwindow: true
+---
+```
+
+### `fields` options
+
+::: {.panel-tabset}
+
+#### `[date, title]`
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+__Blog-style qmd YAML__
+
+``` yaml
+---
+title: "Workshop Slides"
+format: 
+  html:
+    listing: 
+      contents: slides
+      type: table
+      table-hover: true
+      fields: [date, title]
+      sort: "title asc"
+      date-format: "short"
+    link-external-newwindow: true
+---
+```
+
+:::
+                                          
+::: {.column width="50%"}
+__Individual qmd YAML__
+
+* The Example's table of files included the `date` and `title` specified in each of the individual .qmd files' YAMLs 
+* Excerpt of YAML:
+
+``` yaml
+---
+title: "Part 3: Creating Websites with Quarto"
+date: "6/15/25"
+format: 
+  revealjs
+---
+```
+:::
+                                          
+:::
+
+
+#### `[description]`
+
+::: {.panel-tabset}
+
+##### Example
+
+<iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_526_W25/weeks.html" title="fields description">
+</iframe>
+
+##### YAMLs
+
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+__Blog-style qmd [YAML](https://github.com/niederhausen/BSTA_526_W25/blob/main/weeks.qmd){target="_blank"}__
+
+``` yaml
+---
+title: "Weekly Pages"
+format: 
+  html:
+    listing: 
+      contents: weeks
+      type: table
+      table-hover: true
+      fields: [date, title, description]
+      sort: "date asc"
+      date-format: "short"
+    link-external-newwindow: true
+---
+```
+
+:::
+                                          
+::: {.column width="50%"}
+__Individual qmd YAML__
+
+
+* Excerpt of [YAML](https://github.com/niederhausen/BSTA_526_W25/blob/main/weeks/week_01.qmd){target="_blank"} with `description:`:
+
+``` yaml
+---
+title: "Week 1"
+description: "Intro to R/RStudio, Functions, Vectors, Data Types"
+date: "1/09/2025"
+date-modified: "today"
+format: 
+  html
+---
+```
+:::
+                                          
+:::
+
+:::
+
+
+#### `[categories]`
+
+::: {.panel-tabset}
+
+##### Example
+
+<iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_511_F23/class_slides.html" title="fields categories">
+</iframe>
+
+##### YAMLs
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+
+__Blog-style qmd [YAML](https://github.com/niederhausen/BSTA_511_F23/blob/main/class_slides.qmd){target="_blank"}__
+
+``` yaml
+---
+title: "Class Slides"
+format:
+  html:
+    listing: 
+      contents: slides
+      type: table
+      fields: [date, title, categories]
+      table-hover: true
+      sort: "date asc"
+      date-format: "short"
+      categories: true
+    link-external-newwindow: true
+---
+```
+
+:::
+                                          
+::: {.column width="50%"}
+__Individual qmd YAML__
+
+
+* Excerpt of [YAML](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides/Day01_bsta511.qmd){target="_blank"} with `categories:`:
+
+``` yaml
+---
+title: "Day 1: Intro to R & Rstudio"
+subtitle: "BSTA 511/611 Fall 2023, OHSU"
+author: "Meike Niederhausen, PhD"
+date: "09/27/2023"
+categories: ["Week 1"]
+format: 
+  revealjs
+---
+```
+:::
+                                          
+:::
+
+:::
+
+:::
+
+:::
+
+
+# Themes
+
+A website's theme specifies colors, fonts, and much more!
+
+## Change the look of your website with themes
+
+::: {.panel-tabset}
+### How to change?
+
+* Theme is specified in `_quarto.yml`
+
+* Easy way: 
+    * Use a built in Quarto theme from [Bootswatch](https://bootswatch.com/){target="_blank"}
+* Medium difficulty: 
+    * Modify a Bootswatch theme. 
+    * Theme [`scss` files](https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes){target="_blank"} can be downloaded from GitHub
+* Challenge: 
+    * Write your own theme!
+
+
+### Bootswatch themes
+
+* Built in themes are from  [Bootswatch](https://bootswatch.com/){target="_blank"}
+
+
+<iframe width="1100" height="500" src="https://bootswatch.com/" title="Bootswatch">
+</iframe>
+
+### Example: workshop website
+
+* The website theme is specified in [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"}
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+
+::: {style="font-size: 90%;"}
+* See excerpt on right
+* The `cosmo` theme was originally chosen
+* Any changes made in `cosmo_modified.scss` overwrite the `cosmo` theme since it is listed last.
+
+:::
+
+:::
+                                          
+::: {.column width="40%"}
+``` yaml
+format:
+  html:
+    theme: 
+      - cosmo
+      - cosmo_modified.scss
+    css: styles.css
+    toc: true
+
+```
+:::
+                                          
+:::
+
+::: {style="font-size: 90%;"}
+* Changes made to `cosmo.scss`
+    * Hexadecimal color for green changed: 
+        - `$green:   #08875d !default;`
+    * Primary color changed from blue to green: 
+        - `$primary:       $green !default;`
+    * Success color change from green to blue: 
+        - `$success:       $blue !default;`
+
+:::
+
+:::
+
+## Exercise 2: time for a new theme!
+
+1.  Change the theme for your website. 
+    * Check out options at [Bootswatch](https://bootswatch.com/){target="_blank"}.
+
+
+# Publish your website (or webpage)
+
+## Hosting options
+
+::: {.panel-tabset}
+
+### Quarto Pub
+
+* Free & files are publicly visible
+* Requires setting up a [Quarto Pub account](https://quartopub.com/){target="_blank"}
+* Easy to set up
+* See [gallery](https://quarto.org/docs/gallery/){target="_blank"} of Quarto Pub pages
+* Example: [Meike's Quarto pubs site](https://meike.quarto.pub/){target="_blank"}
+---
+
+* In the Terminal window (not the Console!) of RStudio, 
+    * type `quarto publish quarto-pub`
+    * follow the instructions
+        * will be prompted to give Quarto Pub account info if not already done so
+
+Learn more about [Quarto Pub](https://quarto.org/docs/publishing/quarto-pub.html){target="_blank"}
+
+### GitHub
+
+* Free & files are publicly visible
+* Requires a [GitHub](https://github.com/){target="_blank"} account that is synced with your computer (personal access token)
+* A little more involved to set up
+
+---
+
+* I recommend using [Joshua French's instructions](https://colab.research.google.com/github/jfrench/DataWrangleViz/blob/master/github-website-creation.ipynb){target="_blank"} and YouTube videos. 
+* Scroll down to _Changing the output directory of a Quarto website_ to get started. 
+* One additional new step is adding a `.nojekyll` file as described in the [Quarto help pages](https://quarto.org/docs/publishing/github-pages.html#render-to-docs){target="_blank"}
+
+
+### and more!
+
+See more options (including Netlify) at Quarto's [Publishing Basics](https://quarto.org/docs/publishing/){target="_blank"} page.
+
+:::
+
+# Thank you!!!
+
+Contact:
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+Jessica Minnier  
+_minnier@ohsu.edu_
+:::
+                                          
+::: {.column width="50%"}
+Meike Niederhausen  
+_niederha@ohsu.edu_
+:::
+                                          
+:::
+

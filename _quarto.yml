@@ -3,16 +3,45 @@ project:
   output-dir: docs
 
 website:
-  title: "Quarto_BERD_2025"
+  title: "OCTRI-BERD WNAR 2025"
   navbar:
+    background: primary
+    foreground: "#ffffff"
+    logo: "/images/web/cat_laptop.gif"
+    search: true
+    collapse-below: sm
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+    right:
+      - href: about.qmd
+        text: About
+  
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: slides.qmd
+        text: Workshop slides as "blog"
+      - section: "Section for slides"
+        contents: 
+          - href: slides/part0_installation.qmd
+            text: 0 Installation 
+          - href: slides/part1_overview.qmd
+            text: 1 Overview
+          - href: slides/part2_presentations.qmd
+            text: 2 Presentations
+          - href: slides/part3_webpages.qmd
+            text: 3 Websites
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      # - cosmo
+      - cosmo_modified.scss
     css: styles.css
     toc: true
 
