@@ -128,7 +128,7 @@ This workshop will teach you how to create professional presentations and websit
 Before we begin, please ensure you have the following installed:
 
 1.  **R:** A recent version of R is required. You can download it from the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).
-2.  **RStudio:** Download the latest version from the [RStudio website](https://posit.co/download/rstudio-desktop/). Quarto is built right into RStudio, making it the easiest way to get started.
+2.  **RStudio:** Download the latest version from the [RStudio website](https://posit.co/download/rstudio-desktop/). Quarto is built right into RStudio, making it the easiest way to get started. If you have Rstudio already installed, RStudio v2022.07 and later includes support for editing and preview of Quarto documents, and we highly recommend the latest version.
 
 You will also need to install a few R packages. Open RStudio and run the following code in the console:
 

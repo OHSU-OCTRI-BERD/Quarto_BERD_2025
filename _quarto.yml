@@ -16,6 +16,7 @@ website:
     right:
       - href: about.qmd
         text: About
+    google-analytics: "G-LJ14CS2J9H"
   
   sidebar:
     style: "docked"
