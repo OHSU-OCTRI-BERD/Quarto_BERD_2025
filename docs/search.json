@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Jessica Minnier\nAssociate Professor of Biostatistics\n @jminnier\n jessicaminnier.com\n minnier [at] ohsu [dot] edu ]\n\n\nMeike Niederhausen\nAssociate Professor of Biostatistics\n @meike-niederhausen  @niederhausen   ohsu-psu-sph.org  niederha [at] ohsu [dot] edu\n\n\n\n\n\n\nOHSU-PSU School of Public Health\nOregon Clinical and Translational Research Institute (OCTRI) BERD"
+    "text": "This website and slides were created for the Creating Professional Presentations and Websites using R and Quarto workshop presented as a part of OCTRI’s BERD workshop series on R and RStudio on July 17th and 22nd, 2025.\nThe website structure was set up to be used as an example for demonstrating options when creating websites using Quarto in RStudio. See Part 3 slides for more information."
   },
   {
     "objectID": "about.html#instructors",
     "href": "about.html#instructors",
     "title": "About",
-    "section": "",
-    "text": "Jessica Minnier\nAssociate Professor of Biostatistics\n @jminnier\n jessicaminnier.com\n minnier [at] ohsu [dot] edu ]\n\n\nMeike Niederhausen\nAssociate Professor of Biostatistics\n @meike-niederhausen  @niederhausen   ohsu-psu-sph.org  niederha [at] ohsu [dot] edu\n\n\n\n\n\n\nOHSU-PSU School of Public Health\nOregon Clinical and Translational Research Institute (OCTRI) BERD"
+    "section": "Instructors",
+    "text": "Instructors\n\n\n\nJessica Minnier\nAssociate Professor of Biostatistics\n @jminnier\n jessicaminnier.com\n minnier [at] ohsu [dot] edu ]\n\n\nMeike Niederhausen\nAssociate Professor of Biostatistics\n @meike-niederhausen  @niederhausen   ohsu-psu-sph.org  niederha [at] ohsu [dot] edu\n\n\n\n\n\n\nOHSU-PSU School of Public Health\nOregon Clinical and Translational Research Institute (OCTRI) BERD"
   },
   {
     "objectID": "about.html#acknowledgements",
@@ -1169,5 +1169,12 @@
     "title": "Part 1: Workshop Overview",
     "section": "Why Quarto for Research?",
     "text": "Why Quarto for Research?\nFor researchers, reproducibility and clear communication important. Quarto allows us to do both well.\n\nReproducible Research: Seamlessly integrate your R code, statistical analyses, and visualizations directly into your reports and presentations.\nProfessional Outputs: Create polished articles, presentations for conferences, and websites for your lab or personal portfolio.\nCollaboration: Quarto projects are easy to share and collaborate on using version control systems like Git."
+  },
+  {
+    "objectID": "about.html#workshop-abstract",
+    "href": "about.html#workshop-abstract",
+    "title": "About",
+    "section": "Workshop Abstract",
+    "text": "Workshop Abstract\nThis two-part workshop aims to teach statisticians, data scientists, and those in allied fields to create professional style presentations and websites in R and RStudio using the recently developed Quarto package. This package is an extension of RMarkdown and most often used for literate programming reports that incorporate code from R and other programming languages with text, graphs, and results. However, this powerful package can create much more than just an analysis report. This workshop will teach R users who may be novices in Quarto about the other useful applications of Quarto, specifically how to build websites for their professional profiles as well as courses, and how to make presentations for talks and teaching. Quarto presentations can include code and results within slides as well as harness useful presentation tools such as annotations, outlines, notes, etc. Presentations can be formatted as html (Reveal JS), PowerPoint, or LaTeX Beamer slides.\nThis seminar is intended for R and RStudio users. Participants will need to bring laptops with R and RStudio installed, and will receive instructions prior to the course to install required R packages. Example website and presentations can be found at https://niederhausen.github.io/BSTA_511_F24/"
   }
 ]
