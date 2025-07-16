@@ -1,0 +1,14 @@
+{
+  "hash": "b1331cc0dce1f982d613e07c73fd088d",
+  "result": {
+    "markdown": "---\ntitle: \"Part 0: Installation Instructions\"\npagetitle: \"Part 0: Installation Instructions\"\nsubtitle: \"OCTRI-BERD Workshop July 2025\"\nauthor: \"Jessica Minnier, Meike Niederhausen\"\ninstitute: \"OHSU-PSU School of Public Health\"\ndate: \"7/17/25\"\n# format: \n#   revealjs:\n#       incremental: false\n#       scrollable: true\n#       chalkboard: true\n#       theme: [../sky_modified_smaller_font.scss]\n#       width:  1050 #default 1050\n#       height: 700 #default 700\n#       slide-number: true\n#       html-math-method: mathjax\nhtml:\n    link-external-newwindow: true\n    toc: true\n    embed-resources: true\nexecute:\n  echo: true\n  freeze: auto  # re-render only when source changes\n# editor: visual\neditor_options: \n  chunk_output_type: console\n---\n\n\n\nBefore we begin, please ensure you have the following installed:\n\n1.  **R:** A recent version of R is required. You can download it from the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).\n2.  **RStudio:** Download the latest version from the [RStudio website](https://posit.co/download/rstudio-desktop/). Quarto is built right into RStudio, making it the easiest way to get started. RStudio v2022.07 and later includes support for editing and preview of Quarto documents (the documentation below assumes you are using this build or a later version). If you are using Quarto within RStudio it is strongly recommended that you use the latest release of RStudio.\n\n\nYou will also need to install a few R packages. Open RStudio and run the following code in the console:\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(c(\"palmerpenguins\", \"tidyverse\", \"gt\", \"remotes\"))\nremotes::install_github(\"gadenbuie/countdown\") # optional\n```\n:::\n\n\n- **palmerpenguins**: For example datasets.\n- **tidyverse**: A collection of R packages for data science.\n- **gt**: For creating beautiful tables.\n- **countdown**: To add timers to your slides.\n\nIf you do not already have **rmarkdown** installed, please install that as well.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
