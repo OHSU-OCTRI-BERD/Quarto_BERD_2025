@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "OCTRI-BERD WNAR 2025"
+  title: "OCTRI-BERD Quarto 2025"
   navbar:
     background: primary
     foreground: "#ffffff"
