@@ -132,10 +132,13 @@ Before we begin, please ensure you have the following installed:
 
 You will also need to install a few R packages. Open RStudio and run the following code in the console:
 
-```r
+
+```{r}
+#| eval: false
 install.packages(c("palmerpenguins", "tidyverse", "gt", "remotes"))
-remotes::install_github("gadenbuie/countdown")
+remotes::install_github("gadenbuie/countdown") # optional
 ```
+
 
 - **palmerpenguins**: For example datasets.
 - **tidyverse**: A collection of R packages for data science.
