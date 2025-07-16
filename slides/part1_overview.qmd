@@ -135,15 +135,14 @@ You will also need to install a few R packages. Open RStudio and run the followi
 
 ```{r}
 #| eval: false
-install.packages(c("palmerpenguins", "tidyverse", "gt", "remotes"))
-remotes::install_github("gadenbuie/countdown") # optional
+install.packages(c("palmerpenguins", "tidyverse", "gt", "countdown"))
 ```
 
 
 - **palmerpenguins**: For example datasets.
 - **tidyverse**: A collection of R packages for data science.
 - **gt**: For creating beautiful tables.
-- **countdown**: To add timers to your slides (optional).
+- **countdown**: To add timers to your slides.
 
 If you do not already have **rmarkdown** installed, please install that as well.
 
@@ -160,9 +159,9 @@ If you do not already have **rmarkdown** installed, please install that as well.
 -   **Literate Programming:** Combine narrative text with code to create reproducible reports.
 -   **Multiple Outputs:** Generate high-quality output in various formats including HTML, PDF, MS Word, e-books, and more.
 
-## Why Quarto for Biostatisticians?
+## Why Quarto for Research?
 
-For biostatisticians, reproducibility and clear communication important. Quarto allows us to do both well.
+For researchers, reproducibility and clear communication important. Quarto allows us to do both well.
 
 -   **Reproducible Research:** Seamlessly integrate your R code, statistical analyses, and visualizations directly into your reports and presentations.
 -   **Professional Outputs:** Create polished articles, presentations for conferences, and websites for your lab or personal portfolio.

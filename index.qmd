@@ -11,14 +11,14 @@ date: "7/17/25"
 ::: {style="font-size: 125%;"}
 Quick link to this website: <https://bit.ly/berd2025_quarto>
 
-__[Welcome!]{style="color:purple"}__
+__[Welcome!]{style="color:green"}__
 
 
 
 :::
 
 
-[Below are links to the OCTRI-BERD workshop on *Creating Professional Presentations and Websites using R/Quarto*.]{style="color:purple"}
+[Below are links to the OCTRI-BERD workshop on *Creating Professional Presentations and Websites using R/Quarto*.]{style="color:green"}
 
 
 |        |                                                                    |

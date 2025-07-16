@@ -38,8 +38,7 @@ You will also need to install a few R packages. Open RStudio and run the followi
 
 ```{r}
 #| eval: false
-install.packages(c("palmerpenguins", "tidyverse", "gt", "remotes"))
-remotes::install_github("gadenbuie/countdown") # optional
+install.packages(c("palmerpenguins", "tidyverse", "gt", "countdown"))
 ```
 
 - **palmerpenguins**: For example datasets.
