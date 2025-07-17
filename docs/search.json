@@ -152,10 +152,7 @@
     "href": "index.html",
     "title": "Creating Professional Presentations and Websites using R/Quarto",
     "section": "",
-    "text": "Quick link to this website: https://bit.ly/berd2025_quarto\nWelcome!\n\nBelow are links to the OCTRI-BERD workshop on Creating Professional Presentations and Websites using R/Quarto.\n\n\n\nPart 0\nInstallation Instructions\n\n\nPart 1\nWorkshop Overview\n\n\nPart 2\nCreating Presentations\n\n\nPart 3\nCreating Websites\n\n\n\nLinks to Recordings\nWorkshop recording links will be added below when they are available.\n\nThurs, July 17\nTues, July 22\n\n You can access the source code for the website and slides on GitHub",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Website still under construction\n\n\n\nQuick link to this website: https://bit.ly/berd2025_quarto\nWelcome!\n\nBelow are links to the OCTRI-BERD workshop on Creating Professional Presentations and Websites using R/Quarto.\n\n\n\nPart 0\nInstallation Instructions\n\n\nPart 1\nWorkshop Overview\n\n\nPart 2\nIntro to Quarto\n\n\nPart 3\nCreating Presentations\n\n\nPart 4\nCreating Websites\n\n\n\nLinks to Recordings\nWorkshop recording links will be added below when they are available.\n\nThurs, July 17\nTues, July 22\n\n You can access the source code for the website and slides on GitHub"
   },
   {
     "objectID": "slides.html",
@@ -1125,8 +1122,8 @@
     "objectID": "slides/part1_overview.html#welcome",
     "href": "slides/part1_overview.html#welcome",
     "title": "Part 1: Workshop Overview",
-    "section": "Welcome! 👋",
-    "text": "Welcome! 👋\n\nThis workshop will teach you how to create professional presentations and websites using Quarto, an open-source scientific and technical publishing system that builds on R Markdown.\n\nWorkshop Goals:\n\nUnderstand the power of Quarto for reproducible reporting.\nLearn to create dynamic HTML presentations.\nBuild and customize a personal or project website.\nGain confidence in using Quarto for your own projects."
+    "section": "",
+    "text": "This workshop will teach you how to create professional presentations and websites using Quarto, an open-source scientific and technical publishing system that builds on R Markdown.\n\nWorkshop Goals:\n\nUnderstand the power of Quarto for reproducible reporting.\nLearn to create dynamic HTML presentations.\nBuild and customize a personal or project website.\nGain confidence in using Quarto for your own projects."
   },
   {
     "objectID": "slides/part1_overview.html#who-we-are",
@@ -1827,5 +1824,19 @@
     "title": "Part 2: Quarto Introduction",
     "section": "Numbered lists",
     "text": "Numbered lists\n\n\nText in editor:\n\n\n\n\n\n\nOutput:"
+  },
+  {
+    "objectID": "slides/part1_overview.html",
+    "href": "slides/part1_overview.html",
+    "title": "Part 1: Workshop Overview",
+    "section": "",
+    "text": "This workshop will teach you how to create professional presentations and websites using Quarto, an open-source scientific and technical publishing system that builds on R Markdown.\n\nWorkshop Goals:\n\nUnderstand the power of Quarto for reproducible reporting.\nLearn to create dynamic HTML presentations.\nBuild and customize a personal or project website.\nGain confidence in using Quarto for your own projects."
+  },
+  {
+    "objectID": "slides/part1_overview.html#topics",
+    "href": "slides/part1_overview.html#topics",
+    "title": "Part 1: Workshop Overview",
+    "section": "Topics",
+    "text": "Topics"
   }
 ]
