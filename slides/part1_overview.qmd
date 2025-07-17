@@ -102,11 +102,11 @@ This workshop will teach you how to create professional presentations and websit
 <br>
 
 * Thurs, July 17: 1:00 pm - 2:30 pm
-    * Part 1
-    * Begin Part 2 (Presentations)
+    * Part 1 (Overview)
+    * Part 2 (Intro)
 * Tues, July 22: 1:00 pm - 2:30 pm
-    * Finish Part 2 (Presentations)
-    * Part 3 (Websites)
+    * Part 3 (Presentations)
+    * Part 4 (Websites)
 
 
 <br>
