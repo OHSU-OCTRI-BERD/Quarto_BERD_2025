@@ -47,6 +47,23 @@ theme_set(theme_bw(base_size = 22))
 ```
 
 
+# Outline
+
+* Create & render a Quarto file 
+* 3 types of Quarto content: 
+    + *Text editing*
+        - Formatting text; visual editor
+        - Headers
+        - Lists
+        - Hyperlinks
+        - Images
+        - Tabsets
+        - Callout Blocks
+        - Tables
+        - Equations with LaTeX
+    + Code chunks & options
+    + YAML metadata 
+
 # Basic Quarto example
 
 ![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../images/horst_quarto_moon_penguins.png){fig-align="center"}
