@@ -55,7 +55,7 @@ This seminar is intended for R and RStudio users. Participants will need to brin
 
 ::: {.column width="10%"}
 
-<img src="/images/web/ohsu_logo.jpg" width="60px"/>
+<img src="/images/ohsu_logo.jpg" width="60px"/>
 :::
 
 ::: {.column width="90%"}

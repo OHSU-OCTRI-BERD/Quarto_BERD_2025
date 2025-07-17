@@ -7,7 +7,7 @@ website:
   navbar:
     background: primary
     foreground: "#ffffff"
-    logo: "/images/web/cat_laptop.gif"
+    logo: "/images/cat_laptop.gif"
     search: true
     collapse-below: sm
     left:

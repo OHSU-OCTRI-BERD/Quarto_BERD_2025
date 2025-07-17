@@ -138,6 +138,10 @@ html output\
 :::
 :::
 
+# Download .qmd file with code from slides
+
+
+
 # 3 types of Quarto content: text
 
 1. [*Text*, lists, images, tables, links]{style="color:darkorange"}
@@ -265,69 +269,203 @@ in order for the header to work properly.
 Text in editor:
 
 
-![](../images/screenshot_unnumbered_lists_code.png){fig-align="center" height="70%"}
-:::
-                                          
-::: {.column width="50%"}
-::: {style="font-size: 75%;"}
+<!-- ![](../images/screenshot_unnumbered_lists_code.png){fig-align="center" height="70%"} -->
+
+```qmd
 * This is an **unnumbered list**
   + with *sub-items*
       - and *sub-sub-items*,
           - or even deeper.
-* You can use characters *, +, and - to create lists.
+- You can use characters *, +, and - interchangeably to create lists.
   * The order of the 
-      * characters is not important
-          + and characters can be repeated.
+      * character types is not important
+      + and character types can be repeated.
 
 What *is* important is the *spacing*!
 
 + indent each 
   * sub-level with a tab and make sure  
-  * there is a space between the character starting the list and the first bit of text,
-  *otherwise the text won't be a new bullet in the list
+  * there is a __space between the character starting the list and the first bit of text__,
+  *otherwise the text won't be a new bullet in the list, such as this line.
+  
+Also, if you do not have an empty line 
++ before starting a list, 
++ then the output will be continuous text 
+- instead of bullet points.
+```
+
+:::
+                                          
+::: {.column width="50%"}
+::: {style="font-size: 70%;"}
+* This is an **unnumbered list**
+  + with *sub-items*
+      - and *sub-sub-items*,
+          - or even deeper.
+- You can use characters *, +, and - interchangeably to create lists.
+  * The order of the 
+      * character types is not important
+      + and character types can be repeated.
+
+What *is* important is the **spacing**!
+
++ indent each 
+  * sub-level with a tab and make sure  
+  * there is a __space between the character starting the list and the first bit of text__,
+  *otherwise the text won't be a new bullet in the list, such as this line.
+  
+Also, if you do not have an empty line 
++ before starting a list, 
++ then the output will be continuous text 
+- instead of bullet points.
 :::
 
 :::
 :::
-
 
 ## Numbered lists
 
 ::: {.columns}
+                                       
+::: {.column width="60%"}
+``` qmd
+1. This is a **Numbered list**,
+2. which can have
+    i. sub
+    ii. items
+        a. and 
+        b. sub-sub-items.
+```
+:::
+                                          
+::: {.column width="40%"}
+::: {style="font-size: 70%;"}
+1. This is a **Numbered list**,
+2. which can have
+    i. sub
+    ii. items
+        a. and 
+        b. sub-sub-items.
+:::
+:::
+:::
+
+::: {.columns}
+                                       
+::: {.column width="60%"}
+``` qmd
+You can also 
+
+1. create numbered lists
+1. by repeating 
+1. `1.` over and over again.
+    i. Each bullet
+    i. can start with 
+    i. `1.` or `i.` 
+        a. or `a.`,
+        a. in theory...
+
+When lists get interrupted
+
+1. the numbering restarts 
+1. at 1. though.
+
+```
+:::
+                                          
+::: {.column width="40%"}
+::: {style="font-size: 70%;"}
+You can also 
+
+1. create numbered lists
+1. by repeating 
+1. `1.` over and over again.
+    i. Each bullet
+    i. can start with 
+    i. `1.` or `i.` 
+        a. or `a.`,
+        a. in theory...
+
+When lists get interrupted
+
+1. the numbering restarts 
+1. at 1. though.
+:::
+:::
+:::
+
+
+
+::: {.columns}
+                                       
+::: {.column width="60%"}
+``` qmd
+To create a list
+
+(@) whose numbering
+
+does not
+
+(@) get interrupted,
+(@) use `(@)`.
+```
+:::
+                                          
+::: {.column width="40%"}
+::: {style="font-size: 70%;"}
+To create a list
+
+(@) whose numbering
+
+does not
+
+(@) get interrupted,
+(@) use `(@)`.
+:::
+:::
+:::
+
+
+
+## To-do lists
+
+* You can also create _tasks_, or to-do lists, with Quarto.
+* Note that you can check off boxes in the slides!
+
+::: {.columns}
+                                        
 ::: {.column width="50%"}
 Text in editor:
 
-![](../images/screenshot_numbered_lists_code.png){fig-align="center" height="60%"}
+```qmd
+Topics to cover:
+
+- [x] Formatting text
+- [x] Headers
+- [ ] Lists
+    - [x] Unnumbered lists
+    - [x] Numbered lists
+    - [ ] To-do lists
+- [ ] Hyperlinks
+- [ ] Images
+```
 :::
                                           
 ::: {.column width="50%"}
-Output:
+::: {style="font-size: 85%;"}
+Topics to cover:
 
-![](../images/screenshot_numbered_lists_out.png){fig-align="center" height="60%"}
-
-<!-- 1. This is a **Numbered list** -->
-<!--   i) with *sub-items* -->
-<!--       A. and *sub-sub-items*, -->
-<!--           1. or even deeper. -->
-<!-- 2. You can also nest  -->
-<!--   * unnumbered lists  -->
-<!--       * inside numbered lists -->
-<!-- 3. Since  -->
-<!--   a. sub-items can't be lettered. -->
-
-<!-- A cool feature is that -->
-<!-- 1. you can start   -->
-<!-- 1. each numbered bullet  -->
-<!-- 1. with 1. -->
-<!-- 1.just remember to  -->
-<!-- *include the space after the period!*   -->
+- [x] Formatting text
+- [x] Headers
+- [ ] Lists
+    - [x] Unnumbered lists
+    - [x] Numbered lists
+    - [ ] To-do lists
+- [ ] Hyperlinks
+- [ ] Images
 :::
-
 :::
-
-
-
-
+:::
 
 ## Practice 
 
@@ -350,11 +488,378 @@ Output:
 
 :::
 
+
+
+## Hyperlinks 
+
++ __Hyperlink where the url is visible: `<url>`__
+
+```qmd
+Workshop website link: <https://ohsu-octri-berd.github.io/Quarto_BERD_2025/>.
+```
+
+Workshop website link: <https://ohsu-octri-berd.github.io/Quarto_BERD_2025/>.
+
+
++ __Hyperlink showing text instead of the url: `[text](url)`__
+
+```qmd
+We also have a shortened [bitly link](https://bit.ly/berd2025_quarto).
+```
+We also have a shortened [bitly link](https://bit.ly/berd2025_quarto).
+
++ __Open link in a new tab: `[text](url){target="_blank"}`__
+
+```qmd
+This link will open in a new tab  
+[bitly link](https://bit.ly/berd2025_quarto){target="_blank"}
+```
+
+This link will open in a new tab [bitly link](https://bit.ly/berd2025_quarto){target="_blank"}
+
+
+## Images (1/2)
+
+Add an image with a simple `![](filepath)`
+
+``` qmd
+![](/images/cat_laptop.gif)
+```
+
+::::: columns
+::: {.column width="30%"}
+
+
+![](/images/cat_laptop.gif)
+:::
+
+::: {.column width="70%"}
+::: {style="font-size: 85%;"}
+You can add html image options to change the width or height:
+
+Specifying *width* in terms of __pixels__:
+``` qmd
+![](/images/cat_laptop.gif){width="100"}
+```
+
+![](/images/cat_laptop.gif){width="100"}
+Specifying *height* in __inches__:
+``` qmd
+![](/images/cat_laptop.gif){height="2in"}
+```
+
+![](/images/cat_laptop.gif){height="2in"}
+
+Specifying *width* as a __percent__ of the original image size:
+``` qmd
+![](/images/cat_laptop.gif){width="50%"}
+```
+
+![](/images/cat_laptop.gif){width="50%"}
+:::
+:::
+:::::
+
+## Images (2/2) 
+
+Add captions, links, and align
+
+-  Add caption text (& align left):
+
+``` qmd
+![Caption text](/images/ohsu_logo.jpg){width="100" fig-align="left"}
+```
+
+![Caption text](/images/ohsu_logo.jpg){width="100" fig-align="left"}
+
+-  Add caption text that is linked to OHSU webpage (& align center):
+
+``` qmd
+![[Caption text with linked url](https://www.ohsu.edu){target="_blank"}]
+(/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}
+```
+
+![[Caption text with linked url](https://www.ohsu.edu){target="_blank"}](/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}
+
+
+-  Logo image itself is linked to OHSU webpage (& align right):
+
+``` qmd
+[![](/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo"  
+fig-align="right"}](https://www.ohsu.edu){target="_blank"}
+```
+
+[![](/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="right"}](https://www.ohsu.edu){target="_blank"}
+
+
+
+## Tabsets
+::: {style="font-size: 85%;"}
+You can add tabbed content to webpages or slides using the standard Quarto syntax for [tabsets.](https://quarto.org/docs/output-formats/html-basics.html#tabsets){target="_blank"} For example:
+::: 
+
+
+::: {.columns}
+                                       
+::: {.column width="50%"}
+``` qmd
+::: {.panel-tabset}
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+
+### Tab C
+
+Content for `Tab C`
+:::
+```
+
+:::
+                                          
+::: {.column width="50%"}
+
+- Each header creates a new tab. 
+    - The header level (`#` vs `##` vs `###`, etc.) doesn't matter, but they all have to be the same level to create new tabsets.
+    - Here we used `###` level header so that the tabset appears nested within the contents of the slide, which is `##` level.
+- See the next slide for the rendered output of the tabset code above.
+
+
+:::
+:::
+
+
+## Tabsets - Rendered
+
+Below is the rendered output of the tabset code on the previous slide:
+
+::: {.panel-tabset}
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+
+### Tab C
+
+Content for `Tab C`
+:::
+
+
+## Callout Blocks ⚠️ (1/2)
+
+::::::: columns
+::: {.column width="50%"}
+``` qmd
+::: callout-tip
+Callouts are an excellent way to 
+draw attention to specific 
+pieces of information.
+:::
+
+::: {.callout-note}
+They are especially useful for 
+notes, warnings, or tips.
+:::
+
+::: {.callout-important}
+You create them using fenced 
+divs `:::` with a special class.
+:::
+
+```
+:::
+
+::::: {.column width="50%"}
+
+::: callout-tip
+Callouts are an excellent way to draw attention to specific pieces of information.
+:::
+
+::: {.callout-note}
+They are especially useful for notes, warnings, or tips.
+:::
+
+::: {.callout-important}
+You create them using fenced divs `:::` with a special class.
+:::
+
+:::::
+:::::::
+
+
+
+::::::: columns
+::: {.column width="50%"}
+``` qmd
+::: callout-caution
+There are 5 types of callouts.
+:::
+
+::: callout-warning
+It is tempting to overdo it 
+with callout boxes!
+:::
+```
+:::
+
+::::: {.column width="50%"}
+::: callout-caution
+There are 5 types of callouts.
+:::
+
+::: callout-warning
+It is tempting to overdo it with callout boxes!
+:::
+:::::
+:::::::
+
+
+
+## Callout Blocks ⚠️ (2/2)
+
+:::::::: columns
+::: {.column width="50%"}
+``` qmd
+::: {.callout-tip}
+## Tip with different title
+
+You can change the title of any 
+type of callout box by adding 
+`## New title` right below the 
+first line of the callout. 
+:::
+
+::: {.callout-note icon=false}
+You can omit the icon of any type 
+of callout box by adding 
+`icon=false` within the `{}` of 
+the first line of the callout. 
+:::
+```
+:::
+
+:::::: {.column width="50%"}
+::: {.callout-tip}
+## Tip with different title
+
+You can change the title of any type of callout box by adding `## New title` right below the first line of the callout. 
+:::
+
+::: {.callout-note icon=false}
+You can omit the icon of any type of callout box by adding `icon=false` within the `{}` of the first line of the callout. 
+:::
+::::::
+::::::::
+
+
+
+:::::::: columns
+::: {.column width="50%"}
+``` qmd
+::: {.callout-caution collapse="true"}
+## Callouts can be collapsed in 
+html files (not in slides - yet)
+
+If you look at the html file 
+(not the slides), you will see 
+that the content of this callout 
+is "folded" and needs to be expanded 
+by the user to see it. 
+* Use `collapse="true"` if you want it 
+collapsed by default, and 
+* `collapse="false"` to make it 
+expanded by default.
+:::
+```
+:::
+
+:::::: {.column width="50%"}
+::: {.callout-caution collapse="true"}
+## Callouts can be collapsed in html files (not in slides - yet)
+
+* If you look at the html file (not the slides), you will see that the content of this callout is "folded" and needs to be expanded by the user to see it. 
+* Use `collapse="true"` if you want it collapsed by default, and 
+* `collapse="false"` to make it expanded by default.
+:::
+::::::
+::::::::
+
+Learn more about callout blocks at <https://quarto.org/docs/authoring/callouts.html>{target="_blank"}
+
+
+## Tables
+
+One benefit of using or switching over to the Visual editor is that it is much easier to add tables.
+
+::::: columns
+::: {.column width="50%"}
+``` qmd
+| Name    | Date     | Measure |
+|---------|----------|---------|
+| Jessica | 02/04/25 | 9.3     |
+| Meike   | 01/03/25 | 10.1    |
+| BERD    |    🐦    | 10.5    |
+```
+:::
+
+::: {.column width="50%"}
+| Name    | Date     | Measure |
+|---------|----------|---------|
+| Jessica | 02/04/25 | 9.3     |
+| Meike   | 01/03/25 | 10.1    |
+| BERD    |   🐦     | 10.5    |
+:::
+:::::
+
+::: {.callout-important}
+* When creating tables summarizing data or showing regression output, this is NOT the way to create them.  
+* Use code chunks and table options within R to create them instead. 
+:::
+
+
+::: footer
+Learn more at [Quarto Docs: Tables](https://quarto.org/docs/authoring/tables.html){target="_blank"}
+:::
+
+## Equations with LaTeX
+
+* __Mathematical equations and symbols__ can be included using LaTeX, both as *inline equations* or *centered display equations*
+
+``` qmd
+* Use single `$` for inline equations: $y=\beta_0 + \beta_1x + \varepsilon$
+```
+
+* Use single `$` for inline equations: $y=\beta_0 + \beta_1x + \varepsilon$
+
+``` qmd
+* Use double `$$` for centered display equations:
+  
+$$\hat{y}= \frac{3}{7} +  5 \textrm{age} + 3^2 \cdot \textrm{height}$$ 
+```
+
+
+* Use double `$$` for centered display equations:
+  
+$$\hat{y}= \frac{3}{7} +  5 \textrm{age} + 3^2 \cdot \textrm{height}$$ 
+
+::: footer
+Learn more at [Markdown Basics: Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations){target="_blank"}
+:::
+
+
+
+
 # 3 types of Quarto content: code
 
-1. Text, lists, images, tables, links
-2. [*Code chunks*]{style="color:darkorange"}
-3. YAML metadata 
+- [x] 1. Text, lists, images, tables, links
+- [ ] 2. [*Code chunks*]{style="color:darkorange"}
+- [ ] 3. YAML metadata 
 
 ![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_text_code.png){fig-align="center"}
 
@@ -366,7 +871,7 @@ Output:
 :::
 
 ::: {.column width="50%"}
-html output\
+html output
 ![](../images/default_quarto_html.png){fig-align="center"}
 :::
 :::
@@ -474,12 +979,115 @@ y <- 5
 y
 ```
 
+## Code chunk options
+
+::: {.panel-tabset}
+### `eval`
+
+* __`eval`__ determines whether the R code is __run__ or not. 
+* The default is `true`. 
+* When set to `false`, the code is not run but still displayed in the output:
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+`#| eval: true`
+
+```{r}
+#| echo: fenced
+#| eval: true
+
+y <- 1:10
+mean(y)
+```
+:::
+                                          
+::: {.column width="50%"}
+
+`#| eval: false`
+```{r}
+#| echo: fenced
+#| eval: false
+
+y <- 1:10
+mean(y)
+```
+:::
+:::
+
+
+
+
+
+### `echo`
+
+
+* __`echo`__ determines whether the R code is __displayed__ or not. 
+* The default is `true`. When set to `false`, the code is not displayed in the output but the output is (if `eval` is set to `true`):
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+`#| echo: true`
+
+Code chunk:
+
+![](../images/chunk_option_echo_true.png){fig-align="left"}
+
+Output:
+
+```{r}
+#| echo: true
+
+y <- 1:10
+mean(y)
+```
+
+:::
+                                          
+::: {.column width="50%"}
+
+`#| echo: false`
+
+
+Code chunk:
+
+![](../images/chunk_option_echo_false.png){fig-align="left"}
+
+Output:
+
+```{r}
+#| echo: false
+
+y <- 1:10
+mean(y)
+```
+:::
+:::
+
+
+### Other options
+
+* `warning`: do you want R's warnings include in your output?
+* `message`: do you want R's messages include in your output?
+
+For a complete list of options, see the Quarto reference page for [Code Cells: Knitr](https://quarto.org/docs/reference/cells/cells-knitr.html). In particular the sections on [Code Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output) and [Cell Output](https://quarto.org/docs/reference/cells/cells-knitr.html#cell-output).
+
+### Set options globally
+
+* Usually you want most of your document to have the same code chunk options.
+* You can set these options in the YAML of the Quarto file (next topic!). 
+
+:::
+
 
 # 3 types of Quarto content: YAML
 
-1. Text, lists, images, tables, links
-2. Code chunks
-3. [*YAML metadata*]{style="color:darkorange"} 
+- [x] 1. Text, lists, images, tables, links
+- [x] 2. Code chunks
+- [ ] 3. [*YAML metadata*]{style="color:darkorange"} 
 
 ![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_text_code.png){fig-align="center"}
 

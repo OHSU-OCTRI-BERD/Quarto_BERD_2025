@@ -1,0 +1,461 @@
+---
+title: "Part 2: Quarto Introduction"
+subtitle: "OCTRI-BERD Workshop July 2025"
+author: "Jessica Minnier, Meike Niederhausen"
+date: "7/17/25"
+format:
+  revealjs
+---
+
+This file contains just the code from the __Part 2: Quarto Introduction__ slides. Please see the [slides](https://ohsu-octri-berd.github.io/Quarto_BERD_2025/slides/part2_intro.html#/title-slide) for context and more detailed information.
+
+
+# 3 types of Quarto content: text
+
+1. [*Text*, lists, images, tables, links]{style="color:darkorange"}
+2. Code chunks
+3. YAML metadata 
+
+
+## Formatting text  
+
+*This text is in italics*, but _so is this text_.
+
+**Bold** also has __2 options__
+
+~~Should this be deleted?~~
+
+Need^super^ or~sub~ scripts?
+
+`Code is often formatted as verbatim`
+
+> This is a block quote.
+
+
+
+## Headers
+
+Organize your documents using headers to create sections and subsections
+
+Use `#` at the beginning of the line to create headers
+
+Make sure there is no space before the `#`, and there IS a space after the `#` in order for the header to work properly.
+
+Above we already saw level one `#` and two `##` headers be used.  
+Below are more levels of headers:
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+
+
+## Unnumbered lists
+
+
+* This is an **unnumbered list**
+  + with *sub-items*
+      - and *sub-sub-items*,
+          - or even deeper.
+- You can use characters *, +, and - interchangeably to create lists.
+  * The order of the 
+      * character types is not important
+      + and character types can be repeated.
+
+What *is* important is the **spacing**!
+
++ indent each 
+  * sub-level with a tab and make sure  
+  * there is a __space between the character starting the list and the first bit of text__,
+  *otherwise the text won't be a new bullet in the list, such as this line.
+  
+Also, if you do not have an empty line 
++ before starting a list, 
++ then the output will be continuous text 
+- instead of bullet points.
+
+
+## Numbered lists
+
+
+1. This is a **Numbered list**,
+2. which can have
+    i. sub
+    ii. items
+        a. and 
+        b. sub-sub-items.
+
+You can also 
+
+1. create numbered lists
+1. by repeating 
+1. `1.` over and over again.
+    i. Each bullet
+    i. can start with 
+    i. `1.` or `i.` 
+        a. or `a.`,
+        a. in theory...
+
+When lists get interrupted
+
+1. the numbering restarts 
+1. at 1. though.
+
+To create a list
+
+(@) whose numbering
+
+does not
+
+(@) get interrupted,
+(@) use `(@)`.
+
+
+## To-do lists
+
+* You can also create _tasks_, or to-do lists, with Quarto.
+* Note that you can check off boxes in the slides!
+
+Topics to cover:
+
+- [x] Formatting text
+- [x] Headers
+- [ ] Lists
+    - [x] Unnumbered lists
+    - [x] Numbered lists
+    - [ ] To-do lists
+- [ ] Hyperlinks
+- [ ] Images
+
+
+## Practice 
+
+
+1.  __Part 1__
+    1.  Using the visual editor, practice formatting text in your qmd file, such as making text **bold**, *italicized*, and in `code` format.
+    2.  Add 1^st^, 2^nd^, and 3^rd^ level headers
+    3.  Add a list with a
+        -   sub-list (bullet and/or numbered)
+    4.  Add a table
+    5.  Add whatever else you are interested in!
+2.  __Part 2__
+    1.  Switch back to the `Source` editor and examine the markdown code that was used for the formatting.
+
+**Questions**:  _Share in the chat:_
+
+1.  What went smoothly?
+2.  What hurdles did you encounter?
+
+
+
+## Hyperlinks 
+
++ __Hyperlink where the url is visible: `<url>`__
+
+Workshop website link: <https://ohsu-octri-berd.github.io/Quarto_BERD_2025/>.
+
+
++ __Hyperlink showing text instead of the url: `[text](url)`__
+
+We also have a shortened [bitly link](https://bit.ly/berd2025_quarto).
+
++ __Open link in a new tab: `[text](url){target="_blank"}`__
+
+
+This link will open in a new tab [bitly link](https://bit.ly/berd2025_quarto){target="_blank"}
+
+
+## Images (1/2)
+
+* Add an image with a simple `![](filepath)`
+* The `filepath` can be an image on your computer or a url for an image on the web. 
+* So that you can render this html file, we are using an image on the web below:
+
+![](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/web/cat_laptop.gif?raw=true)
+
+You can add html image options to change the width or height:
+
+Specifying *width* in terms of __pixels__:
+
+
+![](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/web/cat_laptop.gif?raw=true){width="100"}
+Specifying *height* in __inches__:
+
+![](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/web/cat_laptop.gif?raw=true){height="2in"}
+
+Specifying *width* as a __percent__ of the original image size:
+
+![](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/web/cat_laptop.gif?raw=true){width="50%"}
+
+
+## Images (2/2) 
+
+Add captions, links, and align
+
+-  Add caption text (& align left):
+
+
+![Caption text](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/ohsu_logo.jpg?raw=true){width="100" fig-align="left"}
+
+-  Add caption text that is linked to OHSU webpage (& align center):
+
+
+![[Caption text with linked url](https://www.ohsu.edu){target="_blank"}](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/ohsu_logo.jpg?raw=true){width="100" fig-alt="OHSU Logo" fig-align="center"}
+
+
+-  Logo image itself is linked to OHSU webpage (& align right):
+
+[![](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/images/ohsu_logo.jpg?raw=true){width="100" fig-alt="OHSU Logo" fig-align="right"}](https://www.ohsu.edu){target="_blank"}
+
+
+
+## Tabsets
+
+You can add tabbed content to webpages or slides using the standard Quarto syntax for [tabsets.](https://quarto.org/docs/output-formats/html-basics.html#tabsets){target="_blank"} 
+
+
+- Each header creates a new tab. 
+    - The header level (`#` vs `##` vs `###`, etc.) doesn't matter, but they all have to be the same level to create new tabsets.
+    - Here we used `###` level header so that the tabset appears nested within the contents of the slide, which is `##` level.
+
+
+::: {.panel-tabset}
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+
+### Tab C
+
+Content for `Tab C`
+:::
+
+
+## Callout Blocks ⚠️ 
+
+
+::: callout-tip
+Callouts are an excellent way to draw attention to specific pieces of information.
+:::
+
+::: {.callout-note}
+They are especially useful for notes, warnings, or tips.
+:::
+
+::: {.callout-important}
+You create them using fenced divs `:::` with a special class.
+:::
+
+
+::: callout-caution
+There are 5 types of callouts.
+:::
+
+::: callout-warning
+It is tempting to overdo it with callout boxes!
+:::
+
+
+
+
+### Customizing Callout Blocks ⚠️ 
+
+
+::: {.callout-tip}
+## Tip with different title
+
+You can change the title of any type of callout box by adding `## New title` right below the first line of the callout. 
+:::
+
+::: {.callout-note icon=false}
+You can omit the icon of any type of callout box by adding `icon=false` within the `{}` of the first line of the callout. 
+:::
+
+
+
+
+::: {.callout-caution collapse="true"}
+## Callouts can be collapsed in html files (not in slides - yet)
+
+* If you look at the html file (not the slides), you will see that the content of this callout is "folded" and needs to be expanded by the user to see it. 
+* Use `collapse="true"` if you want it collapsed by default, and 
+* `collapse="false"` to make it expanded by default.
+:::
+
+
+
+## Tables
+
+One benefit of using or switching over to the Visual editor is that it is much easier to add tables.
+
+
+| Name    | Date     | Measure |
+|---------|----------|---------|
+| Jessica | 02/04/25 | 9.3     |
+| Meike   | 01/03/25 | 10.1    |
+| BERD    |   🐦     | 10.5    |
+
+
+::: {.callout-important}
+* When creating tables summarizing data or showing regression output, this is NOT the way to create them.  
+* Use code chunks and table options within R to create them instead. 
+:::
+
+
+## Equations with LaTeX
+
+* __Mathematical equations and symbols__ can be included using LaTeX, both as *inline equations* or *centered display equations*
+
+
+* Use single `$` for inline equations: $y=\beta_0 + \beta_1x + \varepsilon$
+
+
+* Use double `$$` for centered display equations:
+  
+$$\hat{y}= \frac{3}{7} +  5 \textrm{age} + 3^2 \cdot \textrm{height}$$ 
+
+
+
+# 3 types of Quarto content: code
+
+- [x] 1. Text, lists, images, tables, links
+- [ ] 2. [*Code chunks*]{style="color:darkorange"}
+- [ ] 3. YAML metadata 
+
+
+## Code chunks
+
+* See slides for material on creating and running code chunks. 
+
+
+
+## Code chunk options
+
+::: {.panel-tabset}
+### `eval`
+
+* __`eval`__ determines whether the R code is __run__ or not. 
+* The default is `true`. 
+* When set to `false`, the code is not run but still displayed in the output:
+
+
+`#| eval: true`
+
+```{r}
+#| eval: true
+
+y <- 1:10
+mean(y)
+```
+
+`#| eval: false`
+```{r}
+#| eval: false
+
+y <- 1:10
+mean(y)
+```
+
+
+### `echo`
+
+* __`echo`__ determines whether the R code is __displayed__ or not. 
+* The default is `true`. When set to `false`, the code is not displayed in the output but the output is (if `eval` is set to `true`):
+
+`#| echo: true`
+
+```{r}
+#| echo: true
+
+y <- 1:10
+mean(y)
+```
+
+`#| echo: false`
+
+```{r}
+#| echo: false
+
+y <- 1:10
+mean(y)
+```
+
+
+### Other options
+
+* `warning`: do you want R's warnings include in your output?
+* `message`: do you want R's messages include in your output?
+
+For a complete list of options, see the Quarto reference page for [Code Cells: Knitr](https://quarto.org/docs/reference/cells/cells-knitr.html). In particular the sections on [Code Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output) and [Cell Output](https://quarto.org/docs/reference/cells/cells-knitr.html#cell-output).
+
+### Set options globally
+
+* Usually you want most of your document to have the same code chunk options.
+* You can set these options in the YAML of the Quarto file (next topic!). 
+
+:::
+
+
+# 3 types of Quarto content: YAML
+
+- [x] 1. Text, lists, images, tables, links
+- [x] 2. Code chunks
+- [ ] 3. [*YAML metadata*]{style="color:darkorange"} 
+
+See the slides for information about the YAML.
+
+## Change the output file type 
+
+* The YAML specifies the format of the output file:
+    * html, Word, pdf, slides, website, book, etc.
+* This is done by changing the `format:` option 
+
+```
+---
+title: "My first Quarto file"
+author: "Meike"
+date: "9/25/2023"
+format: html
+editor: visual
+---
+```
+
++------------------------+----------------------------------+
+| Output format          | YAML                             |
++========================+==================================+
+| html                   | `format: html`                   |
++------------------------+----------------------------------+
+| Word                   | `format: docx`                   |
++------------------------+----------------------------------+
+| pdf[^2]                | `format: pdf`                    |
++------------------------+----------------------------------+
+| html slides            | `format: revealjs`               |
++------------------------+----------------------------------+
+| PPT slides             | `format: pptx`                   |
++------------------------+----------------------------------+
+
+
+[^2]:  pdf requires LaTeX installation 
+
+
+## Practice
+
+* Change the format of the qmd file to __revealjs__ and render the file.
+    * How do the slides look?
+    * What in the code determines when a new slide is created?
+
+* Change the format of the qmd file to __pptx__ and render the file.  
+    * How do the slides look? Which styling options worked and which did not?
+    * What in the code determines when a new slide is created?
+
+* Change the format of the qmd file to __docx__ and render the file.  
+    * How does the Word doc look? Which styling options worked and which did not?
+
+

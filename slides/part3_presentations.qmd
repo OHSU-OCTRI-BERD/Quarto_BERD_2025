@@ -348,23 +348,10 @@ print("This code is hidden by default.")
 
 # More Content Layout
 
-## Lists
-
-You make lists in markdown using `-` or `*` such as:
-
-``` qmd
-- Item 1
-- Item 2
-- Item 3
-```
-
--   Item 1
--   Item 2
--   Item 3
 
 ## Incremental Lists
 
-Lists can optionally be displayed incrementally:
+Lists can be displayed incrementally:
 
 ```qmd
 ::: incremental
@@ -422,41 +409,7 @@ Highlight red
 Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments){target="_blank"}
 :::
 
-## Tabsets
 
-You can add tabbed content to slides using the standard Quarto syntax for [tabsets.](https://quarto.org/docs/output-formats/html-basics.html#tabsets){target="_blank"} For example:
-
-``` qmd
-::: {.panel-tabset}
-
-### Tab A
-
-Content for `Tab A`
-
-### Tab B
-
-Content for `Tab B`
-
-:::
-```
-
-## Tabsets - Rendered
-
-You can add tabbed content to slides using the standard Quarto syntax for [tabsets.](https://quarto.org/docs/output-formats/html-basics.html#tabsets){target="_blank"} For example:
-
-::: panel-tabset
-### Tab A
-
-Content for `Tab A`
-
-### Tab B
-
-Content for `Tab B`
-
-### Tab C
-
-Content for `Tab C`
-:::
 
 # Styling Your Presentation
 
@@ -507,69 +460,7 @@ format:
 
 
 
-## Tables
 
-One benefit of using or switching over to the Visual editor is that it is much easier to add tables.
-
-::::: columns
-::: {.column width="50%"}
-``` qmd
-| Name    | Date     | Measure |
-|---------|----------|---------|
-| Jessica | 02/04/25 | 9.3     |
-| Meike   | 01/03/25 | 10.1    |
-| WNAR    |          | 10.5    |
-```
-:::
-
-::: {.column width="50%"}
-| Name    | Date     | Measure |
-|---------|----------|---------|
-| Jessica | 02/04/25 | 9.3     |
-| Meike   | 01/03/25 | 10.1    |
-| WNAR    |          | 10.5    |
-:::
-:::::
-
-::: footer
-More at [Quarto Docs: Tables](https://quarto.org/docs/authoring/tables.html){target="_blank"}
-:::
-
-## Images
-
-Add an image with a simple `![](filepath.png)`
-
-``` qmd
-![](/images/web/cat_laptop.gif)
-```
-
-::::: columns
-::: {.column width="40%"}
-
-
-![](/images/web/cat_laptop.gif)
-:::
-
-::: {.column width="60%"}
-You can add html image options, such as a smaller width or size:
-
-``` qmd
-![](/images/web/cat_laptop.gif){width="100"}
-```
-
-![](/images/web/cat_laptop.gif){width="100"}
-:::
-:::::
-
-## Image, ctd
-
-These are attributes easily added in the visual editor Insert Image option, including a url link:
-
-``` qmd
-![![OHSU Logo](/images/web/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}](https://www.ohsu.edu)
-```
-
-![[OHSU Logo](https://www.ohsu.edu){target="_blank"}](/images/web/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}
 
 
 
@@ -631,86 +522,7 @@ $presentation-h2-font-size: 1.6em;
 $code-block-font-size: 0.55em;
 ```
 
-## Callout Blocks ⚠️
 
-Callouts are an excellent way to draw attention to specific pieces of information. They are especially useful for notes, warnings, or tips.
-
-You create them using fenced divs with a special class.
-
-::::::: columns
-::: {.column width="50%"}
-``` qmd
-Note
-::: {.callout-note}
-This is a note. Use it for helpful but not critical information.
-:::
-
-Important
-::: {.callout-important}
-This is important. Use it for key information the audience must know.
-:::
-```
-:::
-
-::::: {.column width="50%"}
-Note
-
-::: callout-note
-This is a note. Use it for helpful but not critical information.
-:::
-
-Important
-
-::: callout-important
-This is important. Use it for key information the audience must know.
-:::
-:::::
-:::::::
-
-## Callout Blocks, ctd
-
-:::::::: columns
-::: {.column width="50%"}
-``` qmd
-::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
-:::
-
-::: {.callout-tip}
-## Tip with Title
-
-This is an example of a callout with a title.
-:::
-
-::: {.callout-caution collapse="true"}
-## Expand To Learn About Collapse
-
-This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
-:::
-```
-:::
-
-:::::: {.column width="50%"}
-::: callout-note
-Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
-:::
-
-::: callout-tip
-## Tip with Title
-
-This is an example of a callout with a title.
-:::
-
-::: {.callout-caution collapse="true"}
-## Expand To Learn About Collapse
-
-This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
-:::
-::::::
-::::::::
-
-From <https://quarto.org/docs/authoring/callouts.html>{target="_blank"}
 
 ## Customizing the Title Slide
 
