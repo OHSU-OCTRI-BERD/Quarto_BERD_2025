@@ -142,9 +142,16 @@ install.packages("rmarkdown")
 ```
 
 
-## Poll
+## Poll: What level of experience do you have with R? RMarkdown? Quarto?
 
-What level of experience do you have with R? RMarkdown? Quarto?
+3 options to access the brief poll:
+
+1. Navigate to <https://www.menti.com/alq6v7fr22n2> 
+2. Go to <https://www.menti.com/> and enter code: 5755 9651
+3. Use the QR code below. 
+
+
+![](../images/qrcode_menti.png){fig-align="center"}
 
 
 # Quarto Overview
