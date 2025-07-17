@@ -431,7 +431,7 @@ Jessica Minnier, Meike Niederhausen
 </h5>
 <div class="columns">
 <div class="column" style="width:10%;">
-<p><img src="../images/web/ohsu_logo.jpg" width="60px"></p>
+<p><img src="../images/ohsu_logo.jpg" width="60px"></p>
 </div><div class="column" style="width:45%;">
 <p><img class="circle" src="https://github.com/jminnier.png" height="200px"></p>
 <p>Jessica Minnier</p>
@@ -440,23 +440,12 @@ Jessica Minnier, Meike Niederhausen
 <a href="https:/jessicaminnier.com"><i class="fa-solid fa-link" aria-label="link"></i> jessicaminnier.com</a><br>
 <a href="mailto:minnier@ohsu.edu"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> <code>minnier [at] ohsu [dot] edu</code></a> ]</p>
 </div><div class="column" style="width:45%;">
-<p><img class="circle" src="../images/web/Niederhausen_Meike_bw.jpg" height="200px"></p>
+<p><img class="circle" src="../images/Niederhausen_Meike_bw.jpg" height="200px"></p>
 <p>Meike Niederhausen</p>
 <p><small>Associate Professor of Biostatistics</small></p>
 <p><a href="https://www.linkedin.com/in/meike-niederhausen/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <span class="citation" data-cites="meike-niederhausen">@meike-niederhausen</span></a><br> <a href="https://github.com/niederhausen"><i class="fa-brands fa-github" aria-label="github"></i> <span class="citation" data-cites="niederhausen">@niederhausen</span></a> <br> <a href="https://ohsu-psu-sph.org/faculty-directory/name/meike-niederhausen/"><i class="fa-solid fa-link" aria-label="link"></i> ohsu-psu-sph.org</a><br> <a href="mailto:niederh@ohsu.edu"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> <code>niederha [at] ohsu [dot] edu</code></a></p>
 </div>
 </div>
-</section>
-<section id="introductions" class="slide level2">
-<h2>Introductions</h2>
-<p><br></p>
-<ul>
-<li>Please introduce yourself</li>
-</ul>
-<p><br></p>
-<ul>
-<li>What level of experience do you have with R? RMarkdown? Quarto?</li>
-</ul>
 </section>
 <section id="logistics" class="slide level2">
 <h2>Logistics</h2>
@@ -495,22 +484,52 @@ Jessica Minnier, Meike Niederhausen
 <li><strong>gt</strong>: For creating beautiful tables.</li>
 <li><strong>countdown</strong>: To add timers to your slides.</li>
 </ul>
-<p>If you do not already have <strong>rmarkdown</strong> installed, please install that as well.</p>
+<p>If you do not already have <strong>rmarkdown</strong> installed, please install that as well:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="poll" class="slide level2">
+<h2>Poll</h2>
+<p>What level of experience do you have with R? RMarkdown? Quarto?</p>
 </section>
 <section>
 <section id="quarto-overview" class="title-slide slide level1 center">
 <h1>Quarto Overview</h1>
 
-</section>
+<img data-src="../images/horst_rmarkdown_wizards_quarto.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by @allison_horst</a></p></section>
 <section id="what-is-quarto" class="slide level2">
 <h2>What is Quarto?</h2>
 <p>Quarto is a next-generation version of R Markdown from Posit. It is a powerful tool that allows you to create dynamic documents, presentations, and websites from a single source file.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Key Features:</strong></p>
 <ul>
 <li><strong>Multi-language Support:</strong> Use R, Python, Julia, and Observable JS in the same document.</li>
 <li><strong>Literate Programming:</strong> Combine narrative text with code to create reproducible reports.</li>
 <li><strong>Multiple Outputs:</strong> Generate high-quality output in various formats including HTML, PDF, MS Word, e-books, and more.</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/horst_quarto_schematic.png"></p>
+<figcaption><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork by @allison_horst</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="quarto-.qmd-file-code-text-to-html" class="slide level2">
+<h2>Quarto = <code>.qmd</code> file = Code + text <span class="math inline">\(\to\)</span> html</h2>
+<p><code>.qmd</code> files contain code + markdown syntax which can be “rendered” to other formats (html, pdf, Word, etc)</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>.qmd file <img data-src="../images/01_qmd_screenshot.png" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p>html output<br>
+<img data-src="../images/default_quarto_html.png" data-fig-align="center"></p>
+</div>
+</div>
 </section>
 <section id="why-quarto-for-research" class="slide level2">
 <h2>Why Quarto for Research?</h2>

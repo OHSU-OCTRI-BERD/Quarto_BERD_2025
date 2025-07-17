@@ -54,6 +54,17 @@ If you do not already have **rmarkdown** installed, please install that as well:
 install.packages("rmarkdown")
 ```
 
+## Need an R & RStudio refresher?
+
+* This workshop is intended for people with already some familiarity with R and RStudio. 
+    * However, we will not be focusing on R coding. We will briefly talk about R code chunks and how to create and run them, but only with basic R code. 
+* We are expecting basic familiarity with how to use RStudio, installing packages, and ideally also using projects. 
+* If you would like refreshers on these topics, check out slides from our most recent __[Getting Started in R and Rstudio](https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/title-slide)__ workshop from Sept 19, 2024:
+    * [Intro to R and RStudio](https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/introduction-to-r): slides 4-8
+    * [R packages](https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/r-packages-install-load): slides 23-29
+    * [R projects](https://niederhausen.github.io/BSTA_511_F24/resources/Projects_in_R.html) - from BSTA 511 Fall 2024 class webpage
+
+
 # Publishing webpages online
 
 * If you would like to publish your website online, the quickest way is to use [Quarto Pub](https://quartopub.com/). Use the link to sign up for a free account. 

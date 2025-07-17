@@ -3,15 +3,15 @@ title: "About"
 ---
 
 
-This website and slides were created for the  __[Creating Professional Presentations and Websites using R and Quarto](https://www.ohsu.edu/octri/octri-research-forum-creating-professional-presentations-and-websites-using-r-and-quatro){target="_blank"}__ workshop presented as a part of [OCTRI](https://www.ohsu.edu/octri/octri-research-forum-your-monthly-clinical-and-translational-research-event#accordion-384136-2)'s [BERD](https://www.ohsu.edu/octri/biostatistics-epidemiology-and-research-design) workshop series on R and RStudio on July 17th and 22nd, 2025.
+This website and slides were created for the  __[Creating Professional Presentations and Websites using R and Quarto](https://www.ohsu.edu/octri/octri-research-forum-creating-professional-presentations-and-websites-using-r-and-quatro){target="_blank"}__ workshop presented as a part of [OCTRI](https://www.ohsu.edu/octri/octri-research-forum-your-monthly-clinical-and-translational-research-event#accordion-384136-2){target="_blank"}'s [BERD](https://www.ohsu.edu/octri/biostatistics-epidemiology-and-research-design){target="_blank"} workshop series on R and RStudio on July 17th and 22nd, 2025.
 
-The website structure was set up to be used as an example for demonstrating options when creating websites using Quarto in RStudio. See [Part 3 slides](slides/part3_webpages.qmd) for more information.
+The website structure was set up to be used as an example for demonstrating options when creating websites using Quarto in RStudio. See [Part 3 slides](slides/part3_webpages.qmd){target="_blank"} for more information.
 
 ## Workshop Abstract
 
 This two-part workshop aims to teach statisticians, data scientists, and those in allied fields to create professional style presentations and websites in R and RStudio using the recently developed Quarto package. This package is an extension of RMarkdown and most often used for literate programming reports that incorporate code from R and other programming languages with text, graphs, and results. However, this powerful package can create much more than just an analysis report. This workshop will teach R users who may be novices in Quarto about the other useful applications of Quarto, specifically how to build websites for their professional profiles as well as courses, and how to make presentations for talks and teaching. Quarto presentations can include code and results within slides as well as harness useful presentation tools such as annotations, outlines, notes, etc. Presentations can be formatted as html (Reveal JS), PowerPoint, or LaTeX Beamer slides.
 
-This seminar is intended for R and RStudio users. Participants will need to bring laptops with R and RStudio installed, and will receive instructions prior to the course to install required R packages.  Example website and presentations can be found at <https://niederhausen.github.io/BSTA_511_F24/>
+This seminar is intended for R and RStudio users. Participants will need to bring laptops with R and RStudio installed, and will receive instructions prior to the course to install required R packages.  Example website and presentations can be found at [https://niederhausen.github.io/BSTA_511_F24/](https://niederhausen.github.io/BSTA_511_F24/){target="_blank"}
 
 ## Instructors
 

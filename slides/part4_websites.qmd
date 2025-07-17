@@ -1,6 +1,6 @@
 ---
-title: "Part 3: Creating Websites with Quarto"
-pagetitle: "Part 3: Creating Websites with Quarto"
+title: "Part 4: Creating Websites with Quarto"
+pagetitle: "Part 4: Creating Websites with Quarto"
 subtitle: "OCTRI-BERD Workshop July 2025"
 author: "Jessica Minnier, Meike Niederhausen"
 institute: "OHSU-PSU School of Public Health"

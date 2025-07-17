@@ -1,0 +1,587 @@
+---
+title: "Part 2: Quarto Introduction"
+pagetitle: "Part 2: Quarto Introduction"
+subtitle: "OCTRI-BERD Workshop July 2025"
+author: "Jessica Minnier, Meike Niederhausen"
+institute: "OHSU-PSU School of Public Health"
+date: "7/17/25"
+format: 
+  revealjs:
+      incremental: false
+      scrollable: true
+      chalkboard: true
+      theme: [../sky_modified.scss]
+      width:  1050 #default 1050
+      height: 700 #default 700
+      slide-number: true
+      html-math-method: mathjax
+  # html:
+  #   link-external-newwindow: true
+  #   toc: true
+bibliography: ../references.bib
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)    
+library(gt)
+library(palmerpenguins)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+```
+
+
+# Basic Quarto example
+
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../images/horst_quarto_moon_penguins.png){fig-align="center"}
+
+## 1. Create a Quarto file (`.qmd`)
+
+**Two options:**
+
+1.  click on File $\rightarrow$ New File $\rightarrow$ Quarto Document...$\rightarrow$ OK,
+2.  or in upper left corner of RStudio click on ![](../images/green_plus_create_file.png){width="70"} $\rightarrow$ ![](../images/select_quarto_option.png){width="250"}
+
+::: columns
+::: {.column width="50%"}
+**Pop-up window selections:**
+
+-   Enter a title and your name
+-   Select `HTML` output format (default)
+-   Engine: select `Knitr`
+-   Editor: Select `Use visual markdown editor`
+-   Click `Create`
+:::
+
+::: {.column width="50%"}
+![](../images/01_qmd_screenshot_popup.png){width=90%}
+:::
+:::
+
+## 2. Create a Quarto file (`.qmd`)
+
+-   After clicking on `Create`, you should then see the following in your editor window:
+
+![](../images/01_qmd_screenshot.png){fig-align="center"}
+
+## 3. Save the Quarto file (`.qmd`)
+
+-   **Save the file** by
+    -   selecting `File -> Save`,
+    -   or clicking on ![](../images/01_Script_Save.png){width="33" height="24"} (towards the left above the scripting window),
+    -   or keyboard shortcut
+        -   PC: *Ctrl + s*
+        -   Mac: *Command + s*
+-   You will need to specify
+    -   a **filename** to save the file as
+        -   ALWAYS use **.qmd** as the filename extension for Quarto files
+    -   the **folder** to save the file in
+
+## 4. Create (render) html file
+
+We create the html file by **rendering** the .qmd file.
+
+__Two options:__
+
+::: {.columns}
+                                        
+::: {.column width="49%"}
+1.  Click on the Render icon ![](../images/render_icon.png) at the top of the editor window,
+:::
+
+::: {.column width="2%"}
+
+:::
+                                          
+::: {.column width="49%"}
+2.  Or use keyboard shortcuts
+    -   Mac: *Command+Shift+K*
+    -   PC: *Ctrl+Shift+K*
+:::
+                                          
+:::
+
+-   A new window will open with the html output.
+-   You will now see both .qmd and .html files in the folder where you saved the .qmd file.
+
+::: callout-note
+-   The template .qmd file that RStudio creates will render to an html file by default.
+-   The output format can be changed to create a Word doc, pdf, slides, etc.
+:::
+
+## .qmd file vs. its html output
+
+::: columns
+::: {.column width="50%"}
+.qmd file ![](../images/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output\
+![](../images/default_quarto_html.png){fig-align="center"}
+:::
+:::
+
+# 3 types of Quarto content: text
+
+1. [*Text*, lists, images, tables, links]{style="color:darkorange"}
+2. Code chunks
+3. YAML metadata 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_text_code.png){fig-align="center"}
+
+## Formatting text  
+
+* __bold__, _italics_, super^scripts^ & sub~scripts~, ~~strikethrough~~, `verbatim`, etc. \
+\
+
+
+* Text is formatted through a markup language called `Markdown` ([Wikipedia](https://en.wikipedia.org/wiki/Markdown){target="_blank"})
+    * Other markup languages include html (webapges) and LaTeX (math)
+    * All text formatting is specified via *code*
+    * "Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read" [^1]
+* Newer versions of RStudio include a `Visual editor` as well that makes formatting text similar to using a word processor. 
+
+
+![](../images/visual_editor_quarto.png){fig-align="center"}
+
+[^1]: From Quarto's Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html
+
+## Formatting text: `Visual editor`  {.smaller}
+
+* Using the `Visual editor` is similar to using a wordprocessor, such as Word
+* Keyboard shortcuts usually work as well (_shown for Mac below_)
+
+![](../images/visual_editor_options_expanded_quarto.png){fig-align="center"}
+
+
+## Formatting text: `Markdown` 
+
++---------------------------------------------------+---------------------------------------------------+
+| Markdown:                                         | Output:                                           |
++===================================================+===================================================+
+| ```                                               | *This text is in italics*, but _so is this text_. |
+| *This text is in italics*, but _so is this text_. |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | **Bold** also has __2 options__                   |
+| **Bold** also has __2 options__                   |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | ~~Should this be deleted?~~                       |
+| ~~Should this be deleted?~~                       |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | Need^super^ or~sub~ scripts?                      |
+| Need^super^ or~sub~ scripts?                      |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | `Code is often formatted as verbatim`             |
+| `Code is often formatted as verbatim`             |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | > This is a block quote.                          |
+| >This is a block quote.                           |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+
+
+<!-- : {tbl-colwidths="\[50,50\]"} -->
+
+
+## Headers
+
+::: {style="font-size: 85%;"}
+* Organize your documents using headers to create sections and subsections
+* Use `#` at the beginning of the line to create headers
+:::
+
+::: columns
+::: {.column width="50%"}
+Text in editor:
+
+![](../images/screenshot_headers.png){fig-align="center" height="300"}
+
+:::
+
+::: {.column width="50%"}
+Output:
+
+![](../images/screenshot_headers_out.png){fig-align="center" height="300"}
+
+<!-- # Header 1 -->
+
+<!-- ## Header 2 -->
+
+<!-- ### Header 3 -->
+
+<!-- #### Header 4 -->
+
+<!-- ##### Header 5 -->
+
+<!-- ###### Header 6 -->
+
+:::
+:::
+
+
+:::{.callout-important}
+Make sure there is no space before the `#`, and there IS a space after the `#`
+in order for the header to work properly.
+:::
+
+
+
+## Outline of headers in RStudio 
+
+
+* You can easily navigate through your .qmd file if you use headers to outline your text.
+* Click on the Outline button below the Run button ![](../images/01_Script_Run.png) to see the outline.
+
+![](../images/default_quarto_html_outline.png){fig-align="center"}
+
+## Unnumbered lists
+
+
+::: {.columns}
+                                        
+::: {.column width="50%"}
+Text in editor:
+
+
+![](../images/screenshot_unnumbered_lists_code.png){fig-align="center" height="70%"}
+:::
+                                          
+::: {.column width="50%"}
+::: {style="font-size: 75%;"}
+* This is an **unnumbered list**
+  + with *sub-items*
+      - and *sub-sub-items*,
+          - or even deeper.
+* You can use characters *, +, and - to create lists.
+  * The order of the 
+      * characters is not important
+          + and characters can be repeated.
+
+What *is* important is the *spacing*!
+
++ indent each 
+  * sub-level with a tab and make sure  
+  * there is a space between the character starting the list and the first bit of text,
+  *otherwise the text won't be a new bullet in the list
+:::
+
+:::
+:::
+
+
+## Numbered lists
+
+::: {.columns}
+::: {.column width="50%"}
+Text in editor:
+
+![](../images/screenshot_numbered_lists_code.png){fig-align="center" height="60%"}
+:::
+                                          
+::: {.column width="50%"}
+Output:
+
+![](../images/screenshot_numbered_lists_out.png){fig-align="center" height="60%"}
+
+<!-- 1. This is a **Numbered list** -->
+<!--   i) with *sub-items* -->
+<!--       A. and *sub-sub-items*, -->
+<!--           1. or even deeper. -->
+<!-- 2. You can also nest  -->
+<!--   * unnumbered lists  -->
+<!--       * inside numbered lists -->
+<!-- 3. Since  -->
+<!--   a. sub-items can't be lettered. -->
+
+<!-- A cool feature is that -->
+<!-- 1. you can start   -->
+<!-- 1. each numbered bullet  -->
+<!-- 1. with 1. -->
+<!-- 1.just remember to  -->
+<!-- *include the space after the period!*   -->
+:::
+
+:::
+
+
+
+
+
+## Practice 
+
+::: {style="font-size: 85%;"}
+
+1.  __Part 1__
+    1.  Using the visual editor, practice formatting text in your qmd file, such as making text **bold**, *italicized*, and in `code` format.
+    2.  Add 1^st^, 2^nd^, and 3^rd^ level headers
+    3.  Add a list with a
+        -   sub-list (bullet and/or numbered)
+    4.  Add a table
+    5.  Add whatever else you are interested in!
+2.  __Part 2__
+    1.  Switch back to the `Source` editor and examine the markdown code that was used for the formatting.
+
+**Questions**:  _Share in the chat:_
+
+1.  What went smoothly?
+2.  What hurdles did you encounter?
+
+:::
+
+# 3 types of Quarto content: code
+
+1. Text, lists, images, tables, links
+2. [*Code chunks*]{style="color:darkorange"}
+3. YAML metadata 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_text_code.png){fig-align="center"}
+
+## Code chunks
+
+::: columns
+::: {.column width="50%"}
+.qmd file ![](../images/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output\
+![](../images/default_quarto_html.png){fig-align="center"}
+:::
+:::
+
+## What does a code chunk look like?
+
+An empty code chunk looks like this:
+
+`Visual editor`
+
+![](../images/01_qmd_chunk_empty_visual.png)
+
+`Source editor`
+
+![](../images/01_qmd_chunk_empty_source.png)
+
+::: callout-important
+Note that a code chunks start with ```` ```{r} ```` and ends with ```` ``` ````. Make sure there is no space before ```` ``` ````.
+:::
+
+## Enter and run code (1/2)
+::: {style="font-size: 85%;"}
+
+-   **Type R code** inside code chunks
+-   **Select code** you want to run, by
+    -   placing the cursor in the line of code you want to run,
+    -   ***or*** highlighting the code you want to run
+
+::: columns
+::: {.column width="50%"}
+-   **Run selected code** by
+    -   clicking on the ![](../images/01_Script_Run.png) button in the top right corner of the scripting window and choosing `Run Selected Line(s)`,
+    -   or typing one of the following key combinations:
+
+|     |                      |
+|-----|----------------------|
+| Mac | **ctrl + return**    |
+| PC  | **command + return** |
+
+-   *Where does the output appear?*
+:::
+
+::: {.column width="50%"}
+![](../images/01_qmd_coding1a.png){fig-align="center"}
+:::
+:::
+
+:::
+
+## Enter and run code (2/2)
+
+::: {style="font-size: 80%;"}
+-   **Run all code** in a chunk by
+    -   by clicking the play button in the top right corner of the chunk
+-   The code output appears below the code chunk
+:::
+
+![](../images/01_qmd_coding2.png){fig-align="center"}
+
+::: callout-note
+-   The output should also appear in the Console.
+-   Settings can be changed so that the output appears only in the Console and not below the code chunk:
+    -   Select {{< fa solid gear >}} (to right of Render button) and then *Chunk Output in Console*.
+:::
+
+## Create a code chunk
+
+::: {style="font-size: 90%;"}
+__3 options__ to create a code chunk
+
+1.  Click on ![](../images/code_chunk_insert_icon.png) at top right of the editor window, or
+
+2.  [**Keyboard shortcut**]{style="color:darkorange"}
+
+|     |                        |
+|-----|------------------------|
+| Mac | *Command + Option + I* |
+| PC  | *Ctrl + Alt + I*       |
+
+3.  `Visual editor`: Select `Insert` -\> `Executable Cell` -\> `R`
+
+:::
+
+![](../images/code_chunk_insert_visual.png){fig-align="center" width=70%}
+
+
+## Useful keyboard shortcuts
+
+[Full list of keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts){target="_blank"}
+
+| action                              | mac                | windows/linux   |
+|-------------------------------------|--------------------|-----------------|
+| Run code in qmd (or script)         | cmd + enter        | ctrl + enter    |
+| `<-`                                | option + -         | alt + -         |
+| interrupt currently running command | esc                | esc             |
+| keyboard shortcut help              | option + shift + k | alt + shift + k |
+
+
+
+**Practice:** Try typing code below in your qmd (with shortcut) and evaluating it (with shortcut):
+
+```{r}
+#| eval: false
+y <- 5
+y
+```
+
+
+# 3 types of Quarto content: YAML
+
+1. Text, lists, images, tables, links
+2. Code chunks
+3. [*YAML metadata*]{style="color:darkorange"} 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_text_code.png){fig-align="center"}
+
+
+## `YAML` metadata
+
+Many output options can be set in the **YAML metadata**, which is the *first set of code in the file starting and ending with* `---`.
+
+-   It sets the configuration specifications for the output file
+-   YAML is an acronym for 
+    - *yet another markup language*, or 
+    - *YAML ain't markup language*
+
+## Simple `YAML` example 
+
+::: {style="font-size: 70%;"}
+* The default YAML includes a **title** and **author** that appear at the top of the output file. In the example below, I also added in a **date** option
+:::
+
+::: columns 
+::: {.column width="50%"}
+
+YAML:
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "My first Quarto file"
+author: "Meike"
+date: "9/25/2023"
+format: html
+editor: visual
+---
+```
+
+:::
+
+::: {.column width="50%"}
+Output:
+
+![](../images/yaml_simple_output.png){fig-align="center"}
+:::
+:::
+
+:::{.callout-important}
+* The YAML **must** start and end with 3 dashes `---`.
+* The first set of `---` **must** be on the very first line.
+:::
+
+
+## Change the output file type {.smaller}
+
+::: columns
+::: {.column width="35%"}
+* The YAML specifies the format of the output file:
+    * html, Word, pdf, slides, website, book, etc.
+* This is done by changing the `format:` option 
+
+:::
+
+::: {.column width="65%"}
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../images/horst_hedgehog_output_types.png){fig-align="center"}
+:::
+:::
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "My first Quarto file"
+author: "Meike"
+date: "9/25/2023"
+format: html
+editor: visual
+---
+```
+
+:::
+
+::: {.column width="60%"}
++------------------------+----------------------------------+
+| Output format          | YAML                             |
++========================+==================================+
+| html                   | `format: html`                   |
++------------------------+----------------------------------+
+| Word                   | `format: docx`                   |
++------------------------+----------------------------------+
+| pdf[^2]                | `format: pdf`                    |
++------------------------+----------------------------------+
+| html slides            | `format: revealjs`               |
++------------------------+----------------------------------+
+| PPT slides             | `format: pptx`                   |
++------------------------+----------------------------------+
+
+:::
+:::
+
+[^2]:  requires LaTeX installation 
+
+
+

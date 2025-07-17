@@ -196,13 +196,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/part2_presentations.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/part2_presentations.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2 Presentations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/part3_webpages.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/part3_webpages.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3 Websites</span></a>
   </div>
 </li>
@@ -214,7 +214,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#install-recent-versions-of-r-and-rstudio" id="toc-install-recent-versions-of-r-and-rstudio" class="nav-link active" data-scroll-target="#install-recent-versions-of-r-and-rstudio">Install recent versions of R and RStudio</a></li>
+  <li><a href="#install-r-packages" id="toc-install-r-packages" class="nav-link" data-scroll-target="#install-r-packages">Install R packages</a>
+  <ul class="collapse">
+  <li><a href="#need-an-r-rstudio-refresher" id="toc-need-an-r-rstudio-refresher" class="nav-link" data-scroll-target="#need-an-r-rstudio-refresher">Need an R &amp; RStudio refresher?</a></li>
+  </ul></li>
+  <li><a href="#publishing-webpages-online" id="toc-publishing-webpages-online" class="nav-link" data-scroll-target="#publishing-webpages-online">Publishing webpages online</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -256,11 +267,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<section id="install-recent-versions-of-r-and-rstudio" class="level1">
+<h1>Install recent versions of R and RStudio</h1>
 <p>Before we begin, please ensure you have the following installed:</p>
 <ol type="1">
 <li><strong>R:</strong> A recent version of R is required. You can download it from the <a href="https://cran.r-project.org/">Comprehensive R Archive Network (CRAN)</a>.</li>
 <li><strong>RStudio:</strong> Download the latest version from the <a href="https://posit.co/download/rstudio-desktop/">RStudio website</a>. Quarto is built right into RStudio, making it the easiest way to get started. RStudio v2022.07 and later includes support for editing and preview of Quarto documents (the documentation below assumes you are using this build or a later version). If you are using Quarto within RStudio it is strongly recommended that you use the latest release of RStudio.</li>
 </ol>
+</section>
+<section id="install-r-packages" class="level1">
+<h1>Install R packages</h1>
 <p>You will also need to install a few R packages. Open RStudio and run the following code in the console:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"palmerpenguins"</span>, <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"countdown"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -271,9 +287,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>gt</strong>: For creating beautiful tables.</li>
 <li><strong>countdown</strong>: To add timers to your slides.</li>
 </ul>
-<p>If you do not already have <strong>rmarkdown</strong> installed, please install that as well.</p>
+<p>If you do not already have <strong>rmarkdown</strong> installed, please install that as well:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="need-an-r-rstudio-refresher" class="level2">
+<h2 class="anchored" data-anchor-id="need-an-r-rstudio-refresher">Need an R &amp; RStudio refresher?</h2>
+<ul>
+<li>This workshop is intended for people with already some familiarity with R and RStudio.
+<ul>
+<li>However, we will not be focusing on R coding. We will briefly talk about R code chunks and how to create and run them, but only with basic R code.</li>
+</ul></li>
+<li>We are expecting basic familiarity with how to use RStudio, installing packages, and ideally also using projects.</li>
+<li>If you would like refreshers on these topics, check out slides from our most recent <strong><a href="https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/title-slide">Getting Started in R and Rstudio</a></strong> workshop from Sept 19, 2024:
+<ul>
+<li><a href="https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/introduction-to-r">Intro to R and RStudio</a>: slides 4-8</li>
+<li><a href="https://berd-r-intro2024.netlify.app/slides_r_berd_2024#/r-packages-install-load">R packages</a>: slides 23-29</li>
+<li><a href="https://niederhausen.github.io/BSTA_511_F24/resources/Projects_in_R.html">R projects</a> - from BSTA 511 Fall 2024 class webpage</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="publishing-webpages-online" class="level1">
+<h1>Publishing webpages online</h1>
+<ul>
+<li>If you would like to publish your website online, the quickest way is to use <a href="https://quartopub.com/">Quarto Pub</a>. Use the link to sign up for a free account.
+<ul>
+<li>We will also provide instructions for GitHub website hosting, but not cover this more involved process during the workshop.</li>
+</ul></li>
+<li>For inspiration, you can also check out the <a href="https://quarto.org/docs/gallery/">Quarto Gallery</a>.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

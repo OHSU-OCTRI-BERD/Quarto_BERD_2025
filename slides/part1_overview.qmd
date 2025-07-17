@@ -61,7 +61,7 @@ This workshop will teach you how to create professional presentations and websit
 ::: columns
 ::: {.column width="10%"}
 
-  <img src="/images/web/ohsu_logo.jpg" width="60px"/>
+  <img src="/images/ohsu_logo.jpg" width="60px"/>
 :::
 ::: {.column width="45%"}
   <img class="circle" src="https://github.com/jminnier.png" height="200px"/> 
@@ -80,7 +80,7 @@ This workshop will teach you how to create professional presentations and websit
 ::: {.column width="45%"}
 
 
-  <img class="circle" src="/images/web/Niederhausen_Meike_bw.jpg" height="200px"/> 
+  <img class="circle" src="/images/Niederhausen_Meike_bw.jpg" height="200px"/> 
   
   Meike Niederhausen
   
@@ -96,16 +96,6 @@ This workshop will teach you how to create professional presentations and websit
 :::
 :::
 
-
-## Introductions
-
-<br>
-
-* Please introduce yourself
-
-<br>
-
-* What level of experience do you have with R? RMarkdown? Quarto?
 
 ## Logistics
 
@@ -144,20 +134,67 @@ install.packages(c("palmerpenguins", "tidyverse", "gt", "countdown"))
 - **gt**: For creating beautiful tables.
 - **countdown**: To add timers to your slides.
 
-If you do not already have **rmarkdown** installed, please install that as well.
+If you do not already have **rmarkdown** installed, please install that as well:
+
+```{r}
+#| eval: false
+install.packages("rmarkdown")
+```
+
+
+## Poll
+
+What level of experience do you have with R? RMarkdown? Quarto?
 
 
 # Quarto Overview
+
+![[Artwork by \@allison_horst](https://allisonhorst.com/r-packages-functions)](../images/horst_rmarkdown_wizards_quarto.png){fig-align="center"}
   
 ## What is Quarto?
   
   Quarto is a next-generation version of R Markdown from Posit. It is a powerful tool that allows you to create dynamic documents, presentations, and websites from a single source file.
 
+::: {.columns}
+                                        
+::: {.column width="50%"}
 **Key Features:**
-  
+
 -   **Multi-language Support:** Use R, Python, Julia, and Observable JS in the same document.
 -   **Literate Programming:** Combine narrative text with code to create reproducible reports.
 -   **Multiple Outputs:** Generate high-quality output in various formats including HTML, PDF, MS Word, e-books, and more.
+:::
+                                          
+::: {.column width="50%"}
+
+
+![[Artwork by \@allison_horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../images/horst_quarto_schematic.png){fig-align="center"}
+
+:::
+                                          
+:::  
+  
+
+
+
+
+
+
+## Quarto = `.qmd` file = Code + text $\to$ html
+
+`.qmd` files contain code + markdown syntax which can be "rendered" to other formats (html, pdf, Word, etc)
+
+::: columns
+::: {.column width="50%"}
+.qmd file ![](../images/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output\
+![](../images/default_quarto_html.png){fig-align="center"}
+:::
+:::
+
 
 ## Why Quarto for Research?
 
@@ -167,6 +204,8 @@ For researchers, reproducibility and clear communication important. Quarto allow
 -   **Professional Outputs:** Create polished articles, presentations for conferences, and websites for your lab or personal portfolio.
 -   **Collaboration:** Quarto projects are easy to share and collaborate on using version control systems like Git.
 
+
+## Topics
 
 
 

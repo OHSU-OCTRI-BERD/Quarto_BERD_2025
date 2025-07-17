@@ -23,10 +23,11 @@ __[Welcome!]{style="color:green"}__
 
 |        |                                                                    |
 |---------------|---------------------------------------------------------|
-| Part 0 | [Installation Instructions](slides/part0_installation.qmd){target="_blank"}                                         |
-| Part 1 | [Workshop Overview](slides/part1_overview.qmd){target="_blank"}           |
-| Part 2 | [Creating Presentations](slides/part2_presentations.qmd){target="_blank"} |
-| Part 3 | [Creating Websites](slides/part3_webpages.qmd){target="_blank"}           |
+| Part 0 | [Installation Instructions](slides/part0_installation.qmd){target="_blank"} |
+| Part 1 | [Workshop Overview](slides/part1_overview.qmd){target="_blank"}             |
+| Part 2 | [Intro to Quarto](slides/part2_intro.qmd){target="_blank"}                  |
+| Part 3 | [Creating Presentations](slides/part3_presentations.qmd){target="_blank"}   |
+| Part 4 | [Creating Websites](slides/part4_websites.qmd){target="_blank"}             |
 
 
 __Links to Recordings__
