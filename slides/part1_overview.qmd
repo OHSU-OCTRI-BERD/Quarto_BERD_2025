@@ -212,7 +212,7 @@ For researchers, reproducibility and clear communication important. Quarto allow
 -   **Collaboration:** Quarto projects are easy to share and collaborate on using version control systems like Git.
 
 
-## Topics
+
 
 
 
