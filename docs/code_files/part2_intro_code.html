@@ -251,6 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#change-the-output-file-type" id="toc-change-the-output-file-type" class="nav-link" data-scroll-target="#change-the-output-file-type">Change the output file type</a></li>
   <li><a href="#practice-1" id="toc-practice-1" class="nav-link" data-scroll-target="#practice-1">Practice</a></li>
+  <li><a href="#yaml-customizations" id="toc-yaml-customizations" class="nav-link" data-scroll-target="#yaml-customizations">YAML customizations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -845,8 +846,55 @@ editor: visual
 <section id="practice-1" class="level2">
 <h2 class="anchored" data-anchor-id="practice-1">Practice</h2>
 <ul>
-<li>Change the format of the qmd file to revealjs and render the file.</li>
+<li>Change the format of the qmd file to <strong>revealjs</strong> and render the file.
+<ul>
+<li>How do the slides look?</li>
+<li>What in the code determines when a new slide is created?</li>
+</ul></li>
+<li>Change the format of the qmd file to <strong>pptx</strong> and render the file.
+<ul>
+<li>How do the slides look? Which styling options worked and which did not?</li>
+<li>What in the code determines when a new slide is created?</li>
+</ul></li>
+<li>Change the format of the qmd file to <strong>docx</strong> and render the file.
+<ul>
+<li>How does the Word doc look? Which styling options worked and which did not?</li>
+</ul></li>
 </ul>
+</section>
+<section id="yaml-customizations" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-customizations">YAML customizations</h2>
+<ul>
+<li>Below are some YAML options to customize your html file.<br>
+</li>
+<li>Download from GitHub the file <a href="https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/code_files/part2_intro_code_yaml_extra.qmd" target="_blank">part2_intro_code_yaml_extra.qmd</a> to render it on your computer.
+<ul>
+<li>You can view the <a href="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/code_files/part2_intro_code_yaml_extra.html">rendered version</a> online. <em>This will look different from on your computer though since the workshop’s website’s setting are being applied to it. </em></li>
+</ul></li>
+<li>Learn about many more YAML options from Quarto’s <a href="https://quarto.org/docs/reference/formats/html.html" target="_blank">HTML Options page</a>.</li>
+</ul>
+<pre><code>---
+title: "Part 2: Quarto Introduction"
+pagetitle: "Part 2: Quarto Introduction"
+subtitle: "OCTRI-BERD Workshop July 2025"
+author: "Jessica Minnier, Meike Niederhausen"
+institute: "OHSU-PSU School of Public Health"
+date: "7/17/25"
+format:
+  html:
+    link-external-newwindow: true  # open links in a new tab
+    toc: true                      # create a table of contents
+    number-sections: true         # numbers header sections
+    embed-resources: true          # IMPORTANT! Creates a standalone html file that other can view without needing additional files.
+    code-fold: show                # true collapses all code chunks; show shows the code
+    code-tools: true               # creates menu at top of html to toggle code folding
+execute:
+  echo: true                      # show all code in code chunks
+  eval: true                      # run all code in code chunks 
+editor: source                    # other options is visual
+# editor_options: 
+#   chunk_output_type: console      # Code output shown in console instead of inline
+---</code></pre>
 
 
 </section>

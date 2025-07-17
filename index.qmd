@@ -6,11 +6,6 @@ institute: "OHSU-PSU School of Public Health"
 date: "7/17/25"
 ---
 
-<br>
-
-::: {style="font-size: 120%;"}
-__[Website still under construction]{style="color:red"}__
-:::
 
 <br>
 

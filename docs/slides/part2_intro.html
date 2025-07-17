@@ -397,7 +397,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Part 2: Quarto Introduction</h1>
-  <p class="subtitle">OCTRI-BERD Workshop July 2025</p>
+  <p class="subtitle"><a href="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/">OCTRI-BERD Workshop July 2025</a></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1720,6 +1720,40 @@ Jessica Minnier, Meike Niederhausen
 </section>
 <section id="yaml-customizations" class="slide level2">
 <h2>YAML customizations</h2>
+<ul>
+<li>Below are some YAML options to customize your html file.<br>
+</li>
+<li>Download from GitHub the file <a href="https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/code_files/part2_intro_code_yaml_extra.qmd" target="_blank">part2_intro_code_yaml_extra.qmd</a> to render it on your computer.
+<ul>
+<li>You can view the <a href="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/code_files/part2_intro_code_yaml_extra.html">rendered version</a> online. <em>This will look different from on your computer though since the workshop’s website’s setting are being applied to it. </em></li>
+</ul></li>
+<li>Learn about many more YAML options from Quarto’s <a href="https://quarto.org/docs/reference/formats/html.html" target="_blank">HTML Options page</a>.</li>
+</ul>
+<pre><code>---
+title: "Part 2: Quarto Introduction"
+pagetitle: "Part 2: Quarto Introduction"
+subtitle: "OCTRI-BERD Workshop July 2025"
+author: "Jessica Minnier, Meike Niederhausen"
+institute: "OHSU-PSU School of Public Health"
+date: "7/17/25"
+format:
+  html:
+    link-external-newwindow: true  # open links in a new tab
+    toc: true                      # create a table of contents
+    number-sections: true         # numbers header sections
+    embed-resources: true          # IMPORTANT! Creates a standalone html file that other can view without needing additional files.
+    code-fold: show                # true collapses all code chunks; show shows the code
+    code-tools: true               # creates menu at top of html to toggle code folding
+execute:
+  echo: true                      # show all code in code chunks
+  eval: true                      # run all code in code chunks 
+editor: source                    # other options is visual
+# editor_options: 
+#   chunk_output_type: console      # Code output shown in console instead of inline
+---</code></pre>
+<p><br></p>
+<iframe width="900" height="700" src="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/code_files/part2_intro_code_yaml_extra.html">
+</iframe>
 
 <div class="footer footer-default">
 

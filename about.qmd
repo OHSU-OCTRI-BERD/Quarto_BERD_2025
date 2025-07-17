@@ -5,7 +5,7 @@ title: "About"
 
 This website and slides were created for the  __[Creating Professional Presentations and Websites using R and Quarto](https://www.ohsu.edu/octri/octri-research-forum-creating-professional-presentations-and-websites-using-r-and-quatro){target="_blank"}__ workshop presented as a part of [OCTRI](https://www.ohsu.edu/octri/octri-research-forum-your-monthly-clinical-and-translational-research-event#accordion-384136-2){target="_blank"}'s [BERD](https://www.ohsu.edu/octri/biostatistics-epidemiology-and-research-design){target="_blank"} workshop series on R and RStudio on July 17th and 22nd, 2025.
 
-The website structure was set up to be used as an example for demonstrating options when creating websites using Quarto in RStudio. See [Part 3 slides](slides/part3_webpages.qmd){target="_blank"} for more information.
+The website structure was set up to be used as an example for demonstrating options when creating websites using Quarto in RStudio. See [Part 4 slides](slides/part4_websites.qmd){target="_blank"} for more information.
 
 ## Workshop Abstract
 

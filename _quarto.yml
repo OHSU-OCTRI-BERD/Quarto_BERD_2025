@@ -33,10 +33,12 @@ website:
             text: 0 Installation 
           - href: slides/part1_overview.qmd
             text: 1 Overview
-          - href: slides/part2_presentations.qmd
-            text: 2 Presentations
-          - href: slides/part3_webpages.qmd
-            text: 3 Websites
+          - href: slides/part2_intro.qmd
+            text: 2 Intro to Quarto
+          - href: slides/part3_presentations.qmd
+            text: 3 Presentations
+          - href: slides/part4_websites.qmd
+            text: 4 Websites
 
 format:
   html:

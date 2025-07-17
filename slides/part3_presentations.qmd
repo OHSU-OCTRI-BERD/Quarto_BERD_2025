@@ -1,7 +1,7 @@
 ---
 title: "Part 3: Creating Presentations with Quarto"
 pagetitle: "Part 3: Creating Presentations with Quarto"
-subtitle: "OCTRI-BERD Workshop July 2025"
+subtitle: "[OCTRI-BERD Workshop July 2025](https://ohsu-octri-berd.github.io/Quarto_BERD_2025/)"
 author: "Jessica Minnier, Meike Niederhausen"
 institute: "OHSU-PSU School of Public Health"
 date: "7/17/25"
@@ -57,15 +57,13 @@ theme_set(theme_bw(base_size = 22))
 * Content Layout (scrolling, columns)
 * R code & output
 * Incremental reveals
-* Tabsets
 * Themes
 
 :::
                                           
 ::: {.column width="50%"}
-* Images
+
 * Fonts
-* Callout boxes
 * Title slide
 * Presentation tools
 * Slide file formats
@@ -533,7 +531,7 @@ You can add more information to your title slide directly in the YAML header. Th
 title: "Workshop Title"
 subtitle: "An In-depth Look at Quarto"
 author: "Your Name"
-institute: "Department of Biostatistics, OHSU"
+institute: "OHSU-PSU School of Public Health"
 date: "today"
 title-slide-attributes:
   data-background-image: "your-logo.png"
@@ -750,7 +748,7 @@ Learn more at [Quarto Citations](https://quarto.org/docs/authoring/citations.htm
 
 ## Publishing 
 
-We will briefly cover publishing webpages to Quarto Pubs and GitHub in Part 3 of the slides.
+We will briefly cover publishing webpages to Quarto Pubs and GitHub in Part 4 of the slides.
 
 
 ## Self Contained (HTML)

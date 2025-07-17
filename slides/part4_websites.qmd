@@ -1,7 +1,7 @@
 ---
 title: "Part 4: Creating Websites with Quarto"
 pagetitle: "Part 4: Creating Websites with Quarto"
-subtitle: "OCTRI-BERD Workshop July 2025"
+subtitle: "[OCTRI-BERD Workshop July 2025](https://ohsu-octri-berd.github.io/Quarto_BERD_2025/)"
 author: "Jessica Minnier, Meike Niederhausen"
 institute: "OHSU-PSU School of Public Health"
 date: "7/22/25"
@@ -58,9 +58,9 @@ theme_set(theme_bw(base_size = 22))
 
 ### Workshop website
 
-<https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/>
+<https://ohsu-octri-berd.github.io/Quarto_BERD_2025/>
 
-<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/" title="workshop website">
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/" title="workshop website">
 </iframe>
 
 
@@ -226,7 +226,7 @@ How to navigate the website?
 ### Example
 
 
-<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/" title="workshop website">
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/" title="workshop website">
 </iframe>
 
 ### Top
@@ -247,15 +247,15 @@ How to navigate the website?
                                           
 ::: {.column width="50%"}
 
-* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
+* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
 
 ``` yaml
 website:
-  title: "Quarto WNAR 2025"
+  title: "OCTRI-BERD Quarto 2025"
   navbar:
     background: primary
     foreground: "#fff"
-    logo: "/images/web/cat_laptop.gif"
+    logo: "/images/cat_laptop.gif"
     search: true
     collapse-below: sm
     left:
@@ -299,7 +299,7 @@ Learn more: [Top Navigation](https://quarto.org/docs/websites/website-navigation
                                           
 ::: {.column width="50%"}
 
-* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
+* [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"} excerpt:
 
 ``` yaml
   sidebar:
@@ -313,12 +313,16 @@ Learn more: [Top Navigation](https://quarto.org/docs/websites/website-navigation
         text: Workshop slides as "blog"
       - section: "Section for slides"
         contents: 
+          - href: slides/part0_installation.qmd
+            text: 0 Installation 
           - href: slides/part1_overview.qmd
             text: 1 Overview
-          - href: slides/part2_presentations.qmd
-            text: 2 Presentations
-          - href: slides/part3_webpages.qmd
-            text: 3 Websites
+          - href: slides/part2_intro.qmd
+            text: 2 Intro to Quarto
+          - href: slides/part3_presentations.qmd
+            text: 3 Presentations
+          - href: slides/part4_websites.qmd
+            text: 4 Websites
 
 ```
 :::
@@ -333,7 +337,7 @@ Learn more: [Side Navigation](https://quarto.org/docs/websites/website-navigatio
 
 * Within the `contents:` list, sections of related pages can be grouped together with `section:`
 * For each `section:`, list the `contents:`
-* Exampl 1: See the [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"} excerpt in the Options 
+* Exampl 1: See the [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"} excerpt in the Options 
 * Example 2: Sections for weekly pages and homework-related pages from class [website](https://niederhausen.github.io/BSTA_511_F24/){target="_blank"}; [YAML](https://github.com/niederhausen/BSTA_511_F24/blob/main/_quarto.yml){target="_blank"}
 
 <iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_511_F24/" title="workshop website">
@@ -358,7 +362,7 @@ Learn more: [Hybrid Navigation](https://quarto.org/docs/websites/website-navigat
 ## Exercise 1: navigation practice
 
 1.  Add a link to a quarto page to the top navigation bar. 
-    * You can create a new qmd file to link to, or link to a slide file you created in part 2.
+    * You can create a new qmd file to link to, or link to a slide file you created in part 3.
 
 <br>
 
@@ -373,7 +377,7 @@ Learn more: [Hybrid Navigation](https://quarto.org/docs/websites/website-navigat
 
 The __[Workshop Slides](/slides.html){target="_blank"}__ link on the left navigation bar of the workshop website is an example of a blog-style webpage
 
-<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_WNAR_2025/slides.html" title="workshop slides">
+<iframe width="1100" height="500" src="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/slides.html" title="workshop slides">
 </iframe>
 
 
@@ -434,8 +438,8 @@ __Individual qmd YAML__
 
 ``` yaml
 ---
-title: "Part 3: Creating Websites with Quarto"
-date: "6/15/25"
+title: "Part 4: Creating Websites with Quarto"
+date: "7/22/25"
 format: 
   revealjs
 ---
@@ -597,7 +601,7 @@ A website's theme specifies colors, fonts, and much more!
 
 ### Example: workshop website
 
-* The website theme is specified in [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_WNAR_2025/blob/main/_quarto.yml){target="_blank"}
+* The website theme is specified in [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"}
 
 ::: {.columns}
                                         
@@ -631,8 +635,8 @@ format:
 * Changes made to `cosmo.scss`
     * Hexadecimal color for green changed: 
         - `$green:   #08875d !default;`
-    * Primary color changed from blue to green: 
-        - `$primary:       $green !default;`
+    * Primary color changed from blue to purple: 
+        - `$primary:       $purple !default;`
     * Success color change from green to blue: 
         - `$success:       $blue !default;`
 
