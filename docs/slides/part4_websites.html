@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.361">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jessica Minnier, Meike Niederhausen">
   <meta name="dcterms.date" content="2025-07-22">
-  <title>Part 4: Creating Websites with Quarto</title>
+  <title>OCTRI-BERD Quarto 2025 – Part 4: Creating Websites with Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -224,7 +224,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -445,7 +446,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </section>
-<section id="create-quarto-website-project" class="slide level2">
+<section id="create-quarto-website-project" class="slide level2 scrollable">
 <h2>Create Quarto website project</h2>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><strong>Quarto Website</strong> project</a></li><li><a href="#tabset-2-2"><strong>New Project Wizard</strong> window</a></li><li><a href="#tabset-2-3">Voila!</a></li></ul>
@@ -462,7 +463,7 @@ Jessica Minnier, Meike Niederhausen
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/project1.png"></p>
+<p><img data-src="../images/web/project1.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -471,11 +472,10 @@ Jessica Minnier, Meike Niederhausen
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/project2.png"></p>
+<p><img data-src="../images/web/project2.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-2-2">
 <div class="columns">
@@ -495,7 +495,7 @@ Jessica Minnier, Meike Niederhausen
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/project4_annotated.png"></p>
+<p><img data-src="../images/web/project4_annotated.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <div style="font-size: 90%;">
@@ -503,14 +503,13 @@ Jessica Minnier, Meike Niederhausen
 <li>Click on <strong><span style="color:darkorange">Create Project</span></strong></li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-2-3">
 <p>Your new Quarto website project should now open up in RStudio</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/project5.png"></p>
+<p><img data-src="../images/web/project5.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -534,7 +533,7 @@ Jessica Minnier, Meike Niederhausen
 <div id="tabset-3-1">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files1.png"></p>
+<p><img data-src="../images/web/files1.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <p><em>Note: If you do not have GitHub set up, then you will not have the <code>.gitignore</code> file.</em></p>
@@ -543,7 +542,7 @@ Jessica Minnier, Meike Niederhausen
 <p>This is the config file that specifies the general structure of the website</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files_quarto_yml.png" style="width:60.0%"></p>
+<p><img data-src="../images/web/files_quarto_yml.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -551,7 +550,7 @@ Jessica Minnier, Meike Niederhausen
 <p>This is the home page of the website</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files_index_qmd.png"></p>
+<p><img data-src="../images/web/files_index_qmd.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -559,14 +558,14 @@ Jessica Minnier, Meike Niederhausen
 <p>This is an extra (optional) webpage where information about the website can be provided</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files_about_qmd.png"></p>
+<p><img data-src="../images/web/files_about_qmd.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div id="tabset-3-5">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files_style_css.png"></p>
+<p><img data-src="../images/web/files_style_css.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -583,7 +582,7 @@ Jessica Minnier, Meike Niederhausen
 <div id="tabset-4-1">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files2.png"></p>
+<p><img data-src="../images/web/files2.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -596,7 +595,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/web/files_site1.png"></p>
+<p><img data-src="../images/web/files_site1.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -641,22 +640,21 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li><a href="https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml" target="_blank">_quarto.yml</a> excerpt:</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"OCTRI-BERD Quarto 2025"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> primary</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="at">    </span><span class="fu">foreground</span><span class="kw">:</span><span class="at"> </span><span class="st">"#fff"</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> </span><span class="st">"/images/cat_laptop.gif"</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="at">    </span><span class="fu">collapse-below</span><span class="kw">:</span><span class="at"> sm</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> about.qmd</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> About</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"OCTRI-BERD Quarto 2025"</span></span>
+<span id="cb1-3"><a></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb1-4"><a></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> primary</span></span>
+<span id="cb1-5"><a></a><span class="at">    </span><span class="fu">foreground</span><span class="kw">:</span><span class="at"> </span><span class="st">"#fff"</span></span>
+<span id="cb1-6"><a></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> </span><span class="st">"/images/cat_laptop.gif"</span></span>
+<span id="cb1-7"><a></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-8"><a></a><span class="at">    </span><span class="fu">collapse-below</span><span class="kw">:</span><span class="at"> sm</span></span>
+<span id="cb1-9"><a></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb1-10"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb1-11"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="cb1-12"><a></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb1-13"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> about.qmd</span></span>
+<span id="cb1-14"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> About</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <div class="footnote">
 <p>Learn more: <a href="https://quarto.org/docs/websites/website-navigation.html#top-navigation" target="_blank">Top Navigation</a></p>
 </div>
@@ -686,29 +684,28 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li><a href="https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml" target="_blank">_quarto.yml</a> excerpt:</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="at">    </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"docked"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="at">    </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides.qmd</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Workshop slides as "blog"</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Section for slides"</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="at">        </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part0_installation.qmd</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 0 Installation </span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part1_overview.qmd</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 1 Overview</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part2_intro.qmd</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 2 Intro to Quarto</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part3_presentations.qmd</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 3 Presentations</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part4_websites.qmd</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 4 Websites</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
+<span id="cb2-2"><a></a><span class="at">    </span><span class="fu">style</span><span class="kw">:</span><span class="at"> </span><span class="st">"docked"</span></span>
+<span id="cb2-3"><a></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-4"><a></a><span class="at">    </span><span class="fu">collapse-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-5"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb2-6"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb2-7"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="cb2-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides.qmd</span></span>
+<span id="cb2-9"><a></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Workshop slides as "blog"</span></span>
+<span id="cb2-10"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Section for slides"</span></span>
+<span id="cb2-11"><a></a><span class="at">        </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb2-12"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part0_installation.qmd</span></span>
+<span id="cb2-13"><a></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 0 Installation </span></span>
+<span id="cb2-14"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part1_overview.qmd</span></span>
+<span id="cb2-15"><a></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 1 Overview</span></span>
+<span id="cb2-16"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part2_intro.qmd</span></span>
+<span id="cb2-17"><a></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 2 Intro to Quarto</span></span>
+<span id="cb2-18"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part3_presentations.qmd</span></span>
+<span id="cb2-19"><a></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 3 Presentations</span></span>
+<span id="cb2-20"><a></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> slides/part4_websites.qmd</span></span>
+<span id="cb2-21"><a></a><span class="at">            </span><span class="fu">text</span><span class="kw">:</span><span class="at"> 4 Websites</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <div class="footnote">
 <p>Learn more: <a href="https://quarto.org/docs/websites/website-navigation.html#side-navigation" target="_blank">Side Navigation</a></p>
 </div>
@@ -738,7 +735,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </section>
-<section id="exercise-1-navigation-practice" class="slide level2">
+<section id="exercise-1-navigation-practice" class="slide level2 scrollable">
 <h2>Exercise 1: navigation practice</h2>
 <ol type="1">
 <li>Add a link to a quarto page to the top navigation bar.
@@ -765,19 +762,19 @@ Jessica Minnier, Meike Niederhausen
 </iframe>
 </div>
 <div id="tabset-11-2">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Workshop Slides"</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">]</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"title asc"</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="pp">---</span></span>
+<span id="cb3-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Workshop Slides"</span></span>
+<span id="cb3-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-4"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-5"><a></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-6"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
+<span id="cb3-7"><a></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
+<span id="cb3-8"><a></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-9"><a></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">]</span></span>
+<span id="cb3-10"><a></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"title asc"</span></span>
+<span id="cb3-11"><a></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
+<span id="cb3-12"><a></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-13"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-11-3">
 <div class="panel-tabset">
@@ -787,33 +784,32 @@ Jessica Minnier, Meike Niederhausen
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Blog-style qmd YAML</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Workshop Slides"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">]</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"title asc"</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="pp">---</span></span>
+<span id="cb4-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Workshop Slides"</span></span>
+<span id="cb4-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-4"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb4-5"><a></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-6"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
+<span id="cb4-7"><a></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
+<span id="cb4-8"><a></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-9"><a></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">]</span></span>
+<span id="cb4-10"><a></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"title asc"</span></span>
+<span id="cb4-11"><a></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
+<span id="cb4-12"><a></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-13"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Individual qmd YAML</strong></p>
 <ul>
 <li>The Example’s table of files included the <code>date</code> and <code>title</code> specified in each of the individual .qmd files’ YAMLs</li>
 <li>Excerpt of YAML:</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="pp">---</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Part 4: Creating Websites with Quarto"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"7/22/25"</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="at">  revealjs</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="pp">---</span></span>
+<span id="cb5-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Part 4: Creating Websites with Quarto"</span></span>
+<span id="cb5-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"7/22/25"</span></span>
+<span id="cb5-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-5"><a></a><span class="at">  revealjs</span></span>
+<span id="cb5-6"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </div>
 <div id="tabset-10-2">
 <div class="panel-tabset">
@@ -827,34 +823,33 @@ Jessica Minnier, Meike Niederhausen
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Blog-style qmd <a href="https://github.com/niederhausen/BSTA_526_W25/blob/main/weeks.qmd" target="_blank">YAML</a></strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Weekly Pages"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> weeks</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">,</span><span class="at"> description</span><span class="kw">]</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date asc"</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
+<span id="cb6-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Weekly Pages"</span></span>
+<span id="cb6-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-4"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-5"><a></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-6"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> weeks</span></span>
+<span id="cb6-7"><a></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
+<span id="cb6-8"><a></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-9"><a></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">,</span><span class="at"> description</span><span class="kw">]</span></span>
+<span id="cb6-10"><a></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date asc"</span></span>
+<span id="cb6-11"><a></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
+<span id="cb6-12"><a></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-13"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Individual qmd YAML</strong></p>
 <ul>
 <li>Excerpt of <a href="https://github.com/niederhausen/BSTA_526_W25/blob/main/weeks/week_01.qmd" target="_blank">YAML</a> with <code>description:</code>:</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Week 1"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Intro to R/RStudio, Functions, Vectors, Data Types"</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"1/09/2025"</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">date-modified</span><span class="kw">:</span><span class="at"> </span><span class="st">"today"</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="at">  html</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="pp">---</span></span>
+<span id="cb7-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Week 1"</span></span>
+<span id="cb7-3"><a></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Intro to R/RStudio, Functions, Vectors, Data Types"</span></span>
+<span id="cb7-4"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"1/09/2025"</span></span>
+<span id="cb7-5"><a></a><span class="fu">date-modified</span><span class="kw">:</span><span class="at"> </span><span class="st">"today"</span></span>
+<span id="cb7-6"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb7-7"><a></a><span class="at">  html</span></span>
+<span id="cb7-8"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </div>
 </div>
 </div>
@@ -871,36 +866,35 @@ Jessica Minnier, Meike Niederhausen
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Blog-style qmd <a href="https://github.com/niederhausen/BSTA_511_F23/blob/main/class_slides.qmd" target="_blank">YAML</a></strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="pp">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Class Slides"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">,</span><span class="at"> categories</span><span class="kw">]</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date asc"</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="at">      </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="pp">---</span></span>
+<span id="cb8-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Class Slides"</span></span>
+<span id="cb8-3"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb8-4"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb8-5"><a></a><span class="at">    </span><span class="fu">listing</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb8-6"><a></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> slides</span></span>
+<span id="cb8-7"><a></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
+<span id="cb8-8"><a></a><span class="at">      </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">date</span><span class="kw">,</span><span class="at"> title</span><span class="kw">,</span><span class="at"> categories</span><span class="kw">]</span></span>
+<span id="cb8-9"><a></a><span class="at">      </span><span class="fu">table-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb8-10"><a></a><span class="at">      </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date asc"</span></span>
+<span id="cb8-11"><a></a><span class="at">      </span><span class="fu">date-format</span><span class="kw">:</span><span class="at"> </span><span class="st">"short"</span></span>
+<span id="cb8-12"><a></a><span class="at">      </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb8-13"><a></a><span class="at">    </span><span class="fu">link-external-newwindow</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb8-14"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Individual qmd YAML</strong></p>
 <ul>
 <li>Excerpt of <a href="https://github.com/niederhausen/BSTA_511_F23/blob/main/slides/Day01_bsta511.qmd" target="_blank">YAML</a> with <code>categories:</code>:</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1"></a><span class="pp">---</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Day 1: Intro to R &amp; Rstudio"</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"BSTA 511/611 Fall 2023, OHSU"</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Meike Niederhausen, PhD"</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"09/27/2023"</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"Week 1"</span><span class="kw">]</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="at">  revealjs</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a></a><span class="pp">---</span></span>
+<span id="cb9-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Day 1: Intro to R &amp; Rstudio"</span></span>
+<span id="cb9-3"><a></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"BSTA 511/611 Fall 2023, OHSU"</span></span>
+<span id="cb9-4"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Meike Niederhausen, PhD"</span></span>
+<span id="cb9-5"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"09/27/2023"</span></span>
+<span id="cb9-6"><a></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"Week 1"</span><span class="kw">]</span></span>
+<span id="cb9-7"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb9-8"><a></a><span class="at">  revealjs</span></span>
+<span id="cb9-9"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </div>
 </div>
 </div>
@@ -960,15 +954,14 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 </div>
 </div><div class="column" style="width:40%;">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo_modified.scss</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb10-2"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb10-3"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb10-4"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo</span></span>
+<span id="cb10-5"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo_modified.scss</span></span>
+<span id="cb10-6"><a></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb10-7"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <div style="font-size: 90%;">
 <ul>
 <li>Changes made to <code>cosmo.scss</code>
@@ -992,7 +985,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </section>
-<section id="exercise-2-time-for-a-new-theme" class="slide level2">
+<section id="exercise-2-time-for-a-new-theme" class="slide level2 scrollable">
 <h2>Exercise 2: time for a new theme!</h2>
 <ol type="1">
 <li>Change the theme for your website.
@@ -1061,11 +1054,12 @@ Jessica Minnier, Meike Niederhausen
 </div><div class="column" style="width:50%;">
 <p>Meike Niederhausen<br>
 <em>niederha@ohsu.edu</em></p>
-</div>
-</div>
+</div></div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -1095,7 +1089,6 @@ Jessica Minnier, Meike Niederhausen
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1351,18 +1344,7 @@ Jessica Minnier, Meike Niederhausen
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1394,11 +1376,50 @@ Jessica Minnier, Meike Niederhausen
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1408,8 +1429,17 @@ Jessica Minnier, Meike Niederhausen
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1423,7 +1453,11 @@ Jessica Minnier, Meike Niederhausen
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
