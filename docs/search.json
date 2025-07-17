@@ -159,7 +159,11 @@
     "href": "slides.html",
     "title": "Workshop Slides",
     "section": "",
-    "text": "This page is an example of a blog-style webpage\n\nThe table below has links to all of the files in a folder specified in the YAML (contents: slides)\n\nIn this case, the links are to the workshop slides, which are the same files linked to from the homepage.\n\n\n\nThe titles and dates shown are the ones specified in the individual .qmd files\nNote that one can sort the files and also search for (filter) files\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n7/17/25\n\n\nPart 0: Installation Instructions\n\n\n\n\n7/17/25\n\n\nPart 1: Workshop Overview\n\n\n\n\n7/17/25\n\n\nPart 2: Quarto Introduction\n\n\n\n\n7/17/25\n\n\nPart 3: Creating Presentations with Quarto\n\n\n\n\n7/22/25\n\n\nPart 4: Creating Websites with Quarto\n\n\n\n\n\n\nNo matching items"
+    "text": "This page is an example of a blog-style webpage\n\nThe table below has links to all of the files in a folder specified in the YAML (contents: slides)\n\nIn this case, the links are to the workshop slides, which are the same files linked to from the homepage.\n\n\n\nThe titles and dates shown are the ones specified in the individual .qmd files\nNote that one can sort the files and also search for (filter) files\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n7/17/25\n\n\nPart 0: Installation Instructions\n\n\n\n\n7/17/25\n\n\nPart 1: Workshop Overview\n\n\n\n\n7/17/25\n\n\nPart 2: Quarto Introduction\n\n\n\n\n7/17/25\n\n\nPart 3: Creating Presentations with Quarto\n\n\n\n\n7/22/25\n\n\nPart 4: Creating Websites with Quarto\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Workshop slides as \"blog\""
+    ]
   },
   {
     "objectID": "slides/part2_presentations.html#outline",
@@ -1662,70 +1666,120 @@
     "href": "slides/part2_intro.html#create-a-quarto-file-.qmd",
     "title": "Part 2: Quarto Introduction",
     "section": "1. Create a Quarto file (.qmd)",
-    "text": "1. Create a Quarto file (.qmd)\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\n\n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create"
+    "text": "1. Create a Quarto file (.qmd)\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\n\n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#create-a-quarto-file-.qmd-1",
     "href": "slides/part2_intro.html#create-a-quarto-file-.qmd-1",
     "title": "Part 2: Quarto Introduction",
     "section": "2. Create a Quarto file (.qmd)",
-    "text": "2. Create a Quarto file (.qmd)\n\nAfter clicking on Create, you should then see the following in your editor window:"
+    "text": "2. Create a Quarto file (.qmd)\n\nAfter clicking on Create, you should then see the following in your editor window:",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#save-the-quarto-file-.qmd",
     "href": "slides/part2_intro.html#save-the-quarto-file-.qmd",
     "title": "Part 2: Quarto Introduction",
     "section": "3. Save the Quarto file (.qmd)",
-    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in"
+    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#create-render-html-file",
     "href": "slides/part2_intro.html#create-render-html-file",
     "title": "Part 2: Quarto Introduction",
     "section": "4. Create (render) html file",
-    "text": "4. Create (render) html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\n\n\nClick on the Render icon  at the top of the editor window,\n\n\n\n\n\nOr use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+    "text": "4. Create (render) html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\n\n\nClick on the Render icon  at the top of the editor window,\n\n\n\n\n\nOr use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#qmd-file-vs.-its-html-output",
     "href": "slides/part2_intro.html#qmd-file-vs.-its-html-output",
     "title": "Part 2: Quarto Introduction",
     "section": ".qmd file vs. its html output",
-    "text": ".qmd file vs. its html output\n\n\n.qmd file \n\nhtml output"
+    "text": ".qmd file vs. its html output\n\n\n.qmd file \n\nhtml output",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#code-chunks",
     "href": "slides/part2_intro.html#code-chunks",
     "title": "Part 2: Quarto Introduction",
     "section": "Code chunks",
-    "text": "Code chunks\n\n\n.qmd file \n\nhtml output"
+    "text": "Code chunks\n\n\n.qmd file \n\nhtml output",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#what-does-a-code-chunk-look-like",
     "href": "slides/part2_intro.html#what-does-a-code-chunk-look-like",
     "title": "Part 2: Quarto Introduction",
     "section": "What does a code chunk look like?",
-    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```."
+    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#enter-and-run-code-12",
     "href": "slides/part2_intro.html#enter-and-run-code-12",
     "title": "Part 2: Quarto Introduction",
     "section": "Enter and run code (1/2)",
-    "text": "Enter and run code (1/2)\n\n\nType R code inside code chunks\nSelect code you want to run, by\n\nplacing the cursor in the line of code you want to run,\nor highlighting the code you want to run\n\n\n\n\n\nRun selected code by\n\nclicking on the  button in the top right corner of the scripting window and choosing Run Selected Line(s),\nor typing one of the following key combinations:\n\n\n\n\n\nMac\nctrl + return\n\n\nPC\ncommand + return\n\n\n\n\nWhere does the output appear?"
+    "text": "Enter and run code (1/2)\n\n\nType R code inside code chunks\nSelect code you want to run, by\n\nplacing the cursor in the line of code you want to run,\nor highlighting the code you want to run\n\n\n\n\n\nRun selected code by\n\nclicking on the  button in the top right corner of the scripting window and choosing Run Selected Line(s),\nor typing one of the following key combinations:\n\n\n\n\n\nMac\nctrl + return\n\n\nPC\ncommand + return\n\n\n\n\nWhere does the output appear?",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#enter-and-run-code-22",
     "href": "slides/part2_intro.html#enter-and-run-code-22",
     "title": "Part 2: Quarto Introduction",
     "section": "Enter and run code (2/2)",
-    "text": "Enter and run code (2/2)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console."
+    "text": "Enter and run code (2/2)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#create-a-code-chunk",
     "href": "slides/part2_intro.html#create-a-code-chunk",
     "title": "Part 2: Quarto Introduction",
     "section": "Create a code chunk",
-    "text": "Create a code chunk\n\n3 options to create a code chunk\n\nClick on  at top right of the editor window, or\nKeyboard shortcut\n\n\n\n\nMac\nCommand + Option + I\n\n\nPC\nCtrl + Alt + I\n\n\n\n\nVisual editor: Select Insert -&gt; Executable Cell -&gt; R"
+    "text": "Create a code chunk\n\n3 options to create a code chunk\n\nClick on  at top right of the editor window, or\nKeyboard shortcut\n\n\n\n\nMac\nCommand + Option + I\n\n\nPC\nCtrl + Alt + I\n\n\n\n\nVisual editor: Select Insert -&gt; Executable Cell -&gt; R",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#quarto-resources",
@@ -1739,35 +1793,60 @@
     "href": "slides/part2_intro.html#formatting-text",
     "title": "Part 2: Quarto Introduction",
     "section": "Formatting text",
-    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor.\n\n\n\n\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html"
+    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor.\n\n\n\n\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#formatting-text-visual-editor",
     "href": "slides/part2_intro.html#formatting-text-visual-editor",
     "title": "Part 2: Quarto Introduction",
     "section": "Formatting text: Visual editor",
-    "text": "Formatting text: Visual editor\n\nUsing the Visual editor is similar to using a wordprocessor, such as Word\nKeyboard shortcuts usually work as well (shown for Mac below)"
+    "text": "Formatting text: Visual editor\n\nUsing the Visual editor is similar to using a wordprocessor, such as Word\nKeyboard shortcuts usually work as well (shown for Mac below)",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#practice",
     "href": "slides/part2_intro.html#practice",
     "title": "Part 2: Quarto Introduction",
     "section": "Practice",
-    "text": "Practice\n\n\nPart 1\n\nUsing the visual editor, practice formatting text in your qmd file, such as making text bold, italicized, and in code format.\nAdd 1st, 2nd, and 3rd level headers\nAdd a list with a\n\nsub-list (bullet and/or numbered)\n\nAdd a table\nAdd whatever else you are interested in!\n\nPart 2\n\nSwitch back to the Source editor and examine the markdown code that was used for the formatting.\n\n\nQuestions: Share in the chat:\n\nWhat went smoothly?\nWhat hurdles did you encounter?"
+    "text": "Practice\n\n\nPart 1\n\nUsing the visual editor, practice formatting text in your qmd file, such as making text bold, italicized, and in code format.\nAdd 1st, 2nd, and 3rd level headers\nAdd a list with a\n\nsub-list (bullet and/or numbered)\n\nAdd a table\nAdd whatever else you are interested in!\n\nPart 2\n\nSwitch back to the Source editor and examine the markdown code that was used for the formatting.\n\n\nQuestions: Share in the chat:\n\nWhat went smoothly?\nWhat hurdles did you encounter?",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#formatting-text-markdown",
     "href": "slides/part2_intro.html#formatting-text-markdown",
     "title": "Part 2: Quarto Introduction",
     "section": "Formatting text: Markdown",
-    "text": "Formatting text: Markdown\n\n\n\n\n\n\n\nMarkdown:\nOutput:\n\n\n\n\n*This text is in italics*, but _so is this text_.\nThis text is in italics, but so is this text.\n\n\n**Bold** also has __2 options__\nBold also has 2 options\n\n\n~~Should this be deleted?~~\nShould this be deleted?\n\n\nNeed^super^ or~sub~ scripts?\nNeedsuper orsub scripts?\n\n\n`Code is often formatted as verbatim`\nCode is often formatted as verbatim\n\n\n&gt;This is a block quote.\n\nThis is a block quote."
+    "text": "Formatting text: Markdown\n\n\n\n\n\n\n\nMarkdown:\nOutput:\n\n\n\n\n*This text is in italics*, but _so is this text_.\nThis text is in italics, but so is this text.\n\n\n**Bold** also has __2 options__\nBold also has 2 options\n\n\n~~Should this be deleted?~~\nShould this be deleted?\n\n\nNeed^super^ or~sub~ scripts?\nNeedsuper orsub scripts?\n\n\n`Code is often formatted as verbatim`\nCode is often formatted as verbatim\n\n\n&gt;This is a block quote.\n\nThis is a block quote.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#headers",
     "href": "slides/part2_intro.html#headers",
     "title": "Part 2: Quarto Introduction",
     "section": "Headers",
-    "text": "Headers\n\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly."
+    "text": "Headers\n\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#rstudio-tip",
@@ -1781,49 +1860,84 @@
     "href": "slides/part2_intro.html#useful-keyboard-shortcuts",
     "title": "Part 2: Quarto Introduction",
     "section": "Useful keyboard shortcuts",
-    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\nPractice: Try typing code below in your qmd (with shortcut) and evaluating it (with shortcut):\n\ny &lt;- 5\ny"
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\nPractice: Try typing code below in your qmd (with shortcut) and evaluating it (with shortcut):\n\ny &lt;- 5\ny",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#yaml-metadata",
     "href": "slides/part2_intro.html#yaml-metadata",
     "title": "Part 2: Quarto Introduction",
     "section": "YAML metadata",
-    "text": "YAML metadata\nMany output options can be set in the YAML metadata, which is the first set of code in the file starting and ending with ---.\n\nIt sets the configuration specifications for the output file\nYAML is an acronym for\n\nyet another markup language, or\nYAML ain’t markup language"
+    "text": "YAML metadata\nMany output options can be set in the YAML metadata, which is the first set of code in the file starting and ending with ---.\n\nIt sets the configuration specifications for the output file\nYAML is an acronym for\n\nyet another markup language, or\nYAML ain’t markup language",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#simple-yaml-example",
     "href": "slides/part2_intro.html#simple-yaml-example",
     "title": "Part 2: Quarto Introduction",
     "section": "Simple YAML example",
-    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line."
+    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#change-the-output-file-type",
     "href": "slides/part2_intro.html#change-the-output-file-type",
     "title": "Part 2: Quarto Introduction",
     "section": "Change the output file type",
-    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf1\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx\n\n\n\n\n\nrequires LaTeX installation"
+    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf1\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx\n\n\n\n\nrequires LaTeX installation",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#outline-of-headers-in-rstudio",
     "href": "slides/part2_intro.html#outline-of-headers-in-rstudio",
     "title": "Part 2: Quarto Introduction",
     "section": "Outline of headers in RStudio",
-    "text": "Outline of headers in RStudio\n\nYou can easily navigate through your .qmd file if you use headers to outline your text.\nClick on the Outline button below the Run button  to see the outline."
+    "text": "Outline of headers in RStudio\n\nYou can easily navigate through your .qmd file if you use headers to outline your text.\nClick on the Outline button below the Run button  to see the outline.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#unnumbered-lists",
     "href": "slides/part2_intro.html#unnumbered-lists",
     "title": "Part 2: Quarto Introduction",
     "section": "Unnumbered lists",
-    "text": "Unnumbered lists\n\n\nText in editor:\n\n* This is an **unnumbered list**\n  + with *sub-items*\n      - and *sub-sub-items*,\n          - or even deeper.\n- You can use characters *, +, and - interchangeably to create lists.\n  * The order of the \n      * character types is not important\n      + and character types can be repeated.\n\nWhat *is* important is the *spacing*!\n\n+ indent each \n  * sub-level with a tab and make sure  \n  * there is a __space between the character starting the list and the first bit of text__,\n  *otherwise the text won't be a new bullet in the list, such as this line.\n  \nAlso, if you do not have an empty line \n+ before starting a list, \n+ then the output will be continuous text \n- instead of bullet points.\n\n\n\nThis is an unnumbered list\n\nwith sub-items\n\nand sub-sub-items,\n\nor even deeper.\n\n\n\nYou can use characters *, +, and - interchangeably to create lists.\n\nThe order of the\n\ncharacter types is not important\nand character types can be repeated.\n\n\n\nWhat is important is the spacing!\n\nindent each\n\nsub-level with a tab and make sure\n\nthere is a space between the character starting the list and the first bit of text, *otherwise the text won’t be a new bullet in the list, such as this line.\n\n\nAlso, if you do not have an empty line + before starting a list, + then the output will be continuous text - instead of bullet points."
+    "text": "Unnumbered lists\n\n\nText in editor:\n\n* This is an **unnumbered list**\n  + with *sub-items*\n      - and *sub-sub-items*,\n          - or even deeper.\n- You can use characters *, +, and - interchangeably to create lists.\n  * The order of the \n      * character types is not important\n      + and character types can be repeated.\n\nWhat *is* important is the *spacing*!\n\n+ indent each \n  * sub-level with a tab and make sure  \n  * there is a __space between the character starting the list and the first bit of text__,\n  *otherwise the text won't be a new bullet in the list, such as this line.\n  \nAlso, if you do not have an empty line \n+ before starting a list, \n+ then the output will be continuous text \n- instead of bullet points.\n\n\n\nThis is an unnumbered list\n\nwith sub-items\n\nand sub-sub-items,\n\nor even deeper.\n\n\n\nYou can use characters *, +, and - interchangeably to create lists.\n\nThe order of the\n\ncharacter types is not important\nand character types can be repeated.\n\n\n\nWhat is important is the spacing!\n\nindent each\n\nsub-level with a tab and make sure\n\nthere is a space between the character starting the list and the first bit of text, *otherwise the text won’t be a new bullet in the list, such as this line.\n\n\nAlso, if you do not have an empty line + before starting a list, + then the output will be continuous text - instead of bullet points.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#numbered-lists",
     "href": "slides/part2_intro.html#numbered-lists",
     "title": "Part 2: Quarto Introduction",
     "section": "Numbered lists",
-    "text": "Numbered lists\n\n\n1. This is a **Numbered list**,\n2. which can have\n    i. sub\n    ii. items\n        a. and \n        b. sub-sub-items.\n\n\n\nThis is a Numbered list,\nwhich can have\n\nsub\nitems\n\nand\nsub-sub-items.\n\n\n\n\n\n\n\n\nYou can also \n\n1. create numbered lists\n1. by repeating \n1. `1.` over and over again.\n    i. Each bullet\n    i. can start with \n    i. `1.` or `i.` \n        a. or `a.`,\n        a. in theory...\n\nWhen lists get interrupted\n\n1. the numbering restarts \n1. at 1. though.\n\n\nYou can also\n\ncreate numbered lists\nby repeating\n1. over and over again.\n\nEach bullet\ncan start with\n1. or i.\n\nor a.,\nin theory…\n\n\n\nWhen lists get interrupted\n\nthe numbering restarts\nat 1. though.\n\n\n\n\n\n\nTo create a list\n\n(@) whose numbering\n\ndoes not\n\n(@) get interrupted,\n(@) use `(@)`.\n\n\nTo create a list\n\nwhose numbering\n\ndoes not\n\nget interrupted,\nuse (@)."
+    "text": "Numbered lists\n\n\n1. This is a **Numbered list**,\n2. which can have\n    i. sub\n    ii. items\n        a. and \n        b. sub-sub-items.\n\n\n\nThis is a Numbered list,\nwhich can have\n\nsub\nitems\n\nand\nsub-sub-items.\n\n\n\n\n\n\n\nYou can also \n\n1. create numbered lists\n1. by repeating \n1. `1.` over and over again.\n    i. Each bullet\n    i. can start with \n    i. `1.` or `i.` \n        a. or `a.`,\n        a. in theory...\n\nWhen lists get interrupted\n\n1. the numbering restarts \n1. at 1. though.\n\n\nYou can also\n\ncreate numbered lists\nby repeating\n1. over and over again.\n\nEach bullet\ncan start with\n1. or i.\n\nor a.,\nin theory…\n\n\n\nWhen lists get interrupted\n\nthe numbering restarts\nat 1. though.\n\n\n\n\n\nTo create a list\n\n(@) whose numbering\n\ndoes not\n\n(@) get interrupted,\n(@) use `(@)`.\n\n\nTo create a list\n\nwhose numbering\n\ndoes not\n\nget interrupted,\nuse (@).",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part1_overview.html",
@@ -1865,14 +1979,24 @@
     "href": "slides/part2_intro.html#hyperlinks",
     "title": "Part 2: Quarto Introduction",
     "section": "Hyperlinks",
-    "text": "Hyperlinks\n\nHyperlink where the url is visible: &lt;url&gt;\n\nWorkshop website link: &lt;https://ohsu-octri-berd.github.io/Quarto_BERD_2025/&gt;.\nWorkshop website link: https://ohsu-octri-berd.github.io/Quarto_BERD_2025/.\n\nHyperlink showing text instead of the url: [text](url)\n\nWe also have a shortened [bitly link](https://bit.ly/berd2025_quarto).\nWe also have a shortened bitly link.\n\nOpen link in a new tab: [text](url){target=\"_blank\"}\n\nThis link will open in a new tab  \n[bitly link](https://bit.ly/berd2025_quarto){target=\"_blank\"}\nThis link will open in a new tab bitly link"
+    "text": "Hyperlinks\n\nHyperlink where the url is visible: &lt;url&gt;\n\nWorkshop website link: &lt;https://ohsu-octri-berd.github.io/Quarto_BERD_2025/&gt;.\nWorkshop website link: https://ohsu-octri-berd.github.io/Quarto_BERD_2025/.\n\nHyperlink showing text instead of the url: [text](url)\n\nWe also have a shortened [bitly link](https://bit.ly/berd2025_quarto).\nWe also have a shortened bitly link.\n\nOpen link in a new tab: [text](url){target=\"_blank\"}\n\nThis link will open in a new tab  \n[bitly link](https://bit.ly/berd2025_quarto){target=\"_blank\"}\nThis link will open in a new tab bitly link",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#to-do-lists",
     "href": "slides/part2_intro.html#to-do-lists",
     "title": "Part 2: Quarto Introduction",
     "section": "To-do lists",
-    "text": "To-do lists\n\nYou can also create tasks, or to-do lists, with Quarto.\nNote that you can check off boxes in the slides!\n\n\n\nText in editor:\nTopics to cover:\n\n- [x] Formatting text\n- [x] Headers\n- [ ] Lists\n    - [x] Unnumbered lists\n    - [x] Numbered lists\n    - [ ] To-do lists\n- [ ] Hyperlinks\n- [ ] Images\n\n\nTopics to cover:\n\nFormatting text\nHeaders\nLists\n\nUnnumbered lists\nNumbered lists\nTo-do lists\n\nHyperlinks\nImages"
+    "text": "To-do lists\n\nYou can also create tasks, or to-do lists, with Quarto.\nNote that you can check off boxes in the slides!\n\n\n\nText in editor:\nTopics to cover:\n\n- [x] Formatting text\n- [x] Headers\n- [ ] Lists\n    - [x] Unnumbered lists\n    - [x] Numbered lists\n    - [ ] To-do lists\n- [ ] Hyperlinks\n- [ ] Images\n\n\nTopics to cover:\n\nFormatting text\nHeaders\nLists\n\nUnnumbered lists\nNumbered lists\nTo-do lists\n\nHyperlinks\nImages",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#hyperlinks-old",
@@ -1935,28 +2059,48 @@
     "href": "slides/part2_intro.html#images-12",
     "title": "Part 2: Quarto Introduction",
     "section": "Images (1/2)",
-    "text": "Images (1/2)\nAdd an image with a simple ![](filepath)\n![](/images/cat_laptop.gif)\n\n\n\n\n\nYou can add html image options to change the width or height:\nSpecifying width in terms of pixels:\n![](/images/cat_laptop.gif){width=\"100\"}\n Specifying height in inches:\n![](/images/cat_laptop.gif){height=\"2in\"}\n\nSpecifying width as a percent of the original image size:\n![](/images/cat_laptop.gif){width=\"50%\"}"
+    "text": "Images (1/2)\nAdd an image with a simple ![](filepath)\n![](/images/cat_laptop.gif)\n\n\n\n\n\nYou can add html image options to change the width or height:\nSpecifying width in terms of pixels:\n![](/images/cat_laptop.gif){width=\"100\"}\n Specifying height in inches:\n![](/images/cat_laptop.gif){height=\"2in\"}\n\nSpecifying width as a percent of the original image size:\n![](/images/cat_laptop.gif){width=\"50%\"}",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#images-22",
     "href": "slides/part2_intro.html#images-22",
     "title": "Part 2: Quarto Introduction",
     "section": "Images (2/2)",
-    "text": "Images (2/2)\nAdd captions, links, and align\n\nAdd caption text (& align left):\n\n![Caption text](/images/ohsu_logo.jpg){width=\"100\" fig-align=\"left\"}\n\n\n\nCaption text\n\n\n\nAdd caption text that is linked to OHSU webpage (& align center):\n\n![[Caption text with linked url](https://www.ohsu.edu){target=\"_blank\"}]\n(/images/ohsu_logo.jpg){width=\"100\" fig-alt=\"OHSU Logo\" fig-align=\"center\"}\n\n\n\nCaption text with linked url\n\n\n\nLogo image itself is linked to OHSU webpage (& align right):\n\n[![](/images/ohsu_logo.jpg){width=\"100\" fig-alt=\"OHSU Logo\"  \nfig-align=\"right\"}](https://www.ohsu.edu){target=\"_blank\"}"
+    "text": "Images (2/2)\nAdd captions, links, and align\n\nAdd caption text (& align left):\n\n![Caption text](/images/ohsu_logo.jpg){width=\"100\" fig-align=\"left\"}\n\n\n\nCaption text\n\n\n\nAdd caption text that is linked to OHSU webpage (& align center):\n\n![[Caption text with linked url](https://www.ohsu.edu){target=\"_blank\"}]\n(/images/ohsu_logo.jpg){width=\"100\" fig-alt=\"OHSU Logo\" fig-align=\"center\"}\n\n\n\nCaption text with linked url\n\n\n\nLogo image itself is linked to OHSU webpage (& align right):\n\n[![](/images/ohsu_logo.jpg){width=\"100\" fig-alt=\"OHSU Logo\"  \nfig-align=\"right\"}](https://www.ohsu.edu){target=\"_blank\"}",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#tabsets",
     "href": "slides/part2_intro.html#tabsets",
     "title": "Part 2: Quarto Introduction",
     "section": "Tabsets",
-    "text": "Tabsets\n\nYou can add tabbed content to webpages or slides using the standard Quarto syntax for tabsets. For example:\n\n\n\n::: {.panel-tabset}\n### Tab A\n\nContent for `Tab A`\n\n### Tab B\n\nContent for `Tab B`\n\n### Tab C\n\nContent for `Tab C`\n:::\n\n\nEach header creates a new tab.\n\nThe header level (# vs ## vs ###, etc.) doesn’t matter, but they all have to be the same level to create new tabsets.\nHere we used ### level header so that the tabset appears nested within the contents of the slide, which is ## level.\n\nSee the next slide for the rendered output of the tabset code above."
+    "text": "Tabsets\n\nYou can add tabbed content to webpages or slides using the standard Quarto syntax for tabsets. For example:\n\n\n\n::: {.panel-tabset}\n### Tab A\n\nContent for `Tab A`\n\n### Tab B\n\nContent for `Tab B`\n\n### Tab C\n\nContent for `Tab C`\n:::\n\n\nEach header creates a new tab.\n\nThe header level (# vs ## vs ###, etc.) doesn’t matter, but they all have to be the same level to create new tabsets.\nHere we used ### level header so that the tabset appears nested within the contents of the slide, which is ## level.\n\nSee the next slide for the rendered output of the tabset code above.",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#tabsets---rendered",
     "href": "slides/part2_intro.html#tabsets---rendered",
     "title": "Part 2: Quarto Introduction",
     "section": "Tabsets - Rendered",
-    "text": "Tabsets - Rendered\nBelow is the rendered output of the tabset code on the previous slide:\n\nTab ATab BTab C\n\n\nContent for Tab A\n\n\nContent for Tab B\n\n\nContent for Tab C"
+    "text": "Tabsets - Rendered\nBelow is the rendered output of the tabset code on the previous slide:\n\nTab ATab BTab C\n\n\nContent for Tab A\n\n\nContent for Tab B\n\n\nContent for Tab C",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#tabsets---rendered-1",
@@ -2005,35 +2149,60 @@
     "href": "slides/part2_intro.html#callout-blocks-12",
     "title": "Part 2: Quarto Introduction",
     "section": "Callout Blocks ⚠️ (1/2)",
-    "text": "Callout Blocks ⚠️ (1/2)\n\n\n::: callout-tip\nCallouts are an excellent way to \ndraw attention to specific \npieces of information.\n:::\n\n::: {.callout-note}\nThey are especially useful for \nnotes, warnings, or tips.\n:::\n\n::: {.callout-important}\nYou create them using fenced \ndivs `:::` with a special class.\n:::\n\n\n\n\n\n\n\nTip\n\n\nCallouts are an excellent way to draw attention to specific pieces of information.\n\n\n\n\n\n\n\n\n\nNote\n\n\nThey are especially useful for notes, warnings, or tips.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nYou create them using fenced divs ::: with a special class.\n\n\n\n\n\n\n\n::: callout-caution\nThere are 5 types of callouts.\n:::\n\n::: callout-warning\nIt is tempting to overdo it \nwith callout boxes!\n:::\n\n\n\n\n\n\n\nCaution\n\n\nThere are 5 types of callouts.\n\n\n\n\n\n\n\n\n\nWarning\n\n\nIt is tempting to overdo it with callout boxes!"
+    "text": "Callout Blocks ⚠️ (1/2)\n\n\n::: callout-tip\nCallouts are an excellent way to \ndraw attention to specific \npieces of information.\n:::\n\n::: {.callout-note}\nThey are especially useful for \nnotes, warnings, or tips.\n:::\n\n::: {.callout-important}\nYou create them using fenced \ndivs `:::` with a special class.\n:::\n\n\n\n\n\n\n\nTip\n\n\nCallouts are an excellent way to draw attention to specific pieces of information.\n\n\n\n\n\n\n\n\n\nNote\n\n\nThey are especially useful for notes, warnings, or tips.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nYou create them using fenced divs ::: with a special class.\n\n\n\n\n\n\n::: callout-caution\nThere are 5 types of callouts.\n:::\n\n::: callout-warning\nIt is tempting to overdo it \nwith callout boxes!\n:::\n\n\n\n\n\n\n\nCaution\n\n\nThere are 5 types of callouts.\n\n\n\n\n\n\n\n\n\nWarning\n\n\nIt is tempting to overdo it with callout boxes!",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#callout-blocks-22",
     "href": "slides/part2_intro.html#callout-blocks-22",
     "title": "Part 2: Quarto Introduction",
     "section": "Callout Blocks ⚠️ (2/2)",
-    "text": "Callout Blocks ⚠️ (2/2)\n\n\n::: {.callout-tip}\n## Tip with different title\n\nYou can change the title of any \ntype of callout box by adding \n`## New title` right below the \nfirst line of the callout. \n:::\n\n::: {.callout-note icon=false}\nYou can omit the icon of any type \nof callout box by adding \n`icon=false` within the `{}` of \nthe first line of the callout. \n:::\n\n\n\n\n\n\n\nTip with different title\n\n\nYou can change the title of any type of callout box by adding ## New title right below the first line of the callout.\n\n\n\n\n\n\nNote\n\n\nYou can omit the icon of any type of callout box by adding icon=false within the {} of the first line of the callout.\n\n\n\n\n\n\n\n::: {.callout-caution collapse=\"true\"}\n## Callouts can be collapsed in \nhtml files (not in slides - yet)\n\nIf you look at the html file \n(not the slides), you will see \nthat the content of this callout \nis \"folded\" and needs to be expanded \nby the user to see it. \n* Use `collapse=\"true\"` if you want it \ncollapsed by default, and \n* `collapse=\"false\"` to make it \nexpanded by default.\n:::\n\n\n\n\n\n\n\nCallouts can be collapsed in html files (not in slides - yet)\n\n\n\nIf you look at the html file (not the slides), you will see that the content of this callout is “folded” and needs to be expanded by the user to see it.\nUse collapse=\"true\" if you want it collapsed by default, and\ncollapse=\"false\" to make it expanded by default.\n\n\n\n\n\n\nLearn more about callout blocks at https://quarto.org/docs/authoring/callouts.html"
+    "text": "Callout Blocks ⚠️ (2/2)\n\n\n::: {.callout-tip}\n## Tip with different title\n\nYou can change the title of any \ntype of callout box by adding \n`## New title` right below the \nfirst line of the callout. \n:::\n\n::: {.callout-note icon=false}\nYou can omit the icon of any type \nof callout box by adding \n`icon=false` within the `{}` of \nthe first line of the callout. \n:::\n\n\n\n\n\n\n\nTip with different title\n\n\nYou can change the title of any type of callout box by adding ## New title right below the first line of the callout.\n\n\n\n\n\n\nNote\n\n\nYou can omit the icon of any type of callout box by adding icon=false within the {} of the first line of the callout.\n\n\n\n\n\n\n::: {.callout-caution collapse=\"true\"}\n## Callouts can be collapsed in \nhtml files (not in slides - yet)\n\nIf you look at the html file \n(not the slides), you will see \nthat the content of this callout \nis \"folded\" and needs to be expanded \nby the user to see it. \n* Use `collapse=\"true\"` if you want it \ncollapsed by default, and \n* `collapse=\"false\"` to make it \nexpanded by default.\n:::\n\n\n\n\n\n\n\nCallouts can be collapsed in html files (not in slides - yet)\n\n\n\nIf you look at the html file (not the slides), you will see that the content of this callout is “folded” and needs to be expanded by the user to see it.\nUse collapse=\"true\" if you want it collapsed by default, and\ncollapse=\"false\" to make it expanded by default.\n\n\n\n\n\nLearn more about callout blocks at https://quarto.org/docs/authoring/callouts.html",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#tables",
     "href": "slides/part2_intro.html#tables",
     "title": "Part 2: Quarto Introduction",
     "section": "Tables",
-    "text": "Tables\nOne benefit of using or switching over to the Visual editor is that it is much easier to add tables.\n\n\n| Name    | Date     | Measure |\n|---------|----------|---------|\n| Jessica | 02/04/25 | 9.3     |\n| Meike   | 01/03/25 | 10.1    |\n| BERD    |    🐦    | 10.5    |\n\n\n\n\nName\nDate\nMeasure\n\n\n\n\nJessica\n02/04/25\n9.3\n\n\nMeike\n01/03/25\n10.1\n\n\nBERD\n🐦\n10.5\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWhen creating tables summarizing data or showing regression output, this is NOT the way to create them.\n\nUse code chunks and table options within R to create them instead.\n\n\n\n\n\nLearn more at Quarto Docs: Tables"
+    "text": "Tables\nOne benefit of using or switching over to the Visual editor is that it is much easier to add tables.\n\n\n| Name    | Date     | Measure |\n|---------|----------|---------|\n| Jessica | 02/04/25 | 9.3     |\n| Meike   | 01/03/25 | 10.1    |\n| BERD    |    🐦    | 10.5    |\n\n\n\n\nName\nDate\nMeasure\n\n\n\n\nJessica\n02/04/25\n9.3\n\n\nMeike\n01/03/25\n10.1\n\n\nBERD\n🐦\n10.5\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWhen creating tables summarizing data or showing regression output, this is NOT the way to create them.\n\nUse code chunks and table options within R to create them instead.\n\n\n\n\n\nLearn more at Quarto Docs: Tables",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#equations-with-latex",
     "href": "slides/part2_intro.html#equations-with-latex",
     "title": "Part 2: Quarto Introduction",
     "section": "Equations with LaTeX",
-    "text": "Equations with LaTeX\n\nMathematical equations and symbols can be included using LaTeX, both as inline equations or centered display equations\n\n* Use single `$` for inline equations: $y=\\beta_0 + \\beta_1x + \\varepsilon$\n\nUse single $ for inline equations: \\(y=\\beta_0 + \\beta_1x + \\varepsilon\\)\n\n* Use double `$$` for centered display equations:\n  \n$$\\hat{y}= \\frac{3}{7} +  5 \\textrm{age} + 3^2 \\cdot \\textrm{height}$$ \n\nUse double $$ for centered display equations:\n\n\\[\\hat{y}= \\frac{3}{7} +  5 \\textrm{age} + 3^2 \\cdot \\textrm{height}\\]\n\nLearn more at Markdown Basics: Equations"
+    "text": "Equations with LaTeX\n\nMathematical equations and symbols can be included using LaTeX, both as inline equations or centered display equations\n\n* Use single `$` for inline equations: $y=\\beta_0 + \\beta_1x + \\varepsilon$\n\nUse single $ for inline equations: \\(y=\\beta_0 + \\beta_1x + \\varepsilon\\)\n\n* Use double `$$` for centered display equations:\n  \n$$\\hat{y}= \\frac{3}{7} +  5 \\textrm{age} + 3^2 \\cdot \\textrm{height}$$ \n\nUse double $$ for centered display equations:\n\n\\[\\hat{y}= \\frac{3}{7} +  5 \\textrm{age} + 3^2 \\cdot \\textrm{height}\\]\n\nLearn more at Markdown Basics: Equations",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#code-chunk-options",
     "href": "slides/part2_intro.html#code-chunk-options",
     "title": "Part 2: Quarto Introduction",
     "section": "Code chunk options",
-    "text": "Code chunk options\n\nevalechoOther optionsSet options globally\n\n\n\neval determines whether the R code is run or not.\nThe default is true.\nWhen set to false, the code is not run but still displayed in the output:\n\n\n\n#| eval: true\n\n```{r}\n#| eval: true\n\ny &lt;- 1:10\nmean(y)\n```\n\n[1] 5.5\n\n\n\n#| eval: false\n\n```{r}\n#| eval: false\n\ny &lt;- 1:10\nmean(y)\n```\n\n\n\n\n\n\necho determines whether the R code is displayed or not.\nThe default is true. When set to false, the code is not displayed in the output but the output is (if eval is set to true):\n\n\n\n#| echo: true\nCode chunk:\n\n\n\n\n\nOutput:\n\ny &lt;- 1:10\nmean(y)\n\n[1] 5.5\n\n\n\n#| echo: false\nCode chunk:\n\n\n\n\n\nOutput:\n\n\n[1] 5.5\n\n\n\n\n\n\n\nwarning: do you want R’s warnings include in your output?\nmessage: do you want R’s messages include in your output?\n\nFor a complete list of options, see the Quarto reference page for Code Cells: Knitr. In particular the sections on Code Output and Cell Output.\n\n\n\nUsually you want most of your document to have the same code chunk options.\nYou can set these options in the YAML of the Quarto file (next topic!)."
+    "text": "Code chunk options\n\nevalechoOther optionsSet options globally\n\n\n\neval determines whether the R code is run or not.\nThe default is true.\nWhen set to false, the code is not run but still displayed in the output:\n\n\n\n#| eval: true\n\n```{r}\n#| eval: true\n\ny &lt;- 1:10\nmean(y)\n```\n\n[1] 5.5\n\n\n\n#| eval: false\n\n```{r}\n#| eval: false\n\ny &lt;- 1:10\nmean(y)\n```\n\n\n\n\n\necho determines whether the R code is displayed or not.\nThe default is true. When set to false, the code is not displayed in the output but the output is (if eval is set to true):\n\n\n\n#| echo: true\nCode chunk:\n\n\n\n\n\nOutput:\n\ny &lt;- 1:10\nmean(y)\n\n[1] 5.5\n\n\n\n#| echo: false\nCode chunk:\n\n\n\n\n\nOutput:\n\n\n[1] 5.5\n\n\n\n\n\n\nwarning: do you want R’s warnings include in your output?\nmessage: do you want R’s messages include in your output?\n\nFor a complete list of options, see the Quarto reference page for Code Cells: Knitr. In particular the sections on Code Output and Cell Output.\n\n\n\nUsually you want most of your document to have the same code chunk options.\nYou can set these options in the YAML of the Quarto file (next topic!).",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "code_files/part2_intro_code.html",
@@ -2894,14 +3063,24 @@
     "href": "slides/part2_intro.html#practice-1",
     "title": "Part 2: Quarto Introduction",
     "section": "Practice",
-    "text": "Practice\n\nChange the format of the qmd file to revealjs and render the file.\n\nHow do the slides look?\nWhat in the code determines when a new slide is created?\n\nChange the format of the qmd file to pptx and render the file.\n\nHow do the slides look? Which styling options worked and which did not?\nWhat in the code determines when a new slide is created?\n\nChange the format of the qmd file to docx and render the file.\n\nHow does the Word doc look? Which styling options worked and which did not?"
+    "text": "Practice\n\nChange the format of the qmd file to revealjs and render the file.\n\nHow do the slides look?\nWhat in the code determines when a new slide is created?\n\nChange the format of the qmd file to pptx and render the file.\n\nHow do the slides look? Which styling options worked and which did not?\nWhat in the code determines when a new slide is created?\n\nChange the format of the qmd file to docx and render the file.\n\nHow does the Word doc look? Which styling options worked and which did not?",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "slides/part2_intro.html#yaml-customizations",
     "href": "slides/part2_intro.html#yaml-customizations",
     "title": "Part 2: Quarto Introduction",
     "section": "YAML customizations",
-    "text": "YAML customizations\n\nBelow are some YAML options to customize your html file.\n\nDownload from GitHub the file part2_intro_code_yaml_extra.qmd to render it on your computer.\n\nYou can view the rendered version online. This will look different from on your computer though since the workshop’s website’s setting are being applied to it. \n\nLearn about many more YAML options from Quarto’s HTML Options page.\n\n---\ntitle: \"Part 2: Quarto Introduction\"\npagetitle: \"Part 2: Quarto Introduction\"\nsubtitle: \"OCTRI-BERD Workshop July 2025\"\nauthor: \"Jessica Minnier, Meike Niederhausen\"\ninstitute: \"OHSU-PSU School of Public Health\"\ndate: \"7/17/25\"\nformat:\n  html:\n    link-external-newwindow: true  # open links in a new tab\n    toc: true                      # create a table of contents\n    number-sections: true         # numbers header sections\n    embed-resources: true          # IMPORTANT! Creates a standalone html file that other can view without needing additional files.\n    code-fold: show                # true collapses all code chunks; show shows the code\n    code-tools: true               # creates menu at top of html to toggle code folding\nexecute:\n  echo: true                      # show all code in code chunks\n  eval: true                      # run all code in code chunks \neditor: source                    # other options is visual\n# editor_options: \n#   chunk_output_type: console      # Code output shown in console instead of inline\n---"
+    "text": "YAML customizations\n\nBelow are some YAML options to customize your html file.\n\nDownload from GitHub the file part2_intro_code_yaml_extra.qmd to render it on your computer.\n\nYou can view the rendered version online. This will look different from on your computer though since the workshop’s website’s setting are being applied to it. \n\nLearn about many more YAML options from Quarto’s HTML Options page.\n\n---\ntitle: \"Part 2: Quarto Introduction\"\npagetitle: \"Part 2: Quarto Introduction\"\nsubtitle: \"OCTRI-BERD Workshop July 2025\"\nauthor: \"Jessica Minnier, Meike Niederhausen\"\ninstitute: \"OHSU-PSU School of Public Health\"\ndate: \"7/17/25\"\nformat:\n  html:\n    link-external-newwindow: true  # open links in a new tab\n    toc: true                      # create a table of contents\n    number-sections: true         # numbers header sections\n    embed-resources: true          # IMPORTANT! Creates a standalone html file that other can view without needing additional files.\n    code-fold: show                # true collapses all code chunks; show shows the code\n    code-tools: true               # creates menu at top of html to toggle code folding\nexecute:\n  echo: true                      # show all code in code chunks\n  eval: true                      # run all code in code chunks \neditor: source                    # other options is visual\n# editor_options: \n#   chunk_output_type: console      # Code output shown in console instead of inline\n---",
+    "crumbs": [
+      "Home",
+      "Section for slides",
+      "2 Intro to Quarto"
+    ]
   },
   {
     "objectID": "code_files/part2_intro_code_yaml_extra.html#yaml-customizations",
