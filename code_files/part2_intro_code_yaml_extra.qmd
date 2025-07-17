@@ -9,9 +9,10 @@ format:
   html:
     link-external-newwindow: true  # open links in a new tab
     toc: true                      # create a table of contents
+    number-sections: true         # numbers header sections
     embed-resources: true          # IMPORTANT! Creates a standalone html file that other can view without needing additional files.
-    code-fold: show                # 
-    code-tools: true
+    code-fold: show                # true collapses all code chunks; show shows the code
+    code-tools: true               # creates menu at top of html to toggle code folding
 execute:
   echo: true                      # show all code in code chunks
   eval: true                      # run all code in code chunks 

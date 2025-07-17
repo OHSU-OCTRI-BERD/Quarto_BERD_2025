@@ -140,6 +140,9 @@ html output\
 
 # Download .qmd file with code from slides
 
+If you want to run the code in the slides in your own RStudio, we recommend downloading a [qmd file with the code](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/code_files/part2_intro_code.qmd){target="_blank"}.
+
+
 
 
 # 3 types of Quarto content: text
@@ -1192,4 +1195,18 @@ editor: visual
 [^2]:  requires LaTeX installation 
 
 
+## Practice
+
+* Change the format of the qmd file to __revealjs__ and render the file.
+    * How do the slides look?
+    * What in the code determines when a new slide is created?
+
+* Change the format of the qmd file to __pptx__ and render the file.  
+    * How do the slides look? Which styling options worked and which did not?
+    * What in the code determines when a new slide is created?
+
+* Change the format of the qmd file to __docx__ and render the file.  
+    * How does the Word doc look? Which styling options worked and which did not?
+
+## YAML customizations
 
