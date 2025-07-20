@@ -47,22 +47,42 @@ theme_set(theme_bw(base_size = 22))
 ```
 
 
-# Outline
+## Outline
 
+::: {style="font-size: 90%;"}
+
+::: {.columns}
+::: {.column width="50%"}
 * Create & render a Quarto file 
 * 3 types of Quarto content: 
-    + *Text editing*
-        - Formatting text; visual editor
-        - Headers
-        - Lists
-        - Hyperlinks
-        - Images
-        - Tabsets
-        - Callout Blocks
-        - Tables
-        - Equations with LaTeX
-    + Code chunks & options
-    + YAML metadata 
+
+1. **Text editing**
+    - Formatting text; visual editor
+    - Headers
+    - Lists
+    - Hyperlinks
+    - Images
+    - Tabsets
+    - Callout Blocks
+    - Tables
+    - Equations with LaTeX
+
+:::
+::: {.column width="50%"}
+
+2. **Code chunks & options**
+    - Creating and running code chunks
+    - Options: show vs. hide code & output
+    - Local vs global code chunk options
+3. **YAML metadata**
+    - Title, subtitle, author, date, institution
+    - Change output file type (html, slides, Word, etc.)
+    - Table of contents
+    - Code folding
+:::
+:::
+
+:::
 
 # Basic Quarto example
 

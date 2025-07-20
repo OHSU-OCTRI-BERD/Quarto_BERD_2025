@@ -1150,5 +1150,12 @@
       "Section for slides",
       "1 Overview"
     ]
+  },
+  {
+    "objectID": "slides/part2_intro.html#outline",
+    "href": "slides/part2_intro.html#outline",
+    "title": "Part 2: Quarto Introduction",
+    "section": "Outline",
+    "text": "Outline\n\n\n\n\nCreate & render a Quarto file\n3 types of Quarto content:\n\n\nText editing\n\nFormatting text; visual editor\nHeaders\nLists\nHyperlinks\nImages\nTabsets\nCallout Blocks\nTables\nEquations with LaTeX\n\n\n\n\nCode chunks & options\n\nCreating and running code chunks\nOptions: show vs. hide code & output\nLocal vs global code chunk options\n\nYAML metadata\n\nTitle, subtitle, author, date, institution\nChange output file type (html, slides, Word, etc.)\nTable of contents\nCode folding"
   }
 ]
