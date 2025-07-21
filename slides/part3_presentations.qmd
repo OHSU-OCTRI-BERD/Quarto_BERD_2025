@@ -15,6 +15,8 @@ format:
       height: 700 #default 700
       slide-number: true
       html-math-method: mathjax
+      # fig-width: 9  # default: 9
+      # fig-height: 5  # default: 5
   # html:
   #   link-external-newwindow: true
   #   toc: true
@@ -41,8 +43,10 @@ library(palmerpenguins)
 # quarto install extension quarto-ext/fontawesome
 
 # set ggplot theme for slides 
-theme_set(theme_bw(base_size = 22))
-# theme_update(text = element_text(size=16))  # set global text size for ggplots
+    # Change the font size globally for all ggplots; keeps the default grey theme
+# theme_update(text = element_text(size = 22))  
+    # Change the theme to them_bw and change the font size
+# theme_set(theme_bw(base_size = 22)
 
 ```
 
@@ -678,7 +682,129 @@ The sentence above was coded as:
 ## Slide background {background-color="orange"}
 ```
 
+# ggplot figures
 
+## ggplot: themes & text size
+
+
+::: {.panel-tabset}
+### Defaults
+
+::: {style="font-size: 90%;"}
+* The default ggplot theme (`theme_grey()`) has a grey figure background and font size 11 pt. 
+    * The x- and y-axis labels are 11 pt font, and 
+    * the other text (axis numbers, title, etc.) are sized relatively to the label size. 
+:::
+
+```{r}
+ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +
+  geom_point() + labs(title = " Penguin flipper length vs. bill length")
+```
+
+<!-- ![](../images/ggplot_default_theme_default_text_size.png){fig-align="center"} -->
+
+### Customize individual figure
+
+::: {.panel-tabset}
+#### Font size
+
+::: {style="font-size: 90%;"}
+* Below we change the font size to 22 pt and keep the default `theme_grey()`
+* The larger font size makes it easier to read labels in presentations.
+:::
+
+```{r}
+#| code-line-numbers: "3"
+
+ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +
+  geom_point() + labs(title = " Penguin flipper length vs. bill length") +
+  theme_gray(base_size = 22)
+```
+
+#### Theme & font size
+
+::: {style="font-size: 90%;"}
+* Below we change the theme to `theme_bw()` for a "clean" look and 
+    * adjust the font size to 22 pt
+::: 
+
+```{r}
+#| code-line-numbers: "3"
+
+ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +
+  geom_point() + labs(title = " Penguin flipper length vs. bill length") + 
+  theme_bw(base_size = 22)
+
+
+
+```
+
+:::
+
+### Apply changes to all figures
+
+::: {style="font-size: 90%;"}
+* If a presentation had many figures, then it is easier to set the desired `gpplot` customizations at the beginning of the qmd file. 
+* Right after the YAML, we typically have a "setup" code chunk to load R packages and specify settings for the rest of the file. 
+* This is where we can set ggplot customizations using the `theme_set()` function:
+:::
+
+```` qmd
+```{{r}}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)    
+library(gt)
+library(palmerpenguins)
+
+# Change the theme to theme_bw and change the font size
+theme_set(theme_bw(base_size = 22)
+```
+````
+:::
+
+## ggplot figure size
+
+::: {style="font-size: 90%;"}
+* The default figure size in revealjs slides is 9" x 5"
+    * See [here](https://quarto.org/docs/computations/execution-options.html#figure-options) for default sizes for other output types.
+* The defaults can be changed with `fig-width` and `fig-height`
+:::
+
+::: {.panel-tabset}
+### YAML
+
+If set in the YAML, they new sizes are applied to the whole document
+
+```yaml
+---
+title: "Slides for presentation"
+format: 
+  revealjs:
+    fig-width: 6
+    fig-height: 4
+---
+```
+
+### Individual figures
+
+* Use `fig-width` and `fig-height` as code chunk options
+* Note that a line break was added to the figure title using `\n` 
+
+```{r}
+#| echo: fenced
+#| fig-width: 6
+#| fig-height: 4
+
+ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +
+  geom_point() + labs(title = " Penguin flipper length vs. \n bill length") + 
+  theme_bw(base_size = 20)
+```
+
+:::
 
 
 # More Advanced

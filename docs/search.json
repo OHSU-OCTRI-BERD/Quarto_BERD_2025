@@ -276,8 +276,8 @@
     "objectID": "slides/part3_presentations.html#outline",
     "href": "slides/part3_presentations.html#outline",
     "title": "Part 3: Creating Presentations with Quarto",
-    "section": "",
-    "text": "Create Quarto presentation file\nYAML header\nHow to add new slides\nContent Layout (scrolling, columns)\nR code & output\nIncremental reveals\nThemes\n\n\n\nFonts\nTitle slide\nPresentation tools\nSlide file formats\nCitations\nConverting to pdf"
+    "section": "Outline",
+    "text": "Outline\n\n\n\nCreate Quarto presentation file\nYAML header\nHow to add new slides\nContent Layout (scrolling, columns)\nR code & output\nIncremental reveals\nThemes\n\n\n\nFonts\nTitle slide\nPresentation tools\nSlide file formats\nCitations\nConverting to pdf"
   },
   {
     "objectID": "slides/part3_presentations.html#create-a-new-rstudio-project-or-quarto-project",
@@ -361,7 +361,7 @@
     "href": "slides/part3_presentations.html#revealing-code-stepwise",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Revealing Code Stepwise",
-    "text": "Revealing Code Stepwise\nYou can reveal code and its output incrementally.\n\n#| output-location: fragment delays showing output until advancing with a click.\n#| output-location: column-fragment places output in a column adjacent to the code and delays showing until advancing with a click.\n\n\n\n```{r}\n#| echo: true\n#| output-location: \"fragment\"\nx &lt;- 3\ny &lt;- 2\nx + y\nx*y\n```\n\nEach line will appear on a subsequent click.\n\nx &lt;- 3\ny &lt;- 2\nx + y\n\n[1] 5\n\nx*y\n\n[1] 6"
+    "text": "Revealing Code Stepwise\nYou can reveal code and its output incrementally.\n\n#| output-location: fragment delays showing output until advancing with a click.\n#| output-location: column-fragment places output in a column adjacent to the code and delays showing until advancing with a click.\n\n\n\n```{r}\n#| echo: true\n#| output-location: \"fragment\"\nx &lt;- 3\ny &lt;- 2\nx + y\nx*y\n```\n\nEach line will appear on a subsequent click.\n\nx &lt;- 3\ny &lt;- 2\nx + y\n\n\n\n[1] 5\n\nx*y\n\n[1] 6"
   },
   {
     "objectID": "slides/part3_presentations.html#highlighting-code",
@@ -1315,5 +1315,33 @@
     "title": "Part 5: Resources",
     "section": "",
     "text": "Quarto has a blog that is fun to explore to learn about the newest features and find links to workshops on topics.\nFor example, check out the posit::conf(2024) Quarto talks!"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#ggplot-figures",
+    "href": "slides/part3_presentations.html#ggplot-figures",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "ggplot figures",
+    "text": "ggplot figures\n\nTab ATab BTab C\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()\n\n\n\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()\n\n\n\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#ggplot-text-size",
+    "href": "slides/part3_presentations.html#ggplot-text-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "ggplot: text size",
+    "text": "ggplot: text size\n\nDefault theme & text sizeTab BTab C\n\n\nThe default ggplot theme (theme_grey()) has a grey figure background and text size 11 pt. \n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()\n\n\n\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#ggplot-themes-text-size",
+    "href": "slides/part3_presentations.html#ggplot-themes-text-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "ggplot: themes & text size",
+    "text": "ggplot: themes & text size\n\nDefaultsCustomize individual figureApply changes to all figures\n\n\n\n\nThe default ggplot theme (theme_grey()) has a grey figure background and font size 11 pt. \n\nThe x- and y-axis labels are 11 pt font, and\nthe other text (axis numbers, title, etc.) are sized relatively to the label size.\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point() + labs(title = \" Penguin flipper length vs. bill length\")\n\n\n\n\n\n\n\n\nFont sizeTheme & font size\n\n\n\n\nBelow we change the font size to 22 pt and keep the default theme_grey()\nThe larger font size makes it easier to read labels in presentations.\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point() + labs(title = \" Penguin flipper length vs. bill length\") +\n  theme_gray(base_size = 22)\n\n\n\n\n\n\n\n\nBelow we change the theme to theme_bw() for a “clean” look and\n\nadjust the font size to 22 pt\n\n\n\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point() + labs(title = \" Penguin flipper length vs. bill length\") + \n  theme_bw(base_size = 22)\n\n\n\n\n\n\n\n\n\n\n\nIf a presentation had many figures, then it is easier to set the desired gpplot customizations at the beginning of the qmd file.\nRight after the YAML, we typically have a “setup” code chunk to load R packages and specify settings for the rest of the file.\nThis is where we can set ggplot customizations using the theme_set() function:\n\n\n```{r}\n#| label: \"setup\" \n#| include: false\n#| message: false\n#| warning: false\n\nlibrary(tidyverse)    \nlibrary(gt)\nlibrary(palmerpenguins)\n\n# Change the theme to theme_bw and change the font size\ntheme_set(theme_bw(base_size = 22)\n```"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#ggplot-figure-size",
+    "href": "slides/part3_presentations.html#ggplot-figure-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "ggplot figure size",
+    "text": "ggplot figure size\n\n\nThe default figure size in revealjs slides is 9” x 5”\n\nSee here for default sizes for other output types.\n\nThe defaults can be changed with fig-width and fig-height\n\n\n\nYAMLIndividual figures\n\n\nIf set in the YAML, they new sizes are applied to the whole document\n---\ntitle: \"Slides for presentation\"\nformat: \n  revealjs:\n    fig-width: 6\n    fig-height: 4\n---\n\n\n\nUse fig-width and fig-height as code chunk options\nNote that a line break was added to the figure title using \\n\n\n\n```{r}\n#| fig-width: 6\n#| fig-height: 4\n\nggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species)) +\n  geom_point() + labs(title = \" Penguin flipper length vs. \\n bill length\") + \n  theme_bw(base_size = 20)\n```"
   }
 ]
