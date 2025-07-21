@@ -276,8 +276,8 @@
     "objectID": "slides/part3_presentations.html#outline",
     "href": "slides/part3_presentations.html#outline",
     "title": "Part 3: Creating Presentations with Quarto",
-    "section": "Outline",
-    "text": "Outline\n\n\n\nCreate Quarto presentation file\nYAML header\nHow to add new slides\nContent Layout (scrolling, columns)\nR code & output\nIncremental reveals\nThemes\n\n\n\nFonts\nTitle slide\nPresentation tools\nSlide file formats\nCitations\nConverting to pdf"
+    "section": "",
+    "text": "Create Quarto presentation file\nYAML header\nHow to add new slides\nContent Layout (scrolling, columns)\nR code & output\nIncremental reveals\nThemes\n\n\n\nFonts\nTitle slide\nPresentation tools\nSlide file formats\nCitations\nConverting to pdf"
   },
   {
     "objectID": "slides/part3_presentations.html#create-a-new-rstudio-project-or-quarto-project",
@@ -361,7 +361,7 @@
     "href": "slides/part3_presentations.html#revealing-code-stepwise",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Revealing Code Stepwise",
-    "text": "Revealing Code Stepwise\nYou can reveal code and its output incrementally.\n\n#| output-location: fragment delays showing output until advancing with a click.\n#| output-location: column-fragment places output in a column adjacent to the code and delays showing until advancing with a click.\n\n\n\n```{r}\n#| echo: true\n#| output-location: \"fragment\"\nx &lt;- 3\ny &lt;- 2\nx + y\nx*y\n```\n\nEach line will appear on a subsequent click.\n\nx &lt;- 3\ny &lt;- 2\nx + y\n\n\n\n[1] 5\n\nx*y\n\n[1] 6"
+    "text": "Revealing Code Stepwise\nYou can reveal code and its output incrementally.\n\n#| output-location: fragment delays showing output until advancing with a click.\n#| output-location: column-fragment places output in a column adjacent to the code and delays showing until advancing with a click.\n\n\n\n```{r}\n#| echo: true\n#| output-location: \"fragment\"\nx &lt;- 3\ny &lt;- 2\nx + y\nx*y\n```\n\nEach line will appear on a subsequent click.\n\nx &lt;- 3\ny &lt;- 2\nx + y\n\n[1] 5\n\nx*y\n\n[1] 6"
   },
   {
     "objectID": "slides/part3_presentations.html#highlighting-code",
@@ -452,7 +452,7 @@
     "href": "slides/part3_presentations.html#annotations-chalkboard",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Annotations & Chalkboard ✍️",
-    "text": "Annotations & Chalkboard ✍️\nRevealjs includes a “chalkboard” that you can use for live drawings and a “notes canvas” for more permanent annotations.\n\nChalkboard:\n\nPress b to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it.\nOr, click on the chalkboard icon on the bottom left of the slides\n\nNotes Canvas:\n\nPress c to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.\n\nOr, click on the paintbrush icon on the bottom left of the slides\n\n\n\nAdd the chalkboard option in the YAML header to include both the chalkboard and canvas options in your slides, :\n---\nformat: \n  revealjs:\n      chalkboard: true\n---"
+    "text": "Annotations & Chalkboard ✍️\nRevealjs includes a “chalkboard” that you can use for live drawings and a “notes canvas” for more permanent annotations.\n\nChalkboard:\n\nPress b to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it.\nOr, click on the chalkboard icon on the bottom left of the slides\n\nNotes Canvas:\n\nPress c to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.\nOr, click on the paintbrush icon on the bottom left of the slides\n\n\nAdd the chalkboard option in the YAML header to include both the chalkboard and canvas options in your slides, :\n---\nformat: \n  revealjs:\n      chalkboard: true\n---"
   },
   {
     "objectID": "slides/part3_presentations.html#saving-loading-annotations",
@@ -473,7 +473,7 @@
     "href": "slides/part3_presentations.html#adding-a-countdown-timer",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Adding a Countdown Timer ⏳",
-    "text": "Adding a Countdown Timer ⏳\nA great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides. We can use the countdown package, which we installed earlier.\nLet’s set a 5-minute timer for a quick break.\n\ncountdown::countdown(minutes = 1, play_sound = TRUE)\n\n\n−+\n01:00\n\n\n\nThis will embed a timer on the slide. You can customize the duration, text, colors, and whether it plays a sound when finished."
+    "text": "Adding a Countdown Timer ⏳\n\nA great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides.\nBelow we use the countdown package, which we installed earlier.\n\nLet’s set a 1-minute timer:\n\ncountdown::countdown(minutes = 1, play_sound = TRUE)\n\n\n−+\n01:00\n\n\n\nThis will embed a timer on the slide. You can customize the duration, text, colors, and whether it plays a sound when finished."
   },
   {
     "objectID": "slides/part3_presentations.html#html-slides",
@@ -571,10 +571,7 @@
     "href": "index.html",
     "title": "Creating Professional Presentations and Websites using R/Quarto",
     "section": "",
-    "text": "Quick link to this website: https://bit.ly/berd2025_quarto\nWelcome!\n\nBelow are links to the OCTRI-BERD workshop on Creating Professional Presentations and Websites using R/Quarto.\n\n\n\nPart 0\nInstallation Instructions\n\n\nPart 1\nWorkshop Overview\n\n\nPart 2\nIntro to Quarto\n\n\nPart 3\nCreating Presentations\n\n\nPart 4\nCreating Websites\n\n\n\nLinks to Recordings\nWorkshop recording links will be added below when they are available.\n\nThurs, July 17\nTues, July 22\n\n You can access the source code for the website and slides on GitHub",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Quick link to this website: https://bit.ly/berd2025_quarto\nWelcome!\n\nBelow are links to the OCTRI-BERD workshop on Creating Professional Presentations and Websites using R/Quarto.\n\n\n\nPart 0\nInstallation Instructions\n\n\nPart 1\nWorkshop Overview\n\n\nPart 2\nIntro to Quarto\n\n\nPart 3\nCreating Presentations\n\n\nPart 4\nCreating Websites\n\n\nPart 5\nResources\n\n\n\nLinks to Recordings\nWorkshop recording links will be added below when they are available.\n\nThurs, July 17\nTues, July 22\n\n You can access the source code for the website and slides on GitHub"
   },
   {
     "objectID": "code_files/part2_intro_code_yaml_extra.html",
@@ -987,7 +984,7 @@
     "href": "slides.html",
     "title": "Workshop Slides",
     "section": "",
-    "text": "This page is an example of a blog-style webpage\n\nThe table below has links to all of the files in a folder specified in the YAML (contents: slides)\n\nIn this case, the links are to the workshop slides, which are the same files linked to from the homepage.\n\n\n\nThe titles and dates shown are the ones specified in the individual .qmd files\nNote that one can sort the files and also search for (filter) files\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n7/17/25\n\n\nPart 0: Installation Instructions\n\n\n\n\n7/17/25\n\n\nPart 1: Workshop Overview\n\n\n\n\n7/17/25\n\n\nPart 2: Quarto Introduction\n\n\n\n\n7/17/25\n\n\nPart 3: Creating Presentations with Quarto\n\n\n\n\n7/22/25\n\n\nPart 4: Creating Websites with Quarto\n\n\n\n\n\n\nNo matching items"
+    "text": "This page is an example of a blog-style webpage\n\nThe table below has links to all of the files in a folder specified in the YAML (contents: slides)\n\nIn this case, the links are to the workshop slides, which are the same files linked to from the homepage.\n\n\n\nThe titles and dates shown are the ones specified in the individual .qmd files\nNote that one can sort the files and also search for (filter) files\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n7/17/25\n\n\nPart 0: Installation Instructions\n\n\n\n\n7/17/25\n\n\nPart 1: Workshop Overview\n\n\n\n\n7/17/25\n\n\nPart 2: Quarto Introduction\n\n\n\n\n7/17/25\n\n\nPart 3: Creating Presentations with Quarto\n\n\n\n\n7/22/25\n\n\nPart 4: Creating Websites with Quarto\n\n\n\n\n7/22/25\n\n\nPart 5: Resources\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/part0_installation.html",
@@ -1241,5 +1238,82 @@
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Fullscreen mode",
     "text": "Fullscreen mode\n\nSwitch to full screen mode when presenting by pressing the F key.\n\n\n\nPress esc to exit back to your web browser."
+  },
+  {
+    "objectID": "slides/part5_resources.html",
+    "href": "slides/part5_resources.html",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Quarto Guide\n\nThe main page provides a quick overview of the topics in the Quarto guide\nThe guide is my primary go-to resource when trying to figure out new things in Quarto.\n\nIt’s also fun to browse and learn something new!\n\n\n\nSome highlights are linked to below:\n\n\n\nMarkdown Basics\nFigures\nTables\nand much more!\n\n\n\n\n\nWe focused on options for creating HTML documents in Part 2 slides .\nThey also have resources for rendering to PDF and Word documents.\n\n\n\n\n\nThere is a whole section on creating Presentations, with subsections for\n\nrevealjs\nPowerPoint\nBeamer\n\n\n\n\n\n\nMake sure to select the RStudio tool for how to create a website in RStudio.\nLearn more about creating websites\nCheck out their Quarto website video series blog post.\n\n\n\n\n\nQuarto has a blog that is fun to explore to learn about the newest features and find links to workshops on topics.\nFor example, check out the posit::conf(2024) Quarto talks!"
+  },
+  {
+    "objectID": "slides/part5_resources.html#official-quarto-help-files",
+    "href": "slides/part5_resources.html#official-quarto-help-files",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Quarto Guide\n\nA quick overview of the topics in the Quarto guide"
+  },
+  {
+    "objectID": "slides/part3_presentations.html",
+    "href": "slides/part3_presentations.html",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "",
+    "text": "Create Quarto presentation file\nYAML header\nHow to add new slides\nContent Layout (scrolling, columns)\nR code & output\nIncremental reveals\nThemes\n\n\n\nFonts\nTitle slide\nPresentation tools\nSlide file formats\nCitations\nConverting to pdf"
+  },
+  {
+    "objectID": "slides/part5_resources.html#official-quarto-guide",
+    "href": "slides/part5_resources.html#official-quarto-guide",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Quarto Guide\n\nThe main page provides a quick overview of the topics in the Quarto guide\nThe guide is my primary go-to resource when trying to figure out new things in Quarto.\n\nIt’s also fun to browse and learn something new!\n\n\n\n\n\n\nWe focused on options for creating HTML documents in Part 2 slides\nThey also have resources for rendering to PDF and Word documents.\n\n\n\n\n\nThere is a whole section on creating Presentations, with subsections for\n\nrevealjs\nPowerPoint\nBeamer"
+  },
+  {
+    "objectID": "slides/part5_resources.html#authoring",
+    "href": "slides/part5_resources.html#authoring",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Markdown Basics\nFigures\nTables\nand much more!"
+  },
+  {
+    "objectID": "slides/part5_resources.html#documents",
+    "href": "slides/part5_resources.html#documents",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "We focused on options for creating HTML documents in Part 2 slides .\nThey also have resources for rendering to PDF and Word documents."
+  },
+  {
+    "objectID": "slides/part5_resources.html#presentations",
+    "href": "slides/part5_resources.html#presentations",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "There is a whole section on creating Presentations, with subsections for\n\nrevealjs\nPowerPoint\nBeamer"
+  },
+  {
+    "objectID": "slides/part5_resources.html#websites",
+    "href": "slides/part5_resources.html#websites",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Make sure to select the RStudio tool for how to create a website in RStudio.\nLearn more about creating websites\nCheck out their Quarto website video series blog post."
+  },
+  {
+    "objectID": "slides/part5_resources.html#blog",
+    "href": "slides/part5_resources.html#blog",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Quarto has a blog that is fun to explore to learn about the newest features and find links to workshops on topics."
+  },
+  {
+    "objectID": "slides/part3_presentations.html#navigating-slides",
+    "href": "slides/part3_presentations.html#navigating-slides",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Navigating slides",
+    "text": "Navigating slides\n\nJump to slideHamburger menuVisual outline of slides\n\n\n\nNavigate to a slide be pressing G and then typing the slide number or ID\n\n\n\n\nClick on the hamburger menu at the bottom left (3 stacked horizontal lines) to see a table of contents of the slides.\nSelect the slide you want to navigate to\n\n\n\n\nPress o to see an outline of your presentation."
+  },
+  {
+    "objectID": "slides/part5_resources.html#quarto-blog",
+    "href": "slides/part5_resources.html#quarto-blog",
+    "title": "Part 5: Resources",
+    "section": "",
+    "text": "Quarto has a blog that is fun to explore to learn about the newest features and find links to workshops on topics.\nFor example, check out the posit::conf(2024) Quarto talks!"
   }
 ]

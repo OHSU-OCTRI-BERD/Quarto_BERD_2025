@@ -737,6 +737,30 @@ These are my speaker notes. Only I can see them.
 :::
 
 
+## Navigating slides
+
+
+::: {.panel-tabset}
+
+### Jump to slide
+
+* Navigate to a slide be pressing `G` and then typing the slide number or ID
+
+### Hamburger menu
+
+* Click on the hamburger menu at the bottom left (3 stacked horizontal lines) to see a table of contents of the slides. 
+* Select the slide you want to navigate to
+
+### Visual outline of slides
+
+* Press `o` to see an outline of your presentation.
+
+![](/images/web/quartopres_outline.png)
+
+:::
+
+
+
 ## Annotations & Chalkboard ✍️
 
 Revealjs includes a "chalkboard" that you can use for live drawings and a "notes canvas" for more permanent annotations.
@@ -780,11 +804,7 @@ Learn more at [Quarto's Presenting Slides > Chalkboard](https://quarto.org/docs/
 :::
 
 
-## Outlines
 
-Press `o` to see an outline of your presentation.
-
-![](/images/web/quartopres_outline.png)
 
 ## Adding a Countdown Timer ⏳
 

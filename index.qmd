@@ -29,7 +29,7 @@ __[Welcome!]{style="color:green"}__
 | Part 2 | [Intro to Quarto](slides/part2_intro.qmd){target="_blank"}                  |
 | Part 3 | [Creating Presentations](slides/part3_presentations.qmd){target="_blank"}   |
 | Part 4 | [Creating Websites](slides/part4_websites.qmd){target="_blank"}             |
-
+| Part 5 | [Resources](slides/part5_resources.qmd){target="_blank"}             |
 
 
 __Links to Recordings__

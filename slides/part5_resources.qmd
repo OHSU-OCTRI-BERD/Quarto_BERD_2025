@@ -1,0 +1,75 @@
+---
+title: "Part 5: Resources"
+pagetitle: "Part 5: Resources"
+subtitle: "[OCTRI-BERD Workshop July 2025](https://ohsu-octri-berd.github.io/Quarto_BERD_2025/)"
+author: "Jessica Minnier, Meike Niederhausen"
+institute: "OHSU-PSU School of Public Health"
+date: "7/22/25"
+# format: 
+#   revealjs:
+#       incremental: false
+#       scrollable: true
+#       chalkboard: true
+#       theme: [../sky_modified_smaller_font.scss]
+#       width:  1050 #default 1050
+#       height: 700 #default 700
+#       slide-number: true
+#       html-math-method: mathjax
+html:
+    link-external-newwindow: true
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+# Official Quarto Guide
+
+
+* [Quarto Guide](https://quarto.org/docs/guide/)
+    * The main page provides a quick overview of the topics in the Quarto guide
+    * The guide is my primary go-to resource when trying to figure out new things in Quarto. 
+        * *It's also fun to browse and learn something new!*
+
+Some highlights are linked to below:
+
+## Authoring
+
+* [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
+* [Figures](https://quarto.org/docs/authoring/figures.html)
+* [Tables](https://quarto.org/docs/authoring/tables.html)
+* and [much more](https://quarto.org/docs/guide/)!
+
+
+## Documents
+
+* We focused on options for creating [HTML documents](https://quarto.org/docs/output-formats/html-basics.html) in [Part 2 slides](https://ohsu-octri-berd.github.io/Quarto_BERD_2025/slides/part2_intro.html#/title-slide.) .
+* They also have resources for rendering to [PDF](https://quarto.org/docs/output-formats/pdf-basics.html) and [Word](https://quarto.org/docs/output-formats/ms-word.html) documents.
+
+## Presentations
+
+* There is a whole section on creating [Presentations](https://quarto.org/docs/presentations/), with subsections for
+    * [revealjs](https://quarto.org/docs/presentations/revealjs/)
+    * [PowerPoint](https://quarto.org/docs/presentations/powerpoint.html)
+    * [Beamer](https://quarto.org/docs/presentations/beamer.html)
+
+
+## Websites
+
+* Make sure to select the **RStudio tool** for how to create a website in RStudio.
+* Learn more about [creating websites](https://quarto.org/docs/websites/)
+* Check out their [Quarto website video series](https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/) blog post.
+
+## Quarto Blog
+
+* Quarto has a [blog](https://quarto.org/docs/blog/) that is fun to explore to learn about the newest features and find links to workshops on topics.
+* For example, check out the [posit::conf(2024) Quarto talks](https://quarto.org/docs/blog/posts/2024-11-06-conf-talks/)!
+
+
+
