@@ -132,7 +132,7 @@ format: revealjs
 
 More about revealjs can be found on the [Quarto.org docs website](https://quarto.org/docs/presentations/revealjs/){target="_blank"} (embedded below):
 
-<iframe width="780" height="500" src="https://quarto.org/docs/presentations/revealjs/" title="Quarto revealjs">
+<iframe width="1000" height="500" src="https://quarto.org/docs/presentations/revealjs/" title="Quarto revealjs">
 
 </iframe>
 
@@ -187,6 +187,10 @@ gt(penguins)
 
 ## Columns
 
+
+::: {.panel-tabset}
+### Columns Code
+
 You can arrange content in columns using Pandoc's fenced `div` blocks.
 
 ``` qmd
@@ -203,7 +207,8 @@ This is the right column.
 :::
 ```
 
-## Columns, an Example
+### Columns Example
+
 
 Here is a 30/70 split:
 
@@ -218,6 +223,8 @@ penguins %>% head(4) %>% gt()
 ```
 :::
 :::::
+
+:::
 
 # Code and Output
 
@@ -408,6 +415,11 @@ Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.
 :::
 
 
+# Exercise 1b: Your First Presentation
+
+-   On one slide, add a bulleted list where each item is revealed incrementally.
+-   On another slide, use columns to display text on the left and an image on the right. (Hint: Use `![Caption](image.png)` to add an image).
+
 
 # Styling Your Presentation
 
@@ -420,11 +432,17 @@ You can change the entire look of your presentation with themes.
 title: "My Presentation"
 format:
   revealjs:
-    theme: dark
+    theme: sky
 ---
 ```
 
-Available themes include: `default`, `dark`, `simple`, `solarized`, `blood`, `moon`.
+* Available themes are: `default`, `beige`, `blood`, `dark`, `default`, `dracula`, `league`, `moon`, `night`, `serif`, `simple`, `sky`, `solarized`
+* Example of themes are below from <https://revealjs.com/themes/>:
+
+<iframe width="1100" height="500" src="https://revealjs.com/themes/" title="revealjs themes">
+</iframe>
+
+
 
 ## Custom Styles with SCSS
 
@@ -454,24 +472,131 @@ format:
 ---
 ```
 
+
+## Customizing the Title Slide
+
+You can add more information to your title slide directly in the YAML header. This is useful for adding affiliations, subtitles, and logos.
+
+``` yaml
+---
+title: "Workshop Title"
+subtitle: "An In-depth Look at Quarto"
+author: "Your Name"
+institute: "Oregon Health & Science University"
+date: "today"
+title-slide-attributes:
+  data-background-image: "your-logo.png"
+  data-background-size: "15%"
+  data-background-position: "top right"
+format: revealjs
+---
+```
+
+
 # Markup & Fine-Tuning
 
+* Adjust font size at different levels: part of a slide, entire slide, or entire document
+
+
+## Font Size: Part of a slide
+
+::: {.panel-tabset}
+### `{.smaller}` and `{.larger}`
+
+Wrap text in square brackets and use a class like `.smaller` or `.larger.`
+
+<br>
+
+```qmd
+This is [small text]{.smaller} and this is [large text]{.larger}.
+```
+This is [small text]{.smaller} and this is [large text]{.larger}.
+
+<br>
+
+[(Note: If this doesn't work, make sure your theme or `.scss` file defines these classes)]{.smaller}
+
+### `font-size` in fenced div
+
+::: {style="font-size: 85%;"}
+* Place text within a fenced div specifying the font-size.  
+* This option gives more flexibility setting the font size. 
+:::
+
+**Example 1:** font size specified in points
+
+```qmd
+::: {style="font-size: 14pt;"}
+Text is set at 14 pt. 
+:::
+```
+
+::: {style="font-size: 14pt;"}
+Text is set at 14 pt. 
+:::
+
+
+**Example 2:** font size as a percent
+
+```qmd
+::: {style="font-size: 75%;"}
+Text is at 75% of the default font size. 
+:::
+```
+
+::: {style="font-size: 75%;"}
+Text is at 75% of the default font size. 
+:::
+
+
+:::
+
+
+
+## [Auto-fit text size]{.r-fit-text} 
+
+* Use the `{.r-fit-text}` class to **auto-fit text size** to fill the slide.
+* **Header**: it makes the header fill one line by either increasing or decreasing the font size. 
+    * [Note: I usually have to render the slides twice to get this to work correctly]{.smaller}
+
+```qmd
+## [Auto-fit text size]{.r-fit-text} 
+```
+
+* **Body text**: The words "Big Text" below were auto-fit to the slide width. 
+    * Place text within a fenced div with the class `{.r-fit-text}`.
+
+``` qmd
+::: {.r-fit-text}
+Big Text
+:::
+```
+::: {.r-fit-text}
+Big Text
+:::
+
+
+## Font Size: Entire Slide{.larger}
+
+* Apply `{.smaller}` or `{.larger}` to an entire slide 
+    * to make **all** the text on the slide smaller or bigger, 
+    * by adding the class to the end of the header. 
+* *Note that it also makes the header smaller or larger.*
+
+<br>
+
+* For example, the header above was coded as:
+
+```qmd
+## Font Size: Entire Slide{.larger}
+```
 
 
 
 
+## Font Size: Entire Document
 
-
-# Exercise 1b: Your First Presentation
-
--   On one slide, add a bulleted list where each item is revealed incrementally.
--   On another slide, use columns to display text on the left and an image on the right. (Hint: Use `![Caption](image.png)` to add an image).
-
-## Controlling Font Size
-
-You can adjust font size at different levels.
-
--   **Whole Document:** Use the font-size option in your YAML header.
+Use the **font-size** option in your YAML header.
 
 ``` yaml
 format:
@@ -479,29 +604,7 @@ format:
     font-size: 24px
 ```
 
--   **Part of a Slide:** Wrap text in brackets and use a class like `.smaller` or `.larger.`
 
-```qmd
-This is [small text]{.smaller} and this is [large text]{.larger}.
-```
-This is [small text]{.smaller} and this is [large text]{.larger}.
-
-(Note: If this doesn't work, make sure your theme or `.scss` file defines these classes)
-
-
--   **Whole Slide:** Use the `r-fit-text` class to make text fill the slide.
-
-``` qmd
-::: {.r-fit-text}
-Big Text
-:::
-```
-
-## Slide with BIG TEXT
-
-::: r-fit-text
-Big Text
-:::
 
 ## Customizing Text Styles
 
@@ -521,25 +624,61 @@ $code-block-font-size: 0.55em;
 ```
 
 
+## Text [color]{style="color:green"}
 
-## Customizing the Title Slide
+* The default text color is determined by the theme of the document.
 
-You can add more information to your title slide directly in the YAML header. This is useful for adding affiliations, subtitles, and logos.
+* [You can change]{style="color:red"} [individual bits of text]{style="color:blue"} [by placing square brackets]{style="color:purple"} [around the text to modify]{style="color:#27a710"} [and applying the style class for color to it]{style="color:#CC5500"}. 
 
-``` yaml
----
-title: "Workshop Title"
-subtitle: "An In-depth Look at Quarto"
-author: "Your Name"
-institute: "OHSU-PSU School of Public Health"
-date: "today"
-title-slide-attributes:
-  data-background-image: "your-logo.png"
-  data-background-size: "15%"
-  data-background-position: "top right"
-format: revealjs
----
+The sentence above was coded as:
+
+```qmd
+[You can change]{style="color:red"} 
+[individual bits of text]{style="color:blue"} 
+[by placing square brackets]{style="color:purple"} 
+[around the text to modify]{style="color:#27a710"} 
+[and applying the style class for color to it]{style="color:#CC5500"}.
 ```
+
+:::: {style="font-size: 85%;"}
+* Note that the 
+    * first three colors were specified by **name** (i.e. red, blue, purple), and the
+    * last two colors were specified by **hexadecimal** values
+
+::: {.columns}
+                                       
+::: {.column width="50%"}
+* The actual shades of the "named" colors are determined by the theme applied to the slides.     
+    * The `scss` file for the theme can be modified to change the colors using hexadecimal values.
+* Use a [Hexadecimal color picker](https://htmlcolorcodes.com/color-picker/) to select your favorite colors 
+:::
+                                          
+::: {.column width="50%"}
+![](../images/scss_sky_modified_colors.png){fig-align="center" width=70%}
+:::
+:::
+
+::::
+
+
+## Slide background {background-color="orange"}
+
+* The background of a slide can be customized as well
+    * color
+    * image
+    * video
+    * and more!
+* Learn more at Quarto's [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds) reference page.
+
+<br>
+
+* The background of this slide was change by adding `{background-color="orange"}` to the end of the header:
+
+```qmd
+## Slide background {background-color="orange"}
+```
+
+
 
 
 # More Advanced
@@ -560,9 +699,18 @@ There are many, many advanced tools and options shown in the [Quarto presentatio
 
 More about presenter tools can be found on the [Quarto.org docs website](https://quarto.org/docs/presentations/revealjs/presenting.html){target="_blank"}
 
-<iframe width="780" height="500" src="https://quarto.org/docs/presentations/revealjs/presenting.html" title="Quarto revealjs">
+<iframe width="1000" height="500" src="https://quarto.org/docs/presentations/revealjs/presenting.html" title="Quarto revealjs">
 
 </iframe>
+
+## Fullscreen mode
+
+* Switch to full screen mode when presenting by pressing the `F` key.
+
+<br>
+
+* Press `esc` to exit back to your web browser.
+
 
 ## Speaker Notes
 
@@ -593,8 +741,12 @@ These are my speaker notes. Only I can see them.
 
 Revealjs includes a "chalkboard" that you can use for live drawings and a "notes canvas" for more permanent annotations.
 
--   Chalkboard: Press `b` to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it.
--   Notes Canvas: Press `c` to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.
+-   Chalkboard: 
+    * Press `b` to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it. 
+    * Or, click on the chalkboard icon on the bottom left of the slides
+-   Notes Canvas: 
+    * Press `c` to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.
+    * Or, click on the paintbrush icon on the bottom left of the slides
 
 Add the `chalkboard` option in the YAML header to include both the chalkboard and canvas options in your slides, :
 
@@ -621,7 +773,7 @@ format:
 ---
 ```
 
-![](/images/web/quartopres_chalkboard.png)
+![](../images/web/quartopres_chalkboard.png)
 
 ::: {.footnote}
 Learn more at [Quarto's Presenting Slides > Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard){target="_blank"}
@@ -636,12 +788,13 @@ Press `o` to see an outline of your presentation.
 
 ## Adding a Countdown Timer ⏳
 
-A great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides. We can use the countdown package, which we installed earlier.
+* A great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides. 
+* Below we use the countdown package, which we installed earlier.
 
-Let's set a 5-minute timer for a quick break.
+Let's set a 1-minute timer:
 
 ```{r, R-countdown, echo=TRUE}
-countdown::countdown(minutes = 5, play_sound = TRUE)
+countdown::countdown(minutes = 1, play_sound = TRUE)
 ```
 
 This will embed a timer on the slide. You can customize the duration, text, colors, and whether it plays a sound when finished.

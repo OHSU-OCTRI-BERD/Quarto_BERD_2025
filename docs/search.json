@@ -333,7 +333,7 @@
     "href": "slides/part3_presentations.html#columns",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Columns",
-    "text": "Columns\nYou can arrange content in columns using Pandoc’s fenced div blocks.\n::: {.columns}\n                                        \n::: {.column width=\"50%\"}\nThis is the left column. You can put text, images, or code here.\n:::\n                                          \n::: {.column width=\"50%\"}\nThis is the right column.\n:::\n                                          \n:::"
+    "text": "Columns\n\nColumns CodeColumns Example\n\n\nYou can arrange content in columns using Pandoc’s fenced div blocks.\n::: {.columns}\n                                        \n::: {.column width=\"50%\"}\nThis is the left column. You can put text, images, or code here.\n:::\n                                          \n::: {.column width=\"50%\"}\nThis is the right column.\n:::\n                                          \n:::\n\n\nHere is a 30/70 split:\n\n\nHere we have the first four rows of the Palmer Penguins Data set.\n\n\npenguins %&gt;% head(4) %&gt;% gt()\n\n\n\n\n\n  \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n      flipper_length_mm\n      body_mass_g\n      sex\n      year\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n    Adelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n    Adelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n    Adelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007"
   },
   {
     "objectID": "slides/part3_presentations.html#columns-an-example",
@@ -396,7 +396,7 @@
     "href": "slides/part3_presentations.html#themes",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Themes",
-    "text": "Themes\nYou can change the entire look of your presentation with themes.\n---\ntitle: \"My Presentation\"\nformat:\n  revealjs:\n    theme: dark\n---\nAvailable themes include: default, dark, simple, solarized, blood, moon."
+    "text": "Themes\nYou can change the entire look of your presentation with themes.\n---\ntitle: \"My Presentation\"\nformat:\n  revealjs:\n    theme: sky\n---\n\nAvailable themes are: default, beige, blood, dark, default, dracula, league, moon, night, serif, simple, sky, solarized\nExample of themes are below from https://revealjs.com/themes/:"
   },
   {
     "objectID": "slides/part3_presentations.html#custom-styles-with-scss",
@@ -410,7 +410,7 @@
     "href": "slides/part3_presentations.html#controlling-font-size",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Controlling Font Size",
-    "text": "Controlling Font Size\nYou can adjust font size at different levels.\n\nWhole Document: Use the font-size option in your YAML header.\n\nformat:\n  revealjs:\n    font-size: 24px\n\nPart of a Slide: Wrap text in brackets and use a class like .smaller or .larger.\n\nThis is [small text]{.smaller} and this is [large text]{.larger}.\nThis is small text and this is large text.\n(Note: If this doesn’t work, make sure your theme or .scss file defines these classes)\n\nWhole Slide: Use the r-fit-text class to make text fill the slide.\n\n::: {.r-fit-text}\nBig Text\n:::"
+    "text": "Controlling Font Size\n\nYou can adjust font size at different levels: part of a slide, entire slide, or entire document\n\n\nPart of a slideEntire SlideEntire Document\n\n\n\nOption 1: {.smaller} and {.larger}\n\nWrap text in brackets and use a class like .smaller or .larger.\nThis is [small text]{.smaller} and this is [large text]{.larger}.\nThis is small text and this is large text.\n(Note: If this doesn’t work, make sure your theme or .scss file defines these classes)\n\nOption 2: font-size in fenced div\n\nPlace text within a fenced div specifying the font-size.\nExample 1: font size specified in points\n::: {style=\"font-size: 14pt;\"}\nText is set at 14 pt. \n:::\n\nText is set at 14 pt. \n\nExample 2: font size as a percent\n::: {style=\"font-size: 75%;\"}\nText is at 75% of the default font size. \n:::\n\nText is at 75% of the default font size.\n\n\n\n\nUse the r-fit-text class to make text fill the slide.\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text\n\n\n\nUse the font-size option in your YAML header.\nformat:\n  revealjs:\n    font-size: 24px"
   },
   {
     "objectID": "slides/part3_presentations.html#slide-with-big-text",
@@ -431,7 +431,7 @@
     "href": "slides/part3_presentations.html#customizing-the-title-slide",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Customizing the Title Slide",
-    "text": "Customizing the Title Slide\nYou can add more information to your title slide directly in the YAML header. This is useful for adding affiliations, subtitles, and logos.\n---\ntitle: \"Workshop Title\"\nsubtitle: \"An In-depth Look at Quarto\"\nauthor: \"Your Name\"\ninstitute: \"OHSU-PSU School of Public Health\"\ndate: \"today\"\ntitle-slide-attributes:\n  data-background-image: \"your-logo.png\"\n  data-background-size: \"15%\"\n  data-background-position: \"top right\"\nformat: revealjs\n---"
+    "text": "Customizing the Title Slide\nYou can add more information to your title slide directly in the YAML header. This is useful for adding affiliations, subtitles, and logos.\n---\ntitle: \"Workshop Title\"\nsubtitle: \"An In-depth Look at Quarto\"\nauthor: \"Your Name\"\ninstitute: \"Oregon Health & Science University\"\ndate: \"today\"\ntitle-slide-attributes:\n  data-background-image: \"your-logo.png\"\n  data-background-size: \"15%\"\n  data-background-position: \"top right\"\nformat: revealjs\n---"
   },
   {
     "objectID": "slides/part3_presentations.html#speaker-notes",
@@ -452,7 +452,7 @@
     "href": "slides/part3_presentations.html#annotations-chalkboard",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Annotations & Chalkboard ✍️",
-    "text": "Annotations & Chalkboard ✍️\nRevealjs includes a “chalkboard” that you can use for live drawings and a “notes canvas” for more permanent annotations.\n\nChalkboard: Press b to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it.\nNotes Canvas: Press c to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.\n\nAdd the chalkboard option in the YAML header to include both the chalkboard and canvas options in your slides, :\n---\nformat: \n  revealjs:\n      chalkboard: true\n---"
+    "text": "Annotations & Chalkboard ✍️\nRevealjs includes a “chalkboard” that you can use for live drawings and a “notes canvas” for more permanent annotations.\n\nChalkboard:\n\nPress b to toggle the chalkboard. You can draw directly on the slide. Press b again to hide it.\nOr, click on the chalkboard icon on the bottom left of the slides\n\nNotes Canvas:\n\nPress c to toggle the notes canvas. This is like drawing on a transparent overlay that stays with the slide.\n\nOr, click on the paintbrush icon on the bottom left of the slides\n\n\n\nAdd the chalkboard option in the YAML header to include both the chalkboard and canvas options in your slides, :\n---\nformat: \n  revealjs:\n      chalkboard: true\n---"
   },
   {
     "objectID": "slides/part3_presentations.html#saving-loading-annotations",
@@ -473,7 +473,7 @@
     "href": "slides/part3_presentations.html#adding-a-countdown-timer",
     "title": "Part 3: Creating Presentations with Quarto",
     "section": "Adding a Countdown Timer ⏳",
-    "text": "Adding a Countdown Timer ⏳\nA great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides. We can use the countdown package, which we installed earlier.\nLet’s set a 5-minute timer for a quick break.\n\ncountdown::countdown(minutes = 5, play_sound = TRUE)\n\n\n−+\n05:00\n\n\n\nThis will embed a timer on the slide. You can customize the duration, text, colors, and whether it plays a sound when finished."
+    "text": "Adding a Countdown Timer ⏳\nA great way to manage time for in-class exercises or breaks is to add a countdown timer directly into your slides. We can use the countdown package, which we installed earlier.\nLet’s set a 5-minute timer for a quick break.\n\ncountdown::countdown(minutes = 1, play_sound = TRUE)\n\n\n−+\n01:00\n\n\n\nThis will embed a timer on the slide. You can customize the duration, text, colors, and whether it plays a sound when finished."
   },
   {
     "objectID": "slides/part3_presentations.html#html-slides",
@@ -1157,5 +1157,89 @@
     "title": "Part 2: Quarto Introduction",
     "section": "Outline",
     "text": "Outline\n\n\n\n\nCreate & render a Quarto file\n3 types of Quarto content:\n\n\nText editing\n\nFormatting text; visual editor\nHeaders\nLists\nHyperlinks\nImages\nTabsets\nCallout Blocks\nTables\nEquations with LaTeX\n\n\n\n\nCode chunks & options\n\nCreating and running code chunks\nOptions: show vs. hide code & output\nLocal vs global code chunk options\n\nYAML metadata\n\nTitle, subtitle, author, date, institution\nChange output file type (html, slides, Word, etc.)\nTable of contents\nCode folding"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#setting-font-size",
+    "href": "slides/part3_presentations.html#setting-font-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Setting Font Size",
+    "text": "Setting Font Size\n\nYou can adjust font size at different levels: part of a slide, entire slide, or entire document\n\n\nPart of a slideEntire SlideEntire Document\n\n\n\nOption 1: {.smaller} and {.larger}\n\nWrap text in brackets and use a class like .smaller or .larger.\nThis is [small text]{.smaller} and this is [large text]{.larger}.\nThis is small text and this is large text.\n(Note: If this doesn’t work, make sure your theme or .scss file defines these classes)\n\nOption 2: font-size in fenced div\n\nPlace text within a fenced div specifying the font-size.\nThis option gives more flexibility setting the font size.\nExample 1: font size specified in points\n::: {style=\"font-size: 14pt;\"}\nText is set at 14 pt. \n:::\n\nText is set at 14 pt. \n\nExample 2: font size as a percent\n::: {style=\"font-size: 75%;\"}\nText is at 75% of the default font size. \n:::\n\nText is at 75% of the default font size.\n\n\n\n\nUse the r-fit-text class to make text fill the slide.\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text\n\n\n\nUse the font-size option in your YAML header.\nformat:\n  revealjs:\n    font-size: 24px"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size",
+    "href": "slides/part3_presentations.html#font-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size",
+    "text": "Font Size\n\nYou can adjust font size at different levels: part of a slide, entire slide, or entire document\n\n\nPart of a slideEntire SlideEntire Document\n\n\n\nOption 1: {.smaller} and {.larger}\n\nWrap text in brackets and use a class like .smaller or .larger.\nThis is [small text]{.smaller} and this is [large text]{.larger}.\nThis is small text and this is large text.\n(Note: If this doesn’t work, make sure your theme or .scss file defines these classes)\n\nOption 2: font-size in fenced div\n\n\nPlace text within a fenced div specifying the font-size.\nThis option gives more flexibility setting the font size.\n\nExample 1: font size specified in points\n::: {style=\"font-size: 14pt;\"}\nText is set at 14 pt. \n:::\n\nText is set at 14 pt. \n\nExample 2: font size as a percent\n::: {style=\"font-size: 75%;\"}\nText is at 75% of the default font size. \n:::\n\nText is at 75% of the default font size.\n\n\n\n\nOption 1: automatically increase text to fit slide\nUse the {.r-fit-text} class to make text as big as possible to fill the slide.\nThis option is demonstrated on the next slide.\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text\n\n\n\nUse the font-size option in your YAML header.\nformat:\n  revealjs:\n    font-size: 24px"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#example-slide-with-big-text",
+    "href": "slides/part3_presentations.html#example-slide-with-big-text",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Example: Slide with BIG TEXT",
+    "text": "Example: Slide with BIG TEXT\n\nThis slide demonstrates using the {.r-fit-text} class to auto size text to fill the slide.\nHeader: when applied to the header of a slide, it makes it fit on one line by either increasing or decreasing the font size.\n\n## [Example: Slide with BIG TEXT]{.r-fit-text} \n\nBody text: The words “Big Text” below were increased to fit the width of the slide\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size-part-of-a-slide",
+    "href": "slides/part3_presentations.html#font-size-part-of-a-slide",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size: Part of a slide",
+    "text": "Font Size: Part of a slide\n\n{.smaller} and {.larger}font-size in fenced div\n\n\nWrap text in square brackets and use a class like .smaller or .larger.\n\nThis is [small text]{.smaller} and this is [large text]{.larger}.\nThis is small text and this is large text.\n\n(Note: If this doesn’t work, make sure your theme or .scss file defines these classes)\n\n\n\n\nPlace text within a fenced div specifying the font-size.\n\nThis option gives more flexibility setting the font size.\n\n\nExample 1: font size specified in points\n::: {style=\"font-size: 14pt;\"}\nText is set at 14 pt. \n:::\n\nText is set at 14 pt. \n\nExample 2: font size as a percent\n::: {style=\"font-size: 75%;\"}\nText is at 75% of the default font size. \n:::\n\nText is at 75% of the default font size."
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size-entire-slide",
+    "href": "slides/part3_presentations.html#font-size-entire-slide",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size: Entire Slide",
+    "text": "Font Size: Entire Slide\n\nApply {.smaller} or {.larger} to an entire slide\n\nto make all the text on the slide smaller or bigger,\nby adding the class to the end of the header.\n\nNote that it also makes the header smaller or larger.\n\n\n\nFor example, the header above was coded as:\n\n## Font Size: Entire Slide{.larger}"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size-entire-document",
+    "href": "slides/part3_presentations.html#font-size-entire-document",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size: Entire Document",
+    "text": "Font Size: Entire Document\nUse the font-size option in your YAML header.\nformat:\n  revealjs:\n    font-size: 24px"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size-entire-slide-12",
+    "href": "slides/part3_presentations.html#font-size-entire-slide-12",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size: Entire Slide (1/2)",
+    "text": "Font Size: Entire Slide (1/2)\n\nApply {.smaller} or {.larger} to an entire slide\n\nto make all the text on the slide (including the header) smaller or bigger,\nby adding the class to the end of the header.\n\n\n\n\nFor example, the header above was coded as:\n\n## Font Size: Entire Slide (1/2){.larger}"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#font-size-entire-slide-22",
+    "href": "slides/part3_presentations.html#font-size-entire-slide-22",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Font Size: Entire Slide (2/2)",
+    "text": "Font Size: Entire Slide (2/2)\n\nUse the {.r-fit-text} class to auto size text to fill the slide.\nHeader: when applied to the header of a slide, it makes it fit on one line by either increasing or decreasing the font size.\n\n## [Font Size: Entire Slide (2/2)]{.r-fit-text} \n\nBody text: The words “Big Text” below were automatically sized larger to fit the width of the slide. Place text within a fenced div with the class {.r-fit-text}.\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#auto-fit-text-size",
+    "href": "slides/part3_presentations.html#auto-fit-text-size",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Auto-fit text size",
+    "text": "Auto-fit text size\n\nUse the {.r-fit-text} class to auto-fit text size to fill the slide.\nHeader: it makes the header fill one line by either increasing or decreasing the font size.\n\nNote: I usually have to render the slides twice to get this to work correctly\n\n\n## [Auto-fit text size]{.r-fit-text} \n\nBody text: The words “Big Text” below were auto-fit to the slide width.\n\nPlace text within a fenced div with the class {.r-fit-text}.\n\n\n::: {.r-fit-text}\nBig Text\n:::\n\nBig Text"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#text-color",
+    "href": "slides/part3_presentations.html#text-color",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Text color",
+    "text": "Text color\n\nThe default text color is determined by the theme of the document.\nYou can change individual bits of text by placing square brackets around the text to modify and applying the style class for color to it.\n\nThe sentence above was coded as:\n[You can change]{style=\"color:red\"} \n[individual bits of text]{style=\"color:blue\"} \n[by placing square brackets]{style=\"color:purple\"} \n[around the text to modify]{style=\"color:#27a710\"} \n[and applying the style class for color to it]{style=\"color:#CC5500\"}.\n\n\nNote that the\n\nfirst three colors were specified by name (i.e. red, blue, purple), and the\nlast two colors were specified by hexadecimal values\n\n\n\n\n\nThe actual shades of the “named” colors are determined by the theme applied to the slides.\n\nThe scss file for the theme can be modified to change the colors using hexadecimal values.\n\nUse a Hexadecimal color picker to select your favorite colors"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#slide-background",
+    "href": "slides/part3_presentations.html#slide-background",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Slide background",
+    "text": "Slide background\n\nThe background of a slide can be customized as well\n\ncolor\nimage\nvideo\nand more!\n\nLearn more at Quarto’s Slide Backgrounds reference page.\n\n\n\nThe background of this slide was change by adding {background-color=\"orange\"} to the end of the header:\n\n## Slide background {background-color=\"orange\"}"
+  },
+  {
+    "objectID": "slides/part3_presentations.html#fullscreen-mode",
+    "href": "slides/part3_presentations.html#fullscreen-mode",
+    "title": "Part 3: Creating Presentations with Quarto",
+    "section": "Fullscreen mode",
+    "text": "Fullscreen mode\n\nSwitch to full screen mode when presenting by pressing the F key.\n\n\n\nPress esc to exit back to your web browser."
   }
 ]
