@@ -6,15 +6,14 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.361">
+  <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="Jessica Minnier, Meike Niederhausen">
   <meta name="dcterms.date" content="2025-07-17">
-  <title>Part 2: Quarto Introduction</title>
+  <title>OCTRI-BERD Quarto 2025 – Part 2: Quarto Introduction</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,7 +33,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -45,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -73,7 +72,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -87,7 +86,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -98,210 +97,13 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1acd085a7810a4f27fe1fe36e5cf1750.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -412,7 +214,7 @@ Jessica Minnier, Meike Niederhausen
 
   <p class="date">2025-07-17</p>
 </section>
-<section id="outline" class="slide level2">
+<section id="outline" class="slide level2 scrollable">
 <h2>Outline</h2>
 <div style="font-size: 90%;">
 <div class="columns">
@@ -451,8 +253,7 @@ Jessica Minnier, Meike Niederhausen
 <li>Code folding</li>
 </ul></li>
 </ol>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section>
@@ -460,7 +261,7 @@ Jessica Minnier, Meike Niederhausen
 <h1>Basic Quarto example</h1>
 
 <img data-src="../images/horst_quarto_moon_penguins.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a></p></section>
-<section id="create-a-quarto-file-.qmd" class="slide level2">
+<section id="create-a-quarto-file-.qmd" class="slide level2 scrollable">
 <h2>1. Create a Quarto file (<code>.qmd</code>)</h2>
 <p><strong>Two options:</strong></p>
 <ol type="1">
@@ -479,8 +280,7 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="../images/01_qmd_screenshot_popup.png" style="width:90.0%"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="create-a-quarto-file-.qmd-1" class="slide level2">
 <h2>2. Create a Quarto file (<code>.qmd</code>)</h2>
@@ -488,7 +288,7 @@ Jessica Minnier, Meike Niederhausen
 <li>After clicking on <code>Create</code>, you should then see the following in your editor window:</li>
 </ul>
 
-<img data-src="../images/01_qmd_screenshot.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="../images/01_qmd_screenshot.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="save-the-quarto-file-.qmd" class="slide level2">
 <h2>3. Save the Quarto file (<code>.qmd</code>)</h2>
 <ul>
@@ -512,7 +312,7 @@ Jessica Minnier, Meike Niederhausen
 </ul></li>
 </ul>
 </section>
-<section id="create-render-html-file" class="slide level2">
+<section id="create-render-html-file" class="slide level2 scrollable">
 <h2>4. Create (render) html file</h2>
 <p>We create the html file by <strong>rendering</strong> the .qmd file.</p>
 <p><strong>Two options:</strong></p>
@@ -531,8 +331,7 @@ Jessica Minnier, Meike Niederhausen
 <li>PC: <em>Ctrl+Shift+K</em></li>
 </ul></li>
 </ol>
-</div>
-</div>
+</div></div>
 <ul>
 <li>A new window will open with the html output.</li>
 <li>You will now see both .qmd and .html files in the folder where you saved the .qmd file.</li>
@@ -558,12 +357,11 @@ Jessica Minnier, Meike Niederhausen
 <h2>.qmd file vs.&nbsp;its html output</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>.qmd file <img data-src="../images/01_qmd_screenshot.png" data-fig-align="center"></p>
+<p>.qmd file <img data-src="../images/01_qmd_screenshot.png" class="quarto-figure quarto-figure-center"></p>
 </div><div class="column" style="width:50%;">
 <p>html output<br>
-<img data-src="../images/default_quarto_html.png" data-fig-align="center"></p>
-</div>
-</div>
+<img data-src="../images/default_quarto_html.png" class="quarto-figure quarto-figure-center"></p>
+</div></div>
 </section></section>
 <section id="download-.qmd-file-with-code-from-slides" class="title-slide slide level1 center">
 <h1>Download .qmd file with code from slides</h1>
@@ -571,7 +369,7 @@ Jessica Minnier, Meike Niederhausen
 </section>
 
 <section>
-<section id="types-of-quarto-content-text" class="title-slide slide level1 center">
+<section id="types-of-quarto-content-text" class="title-slide slide level1 center scrollable">
 <h1>3 types of Quarto content: text</h1>
 <ol type="1">
 <li><span style="color:darkorange"><em>Text</em>, lists, images, tables, links</span></li>
@@ -580,7 +378,7 @@ Jessica Minnier, Meike Niederhausen
 </ol>
 
 <img data-src="../images/horst_hedgehog_text_code.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/horst-hill-collaborations">Illustration by Alison Hill and Allison Horst, for RStudio.</a></p></section>
-<section id="formatting-text" class="slide level2">
+<section id="formatting-text" class="slide level2 scrollable">
 <h2>Formatting text</h2>
 <ul>
 <li><p><strong>bold</strong>, <em>italics</em>, super<sup>scripts</sup> &amp; sub<sub>scripts</sub>, <del>strikethrough</del>, <code>verbatim</code>, etc.<br>
@@ -596,7 +394,7 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/visual_editor_quarto.png"></p>
+<p><img data-src="../images/visual_editor_quarto.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>From Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html</p></li></ol></aside></section>
@@ -607,10 +405,10 @@ Jessica Minnier, Meike Niederhausen
 <li>Keyboard shortcuts usually work as well (<em>shown for Mac below</em>)</li>
 </ul>
 
-<img data-src="../images/visual_editor_options_expanded_quarto.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="../images/visual_editor_options_expanded_quarto.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="formatting-text-markdown" class="slide level2">
 <h2>Formatting text: <code>Markdown</code></h2>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -665,14 +463,14 @@ Jessica Minnier, Meike Niederhausen
 <p>Text in editor:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/screenshot_headers.png" height="300"></p>
+<p><img data-src="../images/screenshot_headers.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <p>Output:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/screenshot_headers_out.png" height="300"></p>
+<p><img data-src="../images/screenshot_headers_out.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
 <!-- # Header 1 -->
@@ -681,8 +479,7 @@ Jessica Minnier, Meike Niederhausen
 <!-- #### Header 4 -->
 <!-- ##### Header 5 -->
 <!-- ###### Header 6 -->
-</div>
-</div>
+</div></div>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -705,7 +502,7 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/default_quarto_html_outline.png"></p>
+<p><img data-src="../images/default_quarto_html_outline.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </section>
@@ -715,26 +512,26 @@ Jessica Minnier, Meike Niederhausen
 <div class="column" style="width:50%;">
 <p>Text in editor:</p>
 <!-- ![](../images/screenshot_unnumbered_lists_code.png){fig-align="center" height="70%"} -->
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>* This is an **unnumbered list**</span>
-<span id="cb7-2"><a href="#cb7-2"></a>  + with *sub-items*</span>
-<span id="cb7-3"><a href="#cb7-3"></a>      - and *sub-sub-items*,</span>
-<span id="cb7-4"><a href="#cb7-4"></a>          - or even deeper.</span>
-<span id="cb7-5"><a href="#cb7-5"></a>- You can use characters *, +, and - interchangeably to create lists.</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  * The order of the </span>
-<span id="cb7-7"><a href="#cb7-7"></a>      * character types is not important</span>
-<span id="cb7-8"><a href="#cb7-8"></a>      + and character types can be repeated.</span>
-<span id="cb7-9"><a href="#cb7-9"></a></span>
-<span id="cb7-10"><a href="#cb7-10"></a>What *is* important is the *spacing*!</span>
-<span id="cb7-11"><a href="#cb7-11"></a></span>
-<span id="cb7-12"><a href="#cb7-12"></a>+ indent each </span>
-<span id="cb7-13"><a href="#cb7-13"></a>  * sub-level with a tab and make sure  </span>
-<span id="cb7-14"><a href="#cb7-14"></a>  * there is a __space between the character starting the list and the first bit of text__,</span>
-<span id="cb7-15"><a href="#cb7-15"></a>  *otherwise the text won't be a new bullet in the list, such as this line.</span>
-<span id="cb7-16"><a href="#cb7-16"></a>  </span>
-<span id="cb7-17"><a href="#cb7-17"></a>Also, if you do not have an empty line </span>
-<span id="cb7-18"><a href="#cb7-18"></a>+ before starting a list, </span>
-<span id="cb7-19"><a href="#cb7-19"></a>+ then the output will be continuous text </span>
-<span id="cb7-20"><a href="#cb7-20"></a>- instead of bullet points.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>* This is an **unnumbered list**</span>
+<span id="cb7-2"><a></a>  + with *sub-items*</span>
+<span id="cb7-3"><a></a>      - and *sub-sub-items*,</span>
+<span id="cb7-4"><a></a>          - or even deeper.</span>
+<span id="cb7-5"><a></a>- You can use characters *, +, and - interchangeably to create lists.</span>
+<span id="cb7-6"><a></a>  * The order of the </span>
+<span id="cb7-7"><a></a>      * character types is not important</span>
+<span id="cb7-8"><a></a>      + and character types can be repeated.</span>
+<span id="cb7-9"><a></a></span>
+<span id="cb7-10"><a></a>What *is* important is the *spacing*!</span>
+<span id="cb7-11"><a></a></span>
+<span id="cb7-12"><a></a>+ indent each </span>
+<span id="cb7-13"><a></a>  * sub-level with a tab and make sure  </span>
+<span id="cb7-14"><a></a>  * there is a __space between the character starting the list and the first bit of text__,</span>
+<span id="cb7-15"><a></a>  *otherwise the text won't be a new bullet in the list, such as this line.</span>
+<span id="cb7-16"><a></a>  </span>
+<span id="cb7-17"><a></a>Also, if you do not have an empty line </span>
+<span id="cb7-18"><a></a>+ before starting a list, </span>
+<span id="cb7-19"><a></a>+ then the output will be continuous text </span>
+<span id="cb7-20"><a></a>- instead of bullet points.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div style="font-size: 70%;">
 <ul>
@@ -768,19 +565,18 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 <p>Also, if you do not have an empty line + before starting a list, + then the output will be continuous text - instead of bullet points.</p>
 </div>
-</div>
-</div>
+</div></div>
 </section>
-<section id="numbered-lists" class="slide level2">
+<section id="numbered-lists" class="slide level2 scrollable">
 <h2>Numbered lists</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>1. This is a **Numbered list**,</span>
-<span id="cb8-2"><a href="#cb8-2"></a>2. which can have</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    i. sub</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    ii. items</span>
-<span id="cb8-5"><a href="#cb8-5"></a>        a. and </span>
-<span id="cb8-6"><a href="#cb8-6"></a>        b. sub-sub-items.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>1. This is a **Numbered list**,</span>
+<span id="cb8-2"><a></a>2. which can have</span>
+<span id="cb8-3"><a></a>    i. sub</span>
+<span id="cb8-4"><a></a>    ii. items</span>
+<span id="cb8-5"><a></a>        a. and </span>
+<span id="cb8-6"><a></a>        b. sub-sub-items.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:40%;">
 <div style="font-size: 70%;">
 <ol type="1">
@@ -796,25 +592,24 @@ Jessica Minnier, Meike Niederhausen
 </ol></li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>You can also </span>
-<span id="cb9-2"><a href="#cb9-2"></a></span>
-<span id="cb9-3"><a href="#cb9-3"></a>1. create numbered lists</span>
-<span id="cb9-4"><a href="#cb9-4"></a>1. by repeating </span>
-<span id="cb9-5"><a href="#cb9-5"></a>1. `1.` over and over again.</span>
-<span id="cb9-6"><a href="#cb9-6"></a>    i. Each bullet</span>
-<span id="cb9-7"><a href="#cb9-7"></a>    i. can start with </span>
-<span id="cb9-8"><a href="#cb9-8"></a>    i. `1.` or `i.` </span>
-<span id="cb9-9"><a href="#cb9-9"></a>        a. or `a.`,</span>
-<span id="cb9-10"><a href="#cb9-10"></a>        a. in theory...</span>
-<span id="cb9-11"><a href="#cb9-11"></a></span>
-<span id="cb9-12"><a href="#cb9-12"></a>When lists get interrupted</span>
-<span id="cb9-13"><a href="#cb9-13"></a></span>
-<span id="cb9-14"><a href="#cb9-14"></a>1. the numbering restarts </span>
-<span id="cb9-15"><a href="#cb9-15"></a>1. at 1. though.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>You can also </span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>1. create numbered lists</span>
+<span id="cb9-4"><a></a>1. by repeating </span>
+<span id="cb9-5"><a></a>1. `1.` over and over again.</span>
+<span id="cb9-6"><a></a>    i. Each bullet</span>
+<span id="cb9-7"><a></a>    i. can start with </span>
+<span id="cb9-8"><a></a>    i. `1.` or `i.` </span>
+<span id="cb9-9"><a></a>        a. or `a.`,</span>
+<span id="cb9-10"><a></a>        a. in theory...</span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a>When lists get interrupted</span>
+<span id="cb9-13"><a></a></span>
+<span id="cb9-14"><a></a>1. the numbering restarts </span>
+<span id="cb9-15"><a></a>1. at 1. though.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:40%;">
 <div style="font-size: 70%;">
 <p>You can also</p>
@@ -838,18 +633,17 @@ Jessica Minnier, Meike Niederhausen
 <li>at 1. though.</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>To create a list</span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a>(@) whose numbering</span>
-<span id="cb10-4"><a href="#cb10-4"></a></span>
-<span id="cb10-5"><a href="#cb10-5"></a>does not</span>
-<span id="cb10-6"><a href="#cb10-6"></a></span>
-<span id="cb10-7"><a href="#cb10-7"></a>(@) get interrupted,</span>
-<span id="cb10-8"><a href="#cb10-8"></a>(@) use `(@)`.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>To create a list</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>(@) whose numbering</span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a>does not</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a>(@) get interrupted,</span>
+<span id="cb10-8"><a></a>(@) use `(@)`.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:40%;">
 <div style="font-size: 70%;">
 <p>To create a list</p>
@@ -862,8 +656,7 @@ Jessica Minnier, Meike Niederhausen
 <li>use <code>(@)</code>.</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="to-do-lists" class="slide level2">
 <h2>To-do lists</h2>
@@ -874,36 +667,35 @@ Jessica Minnier, Meike Niederhausen
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Text in editor:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>Topics to cover:</span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a>- [x] Formatting text</span>
-<span id="cb11-4"><a href="#cb11-4"></a>- [x] Headers</span>
-<span id="cb11-5"><a href="#cb11-5"></a>- [ ] Lists</span>
-<span id="cb11-6"><a href="#cb11-6"></a>    - [x] Unnumbered lists</span>
-<span id="cb11-7"><a href="#cb11-7"></a>    - [x] Numbered lists</span>
-<span id="cb11-8"><a href="#cb11-8"></a>    - [ ] To-do lists</span>
-<span id="cb11-9"><a href="#cb11-9"></a>- [ ] Hyperlinks</span>
-<span id="cb11-10"><a href="#cb11-10"></a>- [ ] Images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>Topics to cover:</span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a>- [x] Formatting text</span>
+<span id="cb11-4"><a></a>- [x] Headers</span>
+<span id="cb11-5"><a></a>- [ ] Lists</span>
+<span id="cb11-6"><a></a>    - [x] Unnumbered lists</span>
+<span id="cb11-7"><a></a>    - [x] Numbered lists</span>
+<span id="cb11-8"><a></a>    - [ ] To-do lists</span>
+<span id="cb11-9"><a></a>- [ ] Hyperlinks</span>
+<span id="cb11-10"><a></a>- [ ] Images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div style="font-size: 85%;">
 <p>Topics to cover:</p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Formatting text</li>
-<li><input type="checkbox" checked="">Headers</li>
-<li><input type="checkbox">Lists
+<li><label><input type="checkbox" checked="">Formatting text</label></li>
+<li><label><input type="checkbox" checked="">Headers</label></li>
+<li><label><input type="checkbox">Lists</label>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Unnumbered lists</li>
-<li><input type="checkbox" checked="">Numbered lists</li>
-<li><input type="checkbox">To-do lists</li>
+<li><label><input type="checkbox" checked="">Unnumbered lists</label></li>
+<li><label><input type="checkbox" checked="">Numbered lists</label></li>
+<li><label><input type="checkbox">To-do lists</label></li>
 </ul></li>
-<li><input type="checkbox">Hyperlinks</li>
-<li><input type="checkbox">Images</li>
+<li><label><input type="checkbox">Hyperlinks</label></li>
+<li><label><input type="checkbox">Images</label></li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </section>
-<section id="practice" class="slide level2">
+<section id="practice" class="slide level2 scrollable">
 <h2>Practice</h2>
 <div style="font-size: 85%;">
 <ol type="1">
@@ -935,24 +727,24 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li><strong>Hyperlink where the url is visible: <code>&lt;url&gt;</code></strong></li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>Workshop website link: &lt;https://ohsu-octri-berd.github.io/Quarto_BERD_2025/&gt;.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>Workshop website link: &lt;https://ohsu-octri-berd.github.io/Quarto_BERD_2025/&gt;.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Workshop website link: <a href="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/" class="uri">https://ohsu-octri-berd.github.io/Quarto_BERD_2025/</a>.</p>
 <ul>
 <li><strong>Hyperlink showing text instead of the url: <code>[text](url)</code></strong></li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>We also have a shortened [bitly link](https://bit.ly/berd2025_quarto).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>We also have a shortened [bitly link](https://bit.ly/berd2025_quarto).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We also have a shortened <a href="https://bit.ly/berd2025_quarto">bitly link</a>.</p>
 <ul>
 <li><strong>Open link in a new tab: <code>[text](url){target="_blank"}</code></strong></li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>This link will open in a new tab  </span>
-<span id="cb14-2"><a href="#cb14-2"></a>[bitly link](https://bit.ly/berd2025_quarto){target="_blank"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>This link will open in a new tab  </span>
+<span id="cb14-2"><a></a>[bitly link](https://bit.ly/berd2025_quarto){target="_blank"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This link will open in a new tab <a href="https://bit.ly/berd2025_quarto" target="_blank">bitly link</a></p>
 </section>
 <section id="images-12" class="slide level2">
 <h2>Images (1/2)</h2>
 <p>Add an image with a simple <code>![](filepath)</code></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>![](/images/cat_laptop.gif)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>![](/images/cat_laptop.gif)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="../images/cat_laptop.gif"></p>
@@ -960,16 +752,15 @@ Jessica Minnier, Meike Niederhausen
 <div style="font-size: 85%;">
 <p>You can add html image options to change the width or height:</p>
 <p>Specifying <em>width</em> in terms of <strong>pixels</strong>:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>![](/images/cat_laptop.gif){width="100"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>![](/images/cat_laptop.gif){width="100"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img data-src="../images/cat_laptop.gif" width="100"> Specifying <em>height</em> in <strong>inches</strong>:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a href="#cb17-1"></a>![](/images/cat_laptop.gif){height="2in"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>![](/images/cat_laptop.gif){height="2in"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img data-src="../images/cat_laptop.gif" style="height:2in"></p>
 <p>Specifying <em>width</em> as a <strong>percent</strong> of the original image size:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a href="#cb18-1"></a>![](/images/cat_laptop.gif){width="50%"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>![](/images/cat_laptop.gif){width="50%"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img data-src="../images/cat_laptop.gif" style="width:50.0%"></p>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="images-22" class="slide level2">
 <h2>Images (2/2)</h2>
@@ -977,7 +768,7 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li>Add caption text (&amp; align left):</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href="#cb19-1"></a>![Caption text](/images/ohsu_logo.jpg){width="100" fig-align="left"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a></a>![Caption text](/images/ohsu_logo.jpg){width="100" fig-align="left"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><img data-src="../images/ohsu_logo.jpg" width="100"></p>
@@ -987,8 +778,8 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li>Add caption text that is linked to OHSU webpage (&amp; align center):</li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a href="#cb20-1"></a>![[Caption text with linked url](https://www.ohsu.edu){target="_blank"}]</span>
-<span id="cb20-2"><a href="#cb20-2"></a>(/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>![[Caption text with linked url](https://www.ohsu.edu){target="_blank"}]</span>
+<span id="cb20-2"><a></a>(/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo" fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../images/ohsu_logo.jpg" alt="OHSU Logo" width="100"></p>
@@ -998,11 +789,11 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li>Logo image itself is linked to OHSU webpage (&amp; align right):</li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb21-1"><a href="#cb21-1"></a>[![](/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo"  </span>
-<span id="cb21-2"><a href="#cb21-2"></a>fig-align="right"}](https://www.ohsu.edu){target="_blank"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb21-1"><a></a>[![](/images/ohsu_logo.jpg){width="100" fig-alt="OHSU Logo"  </span>
+<span id="cb21-2"><a></a>fig-align="right"}](https://www.ohsu.edu){target="_blank"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-right">
 <figure>
-<p><a href="https://www.ohsu.edu" target="_blank"><img data-src="../images/ohsu_logo.jpg" alt="OHSU Logo" width="100"></a></p>
+<p><a href="https://www.ohsu.edu" target="_blank"><img data-src="../images/ohsu_logo.jpg" class="quarto-figure quarto-figure-right" alt="OHSU Logo" width="100"></a></p>
 </figure>
 </div>
 </section>
@@ -1013,19 +804,19 @@ Jessica Minnier, Meike Niederhausen
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a href="#cb22-1"></a>::: {.panel-tabset}</span>
-<span id="cb22-2"><a href="#cb22-2"></a>### Tab A</span>
-<span id="cb22-3"><a href="#cb22-3"></a></span>
-<span id="cb22-4"><a href="#cb22-4"></a>Content for `Tab A`</span>
-<span id="cb22-5"><a href="#cb22-5"></a></span>
-<span id="cb22-6"><a href="#cb22-6"></a>### Tab B</span>
-<span id="cb22-7"><a href="#cb22-7"></a></span>
-<span id="cb22-8"><a href="#cb22-8"></a>Content for `Tab B`</span>
-<span id="cb22-9"><a href="#cb22-9"></a></span>
-<span id="cb22-10"><a href="#cb22-10"></a>### Tab C</span>
-<span id="cb22-11"><a href="#cb22-11"></a></span>
-<span id="cb22-12"><a href="#cb22-12"></a>Content for `Tab C`</span>
-<span id="cb22-13"><a href="#cb22-13"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>::: {.panel-tabset}</span>
+<span id="cb22-2"><a></a>### Tab A</span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a>Content for `Tab A`</span>
+<span id="cb22-5"><a></a></span>
+<span id="cb22-6"><a></a>### Tab B</span>
+<span id="cb22-7"><a></a></span>
+<span id="cb22-8"><a></a>Content for `Tab B`</span>
+<span id="cb22-9"><a></a></span>
+<span id="cb22-10"><a></a>### Tab C</span>
+<span id="cb22-11"><a></a></span>
+<span id="cb22-12"><a></a>Content for `Tab C`</span>
+<span id="cb22-13"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <ul>
 <li>Each header creates a new tab.
@@ -1035,8 +826,7 @@ Jessica Minnier, Meike Niederhausen
 </ul></li>
 <li>See the next slide for the rendered output of the tabset code above.</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="tabsets---rendered" class="slide level2">
 <h2>Tabsets - Rendered</h2>
@@ -1060,21 +850,21 @@ Jessica Minnier, Meike Niederhausen
 <h2>Callout Blocks ⚠️ (1/2)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a href="#cb23-1"></a>::: callout-tip</span>
-<span id="cb23-2"><a href="#cb23-2"></a>Callouts are an excellent way to </span>
-<span id="cb23-3"><a href="#cb23-3"></a>draw attention to specific </span>
-<span id="cb23-4"><a href="#cb23-4"></a>pieces of information.</span>
-<span id="cb23-5"><a href="#cb23-5"></a>:::</span>
-<span id="cb23-6"><a href="#cb23-6"></a></span>
-<span id="cb23-7"><a href="#cb23-7"></a>::: {.callout-note}</span>
-<span id="cb23-8"><a href="#cb23-8"></a>They are especially useful for </span>
-<span id="cb23-9"><a href="#cb23-9"></a>notes, warnings, or tips.</span>
-<span id="cb23-10"><a href="#cb23-10"></a>:::</span>
-<span id="cb23-11"><a href="#cb23-11"></a></span>
-<span id="cb23-12"><a href="#cb23-12"></a>::: {.callout-important}</span>
-<span id="cb23-13"><a href="#cb23-13"></a>You create them using fenced </span>
-<span id="cb23-14"><a href="#cb23-14"></a>divs `:::` with a special class.</span>
-<span id="cb23-15"><a href="#cb23-15"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a></a>::: callout-tip</span>
+<span id="cb23-2"><a></a>Callouts are an excellent way to </span>
+<span id="cb23-3"><a></a>draw attention to specific </span>
+<span id="cb23-4"><a></a>pieces of information.</span>
+<span id="cb23-5"><a></a>:::</span>
+<span id="cb23-6"><a></a></span>
+<span id="cb23-7"><a></a>::: {.callout-note}</span>
+<span id="cb23-8"><a></a>They are especially useful for </span>
+<span id="cb23-9"><a></a>notes, warnings, or tips.</span>
+<span id="cb23-10"><a></a>:::</span>
+<span id="cb23-11"><a></a></span>
+<span id="cb23-12"><a></a>::: {.callout-important}</span>
+<span id="cb23-13"><a></a>You create them using fenced </span>
+<span id="cb23-14"><a></a>divs `:::` with a special class.</span>
+<span id="cb23-15"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1115,18 +905,17 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a href="#cb24-1"></a>::: callout-caution</span>
-<span id="cb24-2"><a href="#cb24-2"></a>There are 5 types of callouts.</span>
-<span id="cb24-3"><a href="#cb24-3"></a>:::</span>
-<span id="cb24-4"><a href="#cb24-4"></a></span>
-<span id="cb24-5"><a href="#cb24-5"></a>::: callout-warning</span>
-<span id="cb24-6"><a href="#cb24-6"></a>It is tempting to overdo it </span>
-<span id="cb24-7"><a href="#cb24-7"></a>with callout boxes!</span>
-<span id="cb24-8"><a href="#cb24-8"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>::: callout-caution</span>
+<span id="cb24-2"><a></a>There are 5 types of callouts.</span>
+<span id="cb24-3"><a></a>:::</span>
+<span id="cb24-4"><a></a></span>
+<span id="cb24-5"><a></a>::: callout-warning</span>
+<span id="cb24-6"><a></a>It is tempting to overdo it </span>
+<span id="cb24-7"><a></a>with callout boxes!</span>
+<span id="cb24-8"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -1154,28 +943,27 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="callout-blocks-22" class="slide level2">
 <h2>Callout Blocks ⚠️ (2/2)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a href="#cb25-1"></a>::: {.callout-tip}</span>
-<span id="cb25-2"><a href="#cb25-2"></a>## Tip with different title</span>
-<span id="cb25-3"><a href="#cb25-3"></a></span>
-<span id="cb25-4"><a href="#cb25-4"></a>You can change the title of any </span>
-<span id="cb25-5"><a href="#cb25-5"></a>type of callout box by adding </span>
-<span id="cb25-6"><a href="#cb25-6"></a>`## New title` right below the </span>
-<span id="cb25-7"><a href="#cb25-7"></a>first line of the callout. </span>
-<span id="cb25-8"><a href="#cb25-8"></a>:::</span>
-<span id="cb25-9"><a href="#cb25-9"></a></span>
-<span id="cb25-10"><a href="#cb25-10"></a>::: {.callout-note icon=false}</span>
-<span id="cb25-11"><a href="#cb25-11"></a>You can omit the icon of any type </span>
-<span id="cb25-12"><a href="#cb25-12"></a>of callout box by adding </span>
-<span id="cb25-13"><a href="#cb25-13"></a>`icon=false` within the `{}` of </span>
-<span id="cb25-14"><a href="#cb25-14"></a>the first line of the callout. </span>
-<span id="cb25-15"><a href="#cb25-15"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a></a>::: {.callout-tip}</span>
+<span id="cb25-2"><a></a>## Tip with different title</span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a>You can change the title of any </span>
+<span id="cb25-5"><a></a>type of callout box by adding </span>
+<span id="cb25-6"><a></a>`## New title` right below the </span>
+<span id="cb25-7"><a></a>first line of the callout. </span>
+<span id="cb25-8"><a></a>:::</span>
+<span id="cb25-9"><a></a></span>
+<span id="cb25-10"><a></a>::: {.callout-note icon=false}</span>
+<span id="cb25-11"><a></a>You can omit the icon of any type </span>
+<span id="cb25-12"><a></a>of callout box by adding </span>
+<span id="cb25-13"><a></a>`icon=false` within the `{}` of </span>
+<span id="cb25-14"><a></a>the first line of the callout. </span>
+<span id="cb25-15"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1200,24 +988,23 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb26-1"><a href="#cb26-1"></a>::: {.callout-caution collapse="true"}</span>
-<span id="cb26-2"><a href="#cb26-2"></a>## Callouts can be collapsed in </span>
-<span id="cb26-3"><a href="#cb26-3"></a>html files (not in slides - yet)</span>
-<span id="cb26-4"><a href="#cb26-4"></a></span>
-<span id="cb26-5"><a href="#cb26-5"></a>If you look at the html file </span>
-<span id="cb26-6"><a href="#cb26-6"></a>(not the slides), you will see </span>
-<span id="cb26-7"><a href="#cb26-7"></a>that the content of this callout </span>
-<span id="cb26-8"><a href="#cb26-8"></a>is "folded" and needs to be expanded </span>
-<span id="cb26-9"><a href="#cb26-9"></a>by the user to see it. </span>
-<span id="cb26-10"><a href="#cb26-10"></a>* Use `collapse="true"` if you want it </span>
-<span id="cb26-11"><a href="#cb26-11"></a>collapsed by default, and </span>
-<span id="cb26-12"><a href="#cb26-12"></a>* `collapse="false"` to make it </span>
-<span id="cb26-13"><a href="#cb26-13"></a>expanded by default.</span>
-<span id="cb26-14"><a href="#cb26-14"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb26-1"><a></a>::: {.callout-caution collapse="true"}</span>
+<span id="cb26-2"><a></a>## Callouts can be collapsed in </span>
+<span id="cb26-3"><a></a>html files (not in slides - yet)</span>
+<span id="cb26-4"><a></a></span>
+<span id="cb26-5"><a></a>If you look at the html file </span>
+<span id="cb26-6"><a></a>(not the slides), you will see </span>
+<span id="cb26-7"><a></a>that the content of this callout </span>
+<span id="cb26-8"><a></a>is "folded" and needs to be expanded </span>
+<span id="cb26-9"><a></a>by the user to see it. </span>
+<span id="cb26-10"><a></a>* Use `collapse="true"` if you want it </span>
+<span id="cb26-11"><a></a>collapsed by default, and </span>
+<span id="cb26-12"><a></a>* `collapse="false"` to make it </span>
+<span id="cb26-13"><a></a>expanded by default.</span>
+<span id="cb26-14"><a></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -1236,8 +1023,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <p>Learn more about callout blocks at <a href="https://quarto.org/docs/authoring/callouts.html" target="_blank">https://quarto.org/docs/authoring/callouts.html</a></p>
 </section>
 <section id="tables" class="slide level2">
@@ -1245,13 +1031,13 @@ Jessica Minnier, Meike Niederhausen
 <p>One benefit of using or switching over to the Visual editor is that it is much easier to add tables.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb27-1"><a href="#cb27-1"></a>| Name    | Date     | Measure |</span>
-<span id="cb27-2"><a href="#cb27-2"></a>|---------|----------|---------|</span>
-<span id="cb27-3"><a href="#cb27-3"></a>| Jessica | 02/04/25 | 9.3     |</span>
-<span id="cb27-4"><a href="#cb27-4"></a>| Meike   | 01/03/25 | 10.1    |</span>
-<span id="cb27-5"><a href="#cb27-5"></a>| BERD    |    🐦    | 10.5    |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb27-1"><a></a>| Name    | Date     | Measure |</span>
+<span id="cb27-2"><a></a>|---------|----------|---------|</span>
+<span id="cb27-3"><a></a>| Jessica | 02/04/25 | 9.3     |</span>
+<span id="cb27-4"><a></a>| Meike   | 01/03/25 | 10.1    |</span>
+<span id="cb27-5"><a></a>| BERD    |    🐦    | 10.5    |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -1277,8 +1063,7 @@ Jessica Minnier, Meike Niederhausen
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</div></div>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1305,13 +1090,13 @@ Jessica Minnier, Meike Niederhausen
 <ul>
 <li><strong>Mathematical equations and symbols</strong> can be included using LaTeX, both as <em>inline equations</em> or <em>centered display equations</em></li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb28-1"><a href="#cb28-1"></a>* Use single `$` for inline equations: $y=\beta_0 + \beta_1x + \varepsilon$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb28-1"><a></a>* Use single `$` for inline equations: $y=\beta_0 + \beta_1x + \varepsilon$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Use single <code>$</code> for inline equations: <span class="math inline">\(y=\beta_0 + \beta_1x + \varepsilon\)</span></li>
 </ul>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb29-1"><a href="#cb29-1"></a>* Use double `$$` for centered display equations:</span>
-<span id="cb29-2"><a href="#cb29-2"></a>  </span>
-<span id="cb29-3"><a href="#cb29-3"></a>$$\hat{y}= \frac{3}{7} +  5 \textrm{age} + 3^2 \cdot \textrm{height}$$ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource qmd number-lines code-with-copy"><code class="sourceCode"><span id="cb29-1"><a></a>* Use double `$$` for centered display equations:</span>
+<span id="cb29-2"><a></a>  </span>
+<span id="cb29-3"><a></a>$$\hat{y}= \frac{3}{7} +  5 \textrm{age} + 3^2 \cdot \textrm{height}$$ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Use double <code>$$</code> for centered display equations:</li>
 </ul>
@@ -1324,9 +1109,9 @@ Jessica Minnier, Meike Niederhausen
 <section id="types-of-quarto-content-code" class="title-slide slide level1 center">
 <h1>3 types of Quarto content: code</h1>
 <ul class="task-list">
-<li><input type="checkbox" checked="">1. Text, lists, images, tables, links</li>
-<li><input type="checkbox">2. <span style="color:darkorange"><em>Code chunks</em></span></li>
-<li><input type="checkbox">3. YAML metadata</li>
+<li><label><input type="checkbox" checked="">1. Text, lists, images, tables, links</label></li>
+<li><label><input type="checkbox">2. <span style="color:darkorange"><em>Code chunks</em></span></label></li>
+<li><label><input type="checkbox">3. YAML metadata</label></li>
 </ul>
 
 <img data-src="../images/horst_hedgehog_text_code.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/horst-hill-collaborations">Illustration by Alison Hill and Allison Horst, for RStudio.</a></p></section>
@@ -1334,11 +1119,10 @@ Jessica Minnier, Meike Niederhausen
 <h2>Code chunks</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>.qmd file <img data-src="../images/01_qmd_screenshot.png" data-fig-align="center"></p>
+<p>.qmd file <img data-src="../images/01_qmd_screenshot.png" class="quarto-figure quarto-figure-center"></p>
 </div><div class="column" style="width:50%;">
-<p>html output <img data-src="../images/default_quarto_html.png" data-fig-align="center"></p>
-</div>
-</div>
+<p>html output <img data-src="../images/default_quarto_html.png" class="quarto-figure quarto-figure-center"></p>
+</div></div>
 </section>
 <section id="what-does-a-code-chunk-look-like" class="slide level2">
 <h2>What does a code chunk look like?</h2>
@@ -1381,7 +1165,7 @@ Jessica Minnier, Meike Niederhausen
 <li>or typing one of the following key combinations:</li>
 </ul></li>
 </ul>
-<table>
+<table class="caption-top">
 <tbody>
 <tr class="odd">
 <td>Mac</td>
@@ -1399,11 +1183,10 @@ Jessica Minnier, Meike Niederhausen
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/01_qmd_coding1a.png"></p>
+<p><img data-src="../images/01_qmd_coding1a.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="enter-and-run-code-22" class="slide level2">
@@ -1418,7 +1201,7 @@ Jessica Minnier, Meike Niederhausen
 </ul>
 </div>
 
-<img data-src="../images/01_qmd_coding2.png" class="r-stretch quarto-figure-center"><div class="callout callout-note callout-titled callout-style-default">
+<img data-src="../images/01_qmd_coding2.png" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1438,7 +1221,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </section>
-<section id="create-a-code-chunk" class="slide level2">
+<section id="create-a-code-chunk" class="slide level2 scrollable">
 <h2>Create a code chunk</h2>
 <div style="font-size: 90%;">
 <p><strong>3 options</strong> to create a code chunk</p>
@@ -1446,7 +1229,7 @@ Jessica Minnier, Meike Niederhausen
 <li><p>Click on <img data-src="../images/code_chunk_insert_icon.png"> at top right of the editor window, or</p></li>
 <li><p><span style="color:darkorange"><strong>Keyboard shortcut</strong></span></p></li>
 </ol>
-<table>
+<table class="caption-top">
 <tbody>
 <tr class="odd">
 <td>Mac</td>
@@ -1464,14 +1247,14 @@ Jessica Minnier, Meike Niederhausen
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/code_chunk_insert_visual.png" style="width:70.0%"></p>
+<p><img data-src="../images/code_chunk_insert_visual.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
 <section id="useful-keyboard-shortcuts" class="slide level2">
 <h2>Useful keyboard shortcuts</h2>
 <p><a href="https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts" target="_blank">Full list of keyboard shortcuts</a></p>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 27%">
@@ -1509,8 +1292,8 @@ Jessica Minnier, Meike Niederhausen
 </table>
 <p><strong>Practice:</strong> Try typing code below in your qmd (with shortcut) and evaluating it (with shortcut):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb30-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="code-chunk-options" class="slide level2">
@@ -1528,12 +1311,12 @@ Jessica Minnier, Meike Niederhausen
 <div class="column" style="width:50%;">
 <p><code>#| eval: true</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="co">#| eval: true</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a></span>
-<span id="cb31-4"><a href="#cb31-4"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb31-5"><a href="#cb31-5"></a><span class="fu">mean</span>(y)</span>
-<span id="cb31-6"><a href="#cb31-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb31-2"><a></a><span class="in">#| eval: true</span></span>
+<span id="cb31-3"><a></a></span>
+<span id="cb31-4"><a></a><span class="in">y &lt;- 1:10</span></span>
+<span id="cb31-5"><a></a><span class="in">mean(y)</span></span>
+<span id="cb31-6"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.5</code></pre>
 </div>
@@ -1541,15 +1324,14 @@ Jessica Minnier, Meike Niederhausen
 </div><div class="column" style="width:50%;">
 <p><code>#| eval: false</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1"></a><span class="in">```{r}</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="co">#| eval: false</span></span>
-<span id="cb33-3"><a href="#cb33-3"></a></span>
-<span id="cb33-4"><a href="#cb33-4"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb33-5"><a href="#cb33-5"></a><span class="fu">mean</span>(y)</span>
-<span id="cb33-6"><a href="#cb33-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb33-2"><a></a><span class="in">#| eval: false</span></span>
+<span id="cb33-3"><a></a></span>
+<span id="cb33-4"><a></a><span class="in">y &lt;- 1:10</span></span>
+<span id="cb33-5"><a></a><span class="in">mean(y)</span></span>
+<span id="cb33-6"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-2-2">
 <ul>
@@ -1562,13 +1344,13 @@ Jessica Minnier, Meike Niederhausen
 <p>Code chunk:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="../images/chunk_option_echo_true.png"></p>
+<p><img data-src="../images/chunk_option_echo_true.png" class="quarto-figure quarto-figure-left"></p>
 </figure>
 </div>
 <p>Output:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a><span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb34-2"><a></a><span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.5</code></pre>
 </div>
@@ -1578,7 +1360,7 @@ Jessica Minnier, Meike Niederhausen
 <p>Code chunk:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="../images/chunk_option_echo_false.png"></p>
+<p><img data-src="../images/chunk_option_echo_false.png" class="quarto-figure quarto-figure-left"></p>
 </figure>
 </div>
 <p>Output:</p>
@@ -1587,8 +1369,7 @@ Jessica Minnier, Meike Niederhausen
 <pre><code>[1] 5.5</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-2-3">
 <ul>
@@ -1610,9 +1391,9 @@ Jessica Minnier, Meike Niederhausen
 <section id="types-of-quarto-content-yaml" class="title-slide slide level1 center">
 <h1>3 types of Quarto content: YAML</h1>
 <ul class="task-list">
-<li><input type="checkbox" checked="">1. Text, lists, images, tables, links</li>
-<li><input type="checkbox" checked="">2. Code chunks</li>
-<li><input type="checkbox">3. <span style="color:darkorange"><em>YAML metadata</em></span></li>
+<li><label><input type="checkbox" checked="">1. Text, lists, images, tables, links</label></li>
+<li><label><input type="checkbox" checked="">2. Code chunks</label></li>
+<li><label><input type="checkbox">3. <span style="color:darkorange"><em>YAML metadata</em></span></label></li>
 </ul>
 
 <img data-src="../images/horst_hedgehog_text_code.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/horst-hill-collaborations">Illustration by Alison Hill and Allison Horst, for RStudio.</a></p></section>
@@ -1639,23 +1420,22 @@ Jessica Minnier, Meike Niederhausen
 <div class="column" style="width:50%;">
 <p>YAML:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="sc">---</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a>title<span class="sc">:</span> <span class="st">"My first Quarto file"</span></span>
-<span id="cb37-3"><a href="#cb37-3"></a>author<span class="sc">:</span> <span class="st">"Meike"</span></span>
-<span id="cb37-4"><a href="#cb37-4"></a>date<span class="sc">:</span> <span class="st">"9/25/2023"</span></span>
-<span id="cb37-5"><a href="#cb37-5"></a>format<span class="sc">:</span> html</span>
-<span id="cb37-6"><a href="#cb37-6"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb37-7"><a href="#cb37-7"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="sc">---</span></span>
+<span id="cb37-2"><a></a>title<span class="sc">:</span> <span class="st">"My first Quarto file"</span></span>
+<span id="cb37-3"><a></a>author<span class="sc">:</span> <span class="st">"Meike"</span></span>
+<span id="cb37-4"><a></a>date<span class="sc">:</span> <span class="st">"9/25/2023"</span></span>
+<span id="cb37-5"><a></a>format<span class="sc">:</span> html</span>
+<span id="cb37-6"><a></a>editor<span class="sc">:</span> visual</span>
+<span id="cb37-7"><a></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p>Output:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../images/yaml_simple_output.png"></p>
+<p><img data-src="../images/yaml_simple_output.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1673,7 +1453,7 @@ Jessica Minnier, Meike Niederhausen
 </div>
 </div>
 </section>
-<section id="change-the-output-file-type" class="slide level2 smaller">
+<section id="change-the-output-file-type" class="slide level2 smaller scrollable">
 <h2>Change the output file type</h2>
 <div class="columns">
 <div class="column" style="width:35%;">
@@ -1691,21 +1471,20 @@ Jessica Minnier, Meike Niederhausen
 <figcaption><a href="https://allisonhorst.com/horst-hill-collaborations">Illustration by Alison Hill and Allison Horst, for RStudio.</a></figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="sc">---</span></span>
-<span id="cb38-2"><a href="#cb38-2"></a>title<span class="sc">:</span> <span class="st">"My first Quarto file"</span></span>
-<span id="cb38-3"><a href="#cb38-3"></a>author<span class="sc">:</span> <span class="st">"Meike"</span></span>
-<span id="cb38-4"><a href="#cb38-4"></a>date<span class="sc">:</span> <span class="st">"9/25/2023"</span></span>
-<span id="cb38-5"><a href="#cb38-5"></a>format<span class="sc">:</span> html</span>
-<span id="cb38-6"><a href="#cb38-6"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb38-7"><a href="#cb38-7"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="sc">---</span></span>
+<span id="cb38-2"><a></a>title<span class="sc">:</span> <span class="st">"My first Quarto file"</span></span>
+<span id="cb38-3"><a></a>author<span class="sc">:</span> <span class="st">"Meike"</span></span>
+<span id="cb38-4"><a></a>date<span class="sc">:</span> <span class="st">"9/25/2023"</span></span>
+<span id="cb38-5"><a></a>format<span class="sc">:</span> html</span>
+<span id="cb38-6"><a></a>editor<span class="sc">:</span> visual</span>
+<span id="cb38-7"><a></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:60%;">
-<table style="width:83%;">
+<table class="caption-top" style="width:83%;">
 <colgroup>
 <col style="width: 34%">
 <col style="width: 48%">
@@ -1739,8 +1518,7 @@ Jessica Minnier, Meike Niederhausen
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</div></div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>requires LaTeX installation</p></li></ol></aside></section>
 <section id="practice-1" class="slide level2">
 <h2>Practice</h2>
@@ -1798,13 +1576,15 @@ editor: source                    # other options is visual
 <iframe width="900" height="700" src="https://ohsu-octri-berd.github.io/Quarto_BERD_2025/code_files/part2_intro_code_yaml_extra.html">
 </iframe>
 
-<div class="footer footer-default">
 
-</div>
 </section></section>
 
     </div>
-  </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../site_libs/revealjs/dist/reveal.js"></script>
@@ -1830,12 +1610,12 @@ editor: source                    # other options is visual
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'smaller': false,
  
@@ -2086,18 +1866,7 @@ editor: source                    # other options is visual
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2129,11 +1898,48 @@ editor: source                    # other options is visual
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -2143,8 +1949,17 @@ editor: source                    # other options is visual
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -2158,7 +1973,11 @@ editor: source                    # other options is visual
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

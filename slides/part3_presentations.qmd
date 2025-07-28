@@ -870,7 +870,7 @@ These are my speaker notes. Only I can see them.
 
 ### Jump to slide
 
-* Navigate to a slide be pressing `G` and then typing the slide number or ID
+* Navigate to a slide by pressing `g` and then typing the slide number or ID
 
 ### Hamburger menu
 
