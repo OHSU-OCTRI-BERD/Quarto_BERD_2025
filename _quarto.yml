@@ -40,6 +40,8 @@ website:
             text: 3 Presentations
           - href: slides/part4_websites.qmd
             text: 4 Websites
+          - href: slides/part5_resources.qmd
+            text: 5 Resources
 
 format:
   html:

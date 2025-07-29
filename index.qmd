@@ -36,8 +36,8 @@ __Links to Recordings__
 
 _Workshop recording links will be added below when they are available._
 
-* Thurs, July 17
-* Tues, July 22
+* [Thurs, July 17](https://echo360.org/media/8fc67016-1a51-4097-8254-0fde64887bf5/public) (recording starts after Part 2 slide 19)
+* Tues, July 29
 
 {{< fa brands github >}} _You can access the source code for the website and slides on [GitHub](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025){target="_blank"}_
  

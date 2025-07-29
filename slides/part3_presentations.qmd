@@ -441,7 +441,8 @@ format:
 ```
 
 * Available themes are: `default`, `beige`, `blood`, `dark`, `default`, `dracula`, `league`, `moon`, `night`, `serif`, `simple`, `sky`, `solarized`
-* Example of themes are below from <https://revealjs.com/themes/>:
+* Example of themes below are from <https://revealjs.com/themes/>.
+    * The theme `.scss` files can be downloaded from [github](https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/revealjs/themes).
 
 <iframe width="1100" height="500" src="https://revealjs.com/themes/" title="revealjs themes">
 </iframe>
@@ -939,7 +940,7 @@ Learn more at [Quarto's Presenting Slides > Chalkboard](https://quarto.org/docs/
 
 Let's set a 1-minute timer:
 
-```{r, R-countdown, echo=TRUE}
+```{r, R-countdown0, echo=TRUE}
 countdown::countdown(minutes = 1, play_sound = TRUE)
 ```
 
@@ -1004,6 +1005,7 @@ Page numbers [@smith2023, p. 15]
 ```
 
 **Citation styles:**
+
 - `[@smith2023]` → (Smith, 2023)
 - `@smith2023` → Smith (2023)
 - `[-@smith2023]` → (2023)
@@ -1138,6 +1140,7 @@ format: revealjs
 ```
 
 **Step 2:** Adjust heading levels
+
 - `#` becomes section dividers
 - `##` becomes slide titles
 - `###` becomes slide subtitles

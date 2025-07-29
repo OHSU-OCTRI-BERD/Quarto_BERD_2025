@@ -337,7 +337,7 @@ Learn more: [Side Navigation](https://quarto.org/docs/websites/website-navigatio
 
 * Within the `contents:` list, sections of related pages can be grouped together with `section:`
 * For each `section:`, list the `contents:`
-* Exampl 1: See the [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"} excerpt in the Options 
+* Exampl 1: See the [_quarto.yml](https://github.com/OHSU-OCTRI-BERD/Quarto_BERD_2025/blob/main/_quarto.yml){target="_blank"} excerpt in the Options tab
 * Example 2: Sections for weekly pages and homework-related pages from class [website](https://niederhausen.github.io/BSTA_511_F24/){target="_blank"}; [YAML](https://github.com/niederhausen/BSTA_511_F24/blob/main/_quarto.yml){target="_blank"}
 
 <iframe width="1100" height="500" src="https://niederhausen.github.io/BSTA_511_F24/" title="workshop website">
@@ -384,6 +384,13 @@ The __[Workshop Slides](/slides.html){target="_blank"}__ link on the left naviga
 
 
 ### YAML
+
+::: {style="font-size: 85%;"}
+
+* To create a blog-style webpage, create a quarto .qmd file, and specify in the yaml
+    1. format is html (`format: html:`)
+    2. the folder name containing the qmd files that will be listed on the blog (`listing: contents: foldername`)
+:::
 
 ``` yaml
 ---
@@ -674,15 +681,15 @@ Learn more about [Quarto Pub](https://quarto.org/docs/publishing/quarto-pub.html
 
 ### GitHub
 
-* Free & files are publicly visible
-* Requires a [GitHub](https://github.com/){target="_blank"} account that is synced with your computer (personal access token)
-* A little more involved to set up
+* Free & files are publicly visible.
+* This option is more involved to set up.
+* Requires a [GitHub](https://github.com/){target="_blank"} account that is synced with your computer.
+    - I *highly* recommend following __Jenny Bryan__'s *Happy Git and GitHub for the useR* [Pre-workshop set-up instructions](https://happygitwithr.com/workshops){target="_blank"} for getting your RStudio connected with GitHub.
+
 
 ---
 
-* I recommend using [Joshua French's instructions](https://colab.research.google.com/github/jfrench/DataWrangleViz/blob/master/github-website-creation.ipynb){target="_blank"} and YouTube videos. 
-* Scroll down to _Changing the output directory of a Quarto website_ to get started. 
-* One additional new step is adding a `.nojekyll` file as described in the [Quarto help pages](https://quarto.org/docs/publishing/github-pages.html#render-to-docs){target="_blank"}
+* [Google doc](https://docs.google.com/document/d/1fXkRK7oT0U1lHaGpwD1j6r-3PdPYmokmPLuFk7QKKNk/edit?tab=t.0#heading=h.fpoewbfs170w) we created with **instructions to sync a Quarto website** to GitHub
 
 
 ### and more!
